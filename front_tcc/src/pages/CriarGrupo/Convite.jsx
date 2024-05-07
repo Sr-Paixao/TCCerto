@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Box,Button,Container,CssBaseline,TextField,Typography,Paper} from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
-import QRCode from 'qrcode.react';
+// import QRCode from 'qrcode.react';
 
 export default function ForgotPassword() {
   
@@ -63,7 +63,7 @@ export default function ForgotPassword() {
                 
                 <box>
                     <Stack direction="column" alignItems="center" spacing={2} sx={{ mt: 5 }}>
-                      {qrCodeValue && <QRCode value={qrCodeValue} size={200}/>}
+                      {/* {qrCodeValue && <QRCode value={qrCodeValue} size={200}/>} */}
                     </Stack>
                 </box>
 
