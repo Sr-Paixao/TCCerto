@@ -74,7 +74,7 @@ export default function Detalhes_Tarefa() {
                 <Avatar 
                     alt={assignedUsers[0]} 
                     src={`https://source.unsplash.com/32x32/?${assignedUsers[0]}`} 
-                    sx={{ width: 24, height: 24, marginLeft: 10}} 
+                    sx={{ width: 24, height: 24, marginLeft: 20}} 
                 />
                 );
             } else {
@@ -109,7 +109,7 @@ export default function Detalhes_Tarefa() {
                     <GroupOutlinedIcon 
                     sx={{ 
                         color: '#07382E',
-                        fontSize: '180%'
+                        fontSize: '150%'
                     }} 
                     />
                 </ListItemIcon>
@@ -123,7 +123,7 @@ export default function Detalhes_Tarefa() {
                         primary="Atribuído:" 
                         primaryTypographyProps={{ 
                             fontWeight: 'bold',
-                            fontSize: '115%'
+                            fontSize: '100%'
                         }}
                     />
                     {renderAvatars()}
@@ -132,7 +132,7 @@ export default function Detalhes_Tarefa() {
                         e +${assignedUsers.length - 1} pessoas`} 
                         primaryTypographyProps={{ 
                             variant: 'body2', 
-                            fontSize: '0.8rem' 
+                            fontSize: '0.7rem' 
                         }} 
                         sx={{ marginLeft: 2 }} 
                     />
@@ -218,7 +218,7 @@ export default function Detalhes_Tarefa() {
                         marginTop: '5%', 
                         textAlign: 'center', 
                         fontWeight: 'bold',
-                        fontSize: '120%'
+                        fontSize: '100%'
                     }}
                     >
                     Data de Conclusão:
@@ -273,7 +273,7 @@ export default function Detalhes_Tarefa() {
                     gutterBottom 
                     sx={{ 
                         fontWeight: 'bold',
-                        fontSize: '120%'
+                        fontSize: '100%'
                     }}
                     >
                     Descrição:

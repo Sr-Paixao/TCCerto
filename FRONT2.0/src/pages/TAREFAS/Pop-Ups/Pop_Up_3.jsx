@@ -62,7 +62,7 @@ const Tarefa_Excluida = ({ open, handleClose }) => {
             fontSize: '1rem' 
           }}
         >
-          Membro removido com sucesso!
+          Tarefa Excluída com sucesso!
         </Typography>
 
       </div>

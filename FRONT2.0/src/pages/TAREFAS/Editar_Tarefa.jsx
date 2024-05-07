@@ -17,7 +17,7 @@ export default function Edt_Tarefa() {
     const navigate = useNavigate();
 
     const handleCancelarClick = () => {
-        navigate('/Detalhes');
+        navigate('/Dt_Tarefa');
     };
 
     // State para controlar o pop-up

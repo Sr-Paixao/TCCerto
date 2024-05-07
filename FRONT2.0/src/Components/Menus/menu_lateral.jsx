@@ -46,7 +46,7 @@ function MenuLateral({ open, onClose }) {
     {
       icon: selectedIndex === 4 ? <SettingsIcon sx={{ color: '#07382E' }} /> : <SettingsOutlinedIcon />,
       text: "Configurações",
-      path: "/configuracoes" // Define o caminho para a página de Configurações
+      path: "/config" // Define o caminho para a página de Configurações
     }
   ];
 

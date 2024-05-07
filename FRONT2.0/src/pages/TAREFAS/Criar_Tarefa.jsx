@@ -97,7 +97,7 @@ export default function Criar_Tarefa() {
                                             color: '#07382E', 
                                             marginLeft: '60%', 
                                             alignItems: 'center', 
-                                            fontSize: '120%' 
+                                            fontSize: '100%' 
                                             }} 
                                     />
                                 </IconButton>
@@ -111,7 +111,7 @@ export default function Criar_Tarefa() {
                                         marginTop: '10%', 
                                         textAlign: 'center', 
                                         fontWeight: 'bold', 
-                                        fontSize: '120%' 
+                                        fontSize: '100%' 
                                         }}
                                 >
                                         Título:
@@ -125,7 +125,7 @@ export default function Criar_Tarefa() {
                                     onChange={(event) => 
                                     setTitulo(event.target.value)} 
                                     variant="standard" 
-                                    sx={{ width: '110%' }} 
+                                    sx={{ width: '100%' }} 
                                 />
                             </Grid>
                         </Grid>
@@ -158,7 +158,7 @@ export default function Criar_Tarefa() {
                                         marginTop: '5%', 
                                         textAlign: 'center', 
                                         fontWeight: 'bold', 
-                                        fontSize: '120%' 
+                                        fontSize: '100%' 
                                         }}
                                 >
                                         Data de Conclusão:

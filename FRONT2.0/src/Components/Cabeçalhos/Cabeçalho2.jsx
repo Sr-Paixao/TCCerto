@@ -12,7 +12,7 @@ function Cabecalho2({ icon, text, iconSize, handleBack }) {
                     sx={{ 
                         alignSelf: 'flex-start',
                         // marginBottom: '10px',
-                        marginLeft: '-20%'
+                        marginLeft: '-10%'
                     }}
                 >
                     <ArrowBackIcon 

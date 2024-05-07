@@ -29,7 +29,7 @@ const TaskList3 = () => {
                     </span>}
             primaryTypographyProps={{ 
                 variant: 'body2', 
-                fontSize: '120%'
+                fontSize: '100%'
             }}
             />
         </ListItem>
