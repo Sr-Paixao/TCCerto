@@ -39,7 +39,7 @@ function Menu_Inferior({ value, onChange }) {
                 value="equipe" 
                 icon={<GroupIcon sx={{ fontSize: 35 }} />} 
                 component={Link}
-                to="/equipe"
+                to="/Geral_Equipe"
             />
         </BottomNavigation>
     );

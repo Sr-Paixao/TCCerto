@@ -10,7 +10,7 @@ const RedButton = ({ onClick, children }) => {
         sx={{
             mt: 2,
             mb: 5,
-            maxWidth: '180px',
+            maxWidth: '600px',
             fontSize: '100%',
             backgroundColor: 'transparent',
             color: '#FF0000',

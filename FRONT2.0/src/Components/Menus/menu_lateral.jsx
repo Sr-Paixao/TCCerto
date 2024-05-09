@@ -41,7 +41,7 @@ function MenuLateral({ open, onClose }) {
     {
       icon: selectedIndex === 3 ? <DescriptionIcon sx={{ color: '#07382E' }} /> : <DescriptionOutlinedIcon />,
       text: "Modelo",
-      path: "/modelo" // Define o caminho para a página de Modelo
+      path: "/Modelo" // Define o caminho para a página de Modelo
     },
     {
       icon: selectedIndex === 4 ? <SettingsIcon sx={{ color: '#07382E' }} /> : <SettingsOutlinedIcon />,
