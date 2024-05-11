@@ -69,7 +69,7 @@ export default function Geral_Equipe() {
                             <Divider />
 
                                             {/* CONVIDAR MEMBRO  */}
-                            <CustomLink href="/Convite" text="Convidar Membro" />
+                            <CustomLink href="/Add_Membro" text="Convidar Membro" />
                             <Divider />
 
                                             {/* REMOVER MEMBRO  */}

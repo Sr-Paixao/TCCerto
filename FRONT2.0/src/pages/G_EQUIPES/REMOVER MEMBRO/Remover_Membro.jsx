@@ -1,24 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
-    Box, 
-    Container, 
-    CssBaseline, 
-    Paper, 
-    Typography, 
-    IconButton, 
-    List, 
-    ListItem, 
-    ListItemAvatar, 
-    Avatar, 
-    Button, 
-    Divider 
+    Box, Container, CssBaseline, Paper, Typography,  
+    List, ListItem, ListItemAvatar, Avatar, Button, Divider 
     } from '@mui/material';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import GroupRemoveIcon from '@mui/icons-material/GroupRemove';
 import PopUpExcluirMembro from './PopUpExcluirMembro';
 import Cabecalho2 from '../../../Components/Cabeçalhos/Cabeçalho2';
-import RedButton from '../../../Components/Btns/btn_red';
+
 
 export default function Remover_Membro() {
 

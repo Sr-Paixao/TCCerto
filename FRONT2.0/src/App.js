@@ -5,9 +5,6 @@ import api from './api.js';
 
 // Importe suas páginas aqui
 
-import Convite from './pages/CONVITE_GRUPO/Convite.jsx';
-import Convite2 from './pages/CONVITE_GRUPO/Convite2.jsx';
-
 import Index from "./pages/home.jsx";
 
 import Central_Tarefa from './pages/TAREFAS/Central_Tarefas.jsx';
@@ -35,7 +32,7 @@ import Horas_Trabalhadas from './pages/Orçamento/Orçamento3.jsx';
 import Software_Pagos2 from './pages/Orçamento/Orçamento4.jsx';
 import Orçamento_Total from './pages/Orçamento/Orçamento5.jsx';
 import Dt_Orçamento from './pages/Orçamento/orçamento6.jsx';
-
+import Add_Membro from './pages/ADD_MEMBRO/Add_Membro.jsx';
 
 
 
@@ -55,8 +52,8 @@ function App() {
             <BrowserRouter>
                 <Routes>
 
-                    <Route path="/Convite" element={<Convite />} />
-                    <Route path="/Convite2" element={<Convite2 />} />
+            
+                    <Route path="/Add_Membro" element={<Add_Membro />} />
 
                     <Route path="/Index" element={<Index />} />
 
