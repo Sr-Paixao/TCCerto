@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import { Container, CssBaseline, Paper, Typography, IconButton, Grid, Box, BottomNavigation, BottomNavigationAction } from '@mui/material';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import EditNoteOutlinedIcon from '@mui/icons-material/EditNoteOutlined';
-import TaskList from '../../Components/COMPONENTES_TAREFAS/TaskLists/TaskList3'; 
-import Box1 from '../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form1';
-import Box2 from '../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
-import Cabecalho2 from '../../Components/Cabeçalhos/Cabeçalho2';
-import Menu_Inferior from '../../Components/Menus/menu_inferior';
+import TaskList from '../../../Components/COMPONENTES_TAREFAS/TaskLists/TaskList3'; 
+import Box1 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form1';
+import Box2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
+import Cabecalho2 from '../../../Components/Cabeçalhos/Cabeçalho2';
+import Menu_Inferior from '../../../Components/Menus/menu_inferior';
 import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined';
 
 export default function Tarefa_Concluida() {

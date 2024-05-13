@@ -34,6 +34,26 @@ import Orçamento_Total from './pages/Orçamento/Orçamento5.jsx';
 import Dt_Orçamento from './pages/Orçamento/orçamento6.jsx';
 import Add_Membro from './pages/ADD_MEMBRO/Add_Membro.jsx';
 
+                                    //MEMBRO GRUPO
+import Login from './pages/MEMBRO_GRUPO/1Login/Login.jsx';
+import Cadastro from './pages/MEMBRO_GRUPO/2Cadastro/Cadastro.jsx';
+
+import Home2 from "./pages/MEMBRO_GRUPO/3Home_M/home.jsx";
+
+import Central_Tarefas_M from './pages/MEMBRO_GRUPO/4Tarefas_M/Central_Tarefas_M.jsx';
+import Dt_Tarefa_M from './pages/MEMBRO_GRUPO/4Tarefas_M/Detalhes_Tarefa_M.jsx'; 
+import Dt_Concluida_M from './pages/MEMBRO_GRUPO/4Tarefas_M/Tarefa_Concluida_M.jsx';
+
+import Modelo_M from './pages/MEMBRO_GRUPO/5Modelo_M/Modelo_M.jsx';
+
+import Config_M from './pages/MEMBRO_GRUPO/6Configurações_M/Config_M.jsx';
+import Relatar_Problema_M from './pages/MEMBRO_GRUPO/6Configurações_M/Relatar_Problema_M.jsx';
+import Termo_2_M from './pages/MEMBRO_GRUPO/6Configurações_M/Termo_2_M.jsx';
+import Avaliacao_M from './pages/MEMBRO_GRUPO/6Configurações_M/Avaliacao_M.jsx';
+
+
+import Info_Equipe_M from './pages/MEMBRO_GRUPO/7Equipe_M/Info_Equipe_M.jsx';
+
 
 
 
@@ -82,6 +102,27 @@ function App() {
                     <Route path='/Software_Pagos2' element={<Software_Pagos2/>}/>
                     <Route path='/Orçamento_Total' element={<Orçamento_Total/>}/>
                     <Route path='/Dt_Orçamento' element={<Dt_Orçamento/>}/>
+
+                                            {/* //MEMBRO GRUPO  */}
+                    <Route path="/Login" element={<Login />} />
+                    <Route path="/Cadastro" element={<Cadastro />} />
+
+                    <Route path="/Home2" element={<Home2 />} />
+
+                    <Route path="/Central_Tarefas_M" element={<Central_Tarefas_M />} />
+                    <Route path="/Dt_Tarefa_M" element={<Dt_Tarefa_M />} />
+                    <Route path="/Dt_Concluida_M" element={<Dt_Concluida_M />} />
+
+                    <Route path="/Modelo_M" element={<Modelo_M />} />
+
+                    <Route path="/Config_M" element={<Config_M />} />
+                    <Route path="/Relatar_Problema_M" element={<Relatar_Problema_M />} />
+                    <Route path="/Termo_2_M" element={<Termo_2_M />} />
+                    <Route path="/Avaliacao_M" element={<Avaliacao_M />} />
+
+                    <Route path="/Info_Equipe_M" element={<Info_Equipe_M />} />
+
+
 
 
                 </Routes>

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Box, Container, CssBaseline, Paper, Typography, IconButton } from '@mui/material';
-import Menu_Superior2 from '../../Components/Menus/menu_superior2';
-import Menu_Inferior from '../../Components/Menus/menu_inferior';
-import Cabecalho1 from '../../Components/Cabeçalhos/Cabeçalho1';
+import Menu_Superior2 from '../../../Components/Menus/menu_superior2';
+import Menu_Inferior from '../../../Components/Menus/menu_inferior';
+import Cabecalho1 from '../../../Components/Cabeçalhos/Cabeçalho1';
 
 // IMPORT ICONES
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';

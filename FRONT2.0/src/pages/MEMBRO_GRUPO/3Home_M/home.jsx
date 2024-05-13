@@ -1,8 +1,12 @@
 import React from 'react';
-import { Paper, Box, Typography, IconButton, BottomNavigation, BottomNavigationAction } from '@mui/material';
+import { 
+        Paper, Box, Typography, IconButton, 
+        BottomNavigation, BottomNavigationAction 
+        } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import Menu_Inferior from "../Components/Menus/menu_inferior";
-import Menu_Superior from '../Components/Menus/menu_superior';
+//IMPORT COMPONENTS
+import Menu_Inferior from "../../../Components/Menus_Membro/menu_inferior_M";
+import Menu_Superior from '../../../Components/Menus_Membro/menu_superior_M';
 
 // import TaskProgressBar from './HomeTarefa';
 
@@ -192,7 +196,10 @@ export default function HomeScreen() {
 
             </Box>
 
-            <Menu_Inferior value={value} onChange={handleChange} />
+            <Menu_Inferior 
+            value={value} 
+            onChange={handleChange} 
+            />
 
         </ThemeProvider>
     );
