@@ -5,25 +5,31 @@ import {
     Container, 
     CssBaseline, 
     Paper, 
+    Typography, 
     Divider, 
-    IconButton
 } from '@mui/material';
 import Link from '@mui/material/Link';
-import GroupsIcon from '@mui/icons-material/Groups';
-import Menu_Superior2 from '../../Components/Menus/menu_superior2';
-import Menu_Inferior from '../../Components/Menus/menu_inferior';
-import Cabecalho1 from '../../Components/Cabeçalhos/Cabeçalho1';
-import CustomLink from '../../Components/LINKS/CustomLink';
+import SettingsIcon from '@mui/icons-material/Settings';
+import Menu_Superior2 from '../../../Components/Menus/menu_superior2';
+import Menu_Inferior from '../../../Components/Menus/menu_inferior';
+import Cabecalho1 from '../../../Components/Cabeçalhos/Cabeçalho1';
+import CustomLink from '../../../Components/LINKS/CustomLink';
+import Popup from "../CONFIGURAÇÕES/Avaliacao";
 
-export default function Geral_Equipe() {
+export default function Configuracoes() {
 
+    const [openPopup, setOpenPopup] = useState(false);
     const navigate = useNavigate();
 
-    // Função para voltar para a página inicial
-    const handleBack = () => {
-        navigate('/');
+    // Função para abrir o pop-up
+    const handleOpenPopup = () => {
+        setOpenPopup(true);
     };
 
+    // Função para fechar o pop-up
+    const handleClosePopup = () => {
+        setOpenPopup(false);
+    };
 
     return (
         <Container 
@@ -42,45 +48,45 @@ export default function Geral_Equipe() {
                         boxShadow: "0" 
                         }}
                 >
+
                                             {/* Menu Superior */}
                     <Menu_Superior2
-                    sx={{ mt: '15%'}} 
-                    />
+                    sx={{ mt: '15%'}} />
 
                                             {/* CABEÇALHO */}
                     <Box
                     sx={{mt: '15%'}}
                     >
-                        <Cabecalho1 
-                            icon={<GroupsIcon />} 
-                            text='Equipe' 
-                            iconSize="70px"
-                        />
+                    <Cabecalho1 
+                        icon={<SettingsIcon />} 
+                        text='Configuração' 
+                        iconSize="70px"
+                    />
                     </Box>
-
-                                            {/* INFORMAÇÃO EQUIPE */}
+                                            {/* ITENS CONFIGURAÇÕES */}
                     <Box 
                         sx={{ 
                             width: '100%', 
                             mt: 3 
                             }}
                     >
-                            <CustomLink href="/Info_Equipe" text="Informações da Equipe" />
+
+                        <CustomLink href="/Relatar_Problema" text="Relatar Problema" />
                             <Divider />
 
-                                            {/* CONVIDAR MEMBRO  */}
-                            <CustomLink href="/Add_Membro" text="Convidar Membro" />
+                        <CustomLink href="/Termo_2" text="Termos e Politicas" />
                             <Divider />
 
-                                            {/* REMOVER MEMBRO  */}
-                            <CustomLink href="/Remover_Membro" text="Remover Membro" />
-                            <Divider />
+                        <CustomLink onClick={handleOpenPopup} style={{ cursor: 'pointer' }} text="Avalie-nos" />
 
-                                            {/* DESFAZER EQUIPE  */}
-                            <CustomLink href="/Desfazer_Equipe" text="Desfazer Equipe" />
                     </Box>
+                    
                                             {/*MENU INFERIOR */}
                     <Menu_Inferior />
+                    <Popup 
+                        open={openPopup} 
+                        handleClose={handleClosePopup} 
+                    />
                     
                 </Paper>
         </Container>

@@ -4,7 +4,7 @@ import { Box, Container, CssBaseline, Paper, Typography, IconButton } from '@mui
 import Menu_Superior2 from '../../../Components/Menus_Membro/menu_superior2_M';
 import Menu_Inferior from '../../../Components/Menus_Membro/menu_inferior_M';
 import Cabecalho1 from '../../../Components/Cabeçalhos/Cabeçalho1';
-import DownloadBox from '../../../Components/Box_Modelo';
+import DownloadBox from '../../../Components/BOXES/Box_Modelo';
 
 // IMPORT ICONES
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';

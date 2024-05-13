@@ -5,12 +5,12 @@ import AddTaskIcon from '@mui/icons-material/AddTask';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import EditNoteOutlinedIcon from '@mui/icons-material/EditNoteOutlined';
 import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
-import Menu_Inferior from '../../Components/Menus/menu_inferior';
-import Cabecalho2 from '../../Components/Cabeçalhos/Cabeçalho2';
-import Box1 from '../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form1';
-import Box2 from '../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
-import GreenButton from '../../Components/Btns/btn_green';
-import TaskList from '../../Components/COMPONENTES_TAREFAS/TaskLists/TaskList2';
+import Menu_Inferior from '../../../Components/Menus/menu_inferior';
+import Cabecalho2 from '../../../Components/Cabeçalhos/Cabeçalho2';
+import Box1 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form1';
+import Box2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
+import GreenButton from '../../../Components/Btns/btn_green';
+import TaskList from '../../../Components/COMPONENTES_TAREFAS/TaskLists/TaskList2';
 import Tarefa_Criada from './Pop-Ups/Pop_Up_1'; 
 
 export default function Criar_Tarefa() {

@@ -8,7 +8,6 @@ import {
     Typography, 
     IconButton,
     Grid,
-    Button,
     TextField
 } from '@mui/material';
 import { List, ListItem, ListItemAvatar, Avatar } from '@mui/material';
@@ -17,9 +16,9 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import EditNoteOutlinedIcon from '@mui/icons-material/EditNoteOutlined';
 import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
-import Box2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
-import GreenButton from '../../../Components/Btns/btn_green';
-import RedButton from '../../../Components/Btns/btn_red';
+import Box2 from '../../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
+import GreenButton from '../../../../Components/Btns/btn_green';
+import RedButton from '../../../../Components/Btns/btn_red';
 
 // IMPORT POP-UPS
 import Popup1 from './POPUP_SALVAR'; 

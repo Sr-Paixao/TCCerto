@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Typography, Button, Grid, Avatar } from '@mui/material';
-import pc_preço from '../../img/orçamento 4.svg';
+import pc_preço from '../../../img/orçamento 4.svg';
 import { useNavigate } from 'react-router-dom';
 import Orçamento_Criado from './pop-up02'; 
 

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Modal, Typography, IconButton, Grid, Avatar } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close'; 
 import { Rating } from '@mui/material';
-import TCCERTOImage from '../../img/logo.svg'; 
-import GreenButton from '../../Components/Btns/btn_green';
+import TCCERTOImage from '../../../img/logo.svg'; 
+import GreenButton from '../../../Components/Btns/btn_green';
 import Thanks from './Pop_Ups/POP_UP_THANKS';
 
 const Avaliacao = ({ open, handleClose }) => {

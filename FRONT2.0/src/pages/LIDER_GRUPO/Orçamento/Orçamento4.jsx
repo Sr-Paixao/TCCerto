@@ -13,7 +13,7 @@ import {
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import pc_preço from '../../img/orçamento 4.svg';
+import pc_preço from '../../../img/orçamento 4.svg';
 import Orçamento_Criado from './pop-up02';
 
 export default function Software_Pagos2() {

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container, CssBaseline, Paper, Typography, Box, Grid } from '@mui/material';
 import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined';
-import Cabecalho1 from '../../Components/Cabeçalhos/Cabeçalho1';
-import Menu_Superior2 from '../../Components/Menus/menu_superior2';
-import Menu_Inferior from '../../Components/Menus/menu_inferior';
-import Card_Tarefa from '../../Components/COMPONENTES_TAREFAS/CARDS_TAREFAS/Card_Tarefas';
-import Card_Tarefa_Completa from '../../Components/COMPONENTES_TAREFAS/CARDS_TAREFAS/Card_Concluida';
-import Btn_Criar_Tarefa from '../../Components/Btns/btn_criar_tarefa';
+import Cabecalho1 from '../../../Components/Cabeçalhos/Cabeçalho1';
+import Menu_Superior2 from '../../../Components/Menus/menu_superior2';
+import Menu_Inferior from '../../../Components/Menus/menu_inferior';
+import Card_Tarefa from '../../../Components/COMPONENTES_TAREFAS/CARDS_TAREFAS/Card_Tarefas';
+import Card_Tarefa_Completa from '../../../Components/COMPONENTES_TAREFAS/CARDS_TAREFAS/Card_Concluida';
+import Btn_Criar_Tarefa from '../../../Components/Btns/btn_criar_tarefa';
 
 export default function Central_Tarefa() {
     return (

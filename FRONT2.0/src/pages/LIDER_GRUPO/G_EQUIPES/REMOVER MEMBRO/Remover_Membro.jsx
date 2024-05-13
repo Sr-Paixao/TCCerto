@@ -6,7 +6,7 @@ import {
     } from '@mui/material';
 import GroupRemoveIcon from '@mui/icons-material/GroupRemove';
 import PopUpExcluirMembro from './PopUpExcluirMembro';
-import Cabecalho2 from '../../../Components/Cabeçalhos/Cabeçalho2';
+import Cabecalho2 from '../../../../Components/Cabeçalhos/Cabeçalho2';
 
 
 export default function Remover_Membro() {

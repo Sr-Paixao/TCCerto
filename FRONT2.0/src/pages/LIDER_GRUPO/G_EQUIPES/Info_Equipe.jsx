@@ -15,9 +15,9 @@ import { List, ListItem, ListItemAvatar, Avatar } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import Link from '@mui/material/Link';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import RedButton from '../../Components/Btns/btn_red';
-import Box_2 from '../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
-import Menu_Inferior from '../../Components/Menus/menu_inferior';
+import RedButton from '../../../Components/Btns/btn_red';
+import Box_2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
+import Menu_Inferior from '../../../Components/Menus/menu_inferior';
 
 
 const members = [

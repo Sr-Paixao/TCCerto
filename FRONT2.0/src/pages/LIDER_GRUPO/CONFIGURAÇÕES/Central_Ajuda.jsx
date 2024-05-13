@@ -18,10 +18,10 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import Menu_Inferior from '../../Components/Menus/menu_inferior';
-import Cabecalho2 from '../../Components/Cabeçalhos/Cabeçalho2';
-import GreenButton from '../../Components/Btns/btn_green';
-import Box1 from '../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form1';
+import Menu_Inferior from '../../../Components/Menus/menu_inferior';
+import Cabecalho2 from '../../../Components/Cabeçalhos/Cabeçalho2';
+import GreenButton from '../../../Components/Btns/btn_green';
+import Box1 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form1';
 
 // IMPORT POP-UP 
 import Popup from './Pop_Ups/POP_UP_HELP';

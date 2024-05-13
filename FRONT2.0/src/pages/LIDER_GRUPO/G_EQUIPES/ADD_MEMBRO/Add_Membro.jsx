@@ -15,7 +15,7 @@ import {
     Divider 
 } from '@mui/material';
 import GroupAddIcon from '@mui/icons-material/GroupAdd';
-import Cabecalho2 from '../../Components/Cabeçalhos/Cabeçalho2';
+import Cabecalho2 from '../../../../Components/Cabeçalhos/Cabeçalho2';
 import PopUpAddMembro from './pop-up_add_membro';
 
 export default function Add_Membro() {
