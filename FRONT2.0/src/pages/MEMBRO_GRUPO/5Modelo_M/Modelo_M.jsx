@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Box, Container, CssBaseline, Paper, Typography, IconButton } from '@mui/material';
-import Menu_Superior2 from '../../../Components/Menus_Membro/menu_superior2_M';
-import Menu_Inferior from '../../../Components/Menus_Membro/menu_inferior_M';
-import Cabecalho1 from '../../../Components/Cabeçalhos/Cabeçalho1';
-import DownloadBox from '../../../Components/BOXES/Box_Modelo';
+import { Box, Container, CssBaseline, Paper, Typography } from '@mui/material';
+import Menu_Superior2 from '../../../Components/MENUS_MEMBROS/menu_superior2_M';
+import Menu_Inferior from '../../../Components/MENUS_MEMBROS/menu_inferior_M';
+import Cabecalho1 from '../../../Components/CABEÇALHOS/Cabeçalho1';
+import DownloadBox from '../../../Components/BOX/Box_Modelo';
 
 // IMPORT ICONES
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
-import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
+
 
 export default function Modelo_M() {
     const [value, setValue] = useState(0); // Estado para controlar o valor selecionado do BottomNavigation

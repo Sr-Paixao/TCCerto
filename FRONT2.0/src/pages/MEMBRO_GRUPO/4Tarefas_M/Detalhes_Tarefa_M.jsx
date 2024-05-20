@@ -7,11 +7,11 @@ import {
         } from '@mui/material';
 
 //IMPORT COMPONENTS
-import Cabecalho2 from '../../../Components/Cabeçalhos2/Cabeçalho2';
-import Box1 from '../../../Components/Tarefas_Membro/Box_Form/Box_form1';
-import Box2 from '../../../Components/Tarefas_Membro/Box_Form/Box_form2';
+import Cabecalho2 from '../../../Components/CABEÇALHOS/Cabeçalho2';
+import Box1 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form1';
+import Box2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
 import GreenButton from '../../../Components/Btns/btn_green';
-import Menu_Inferior from '../../../Components/Menus_Membro/menu_inferior_M';
+import Menu_Inferior from '../../../Components/MENUS_MEMBROS/menu_inferior_M';
 
 // IMPORT ICONES 
 import RadioButtonUncheckedOutlinedIcon from '@mui/icons-material/RadioButtonUncheckedOutlined';

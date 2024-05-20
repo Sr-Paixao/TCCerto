@@ -1,25 +1,16 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {  
-        Button,
-        Box,
-        Grid,
-        Container, 
-        CssBaseline, 
-        Paper, 
-        Typography,  
-        IconButton, 
-        TextField
+import { 
+        Box, Grid, Container, CssBaseline, 
+        Paper, Typography, IconButton, TextField
         } from '@mui/material';
 
-    
 // IMPORTS DE ICONES 
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import Menu_Inferior from '../../../Components/Menus/menu_inferior';
-import Cabecalho2 from '../../../Components/Cabeçalhos/Cabeçalho2';
+import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
+import Cabecalho2 from '../../../Components/CABEÇALHOS/Cabeçalho2';
 import GreenButton from '../../../Components/Btns/btn_green';
 import Box1 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form1';
 

@@ -12,11 +12,11 @@ import DoneIcon from '@mui/icons-material/Done';
 import EditNoteOutlinedIcon from '@mui/icons-material/EditNoteOutlined';
 
 //IMPORTS COMPONENTS
-import Cabecalho2 from '../../../Components/Cabeçalhos2/Cabeçalho2';
-import Box1 from '../../../Components/Tarefas_Membro/Box_Form/Box_form1';
-import Box2 from '../../../Components/Tarefas_Membro/Box_Form/Box_form2';
+import Cabecalho2 from '../../../Components/CABEÇALHOS/Cabeçalho2';
+import Box1 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form1';
+import Box2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
 import RedButton from '../../../Components/Btns/btn_red';
-import Menu_Inferior from '../../../Components/Menus_Membro/menu_inferior_M';
+import Menu_Inferior from '../../../Components/MENUS_MEMBROS/menu_inferior_M';
 
 //IMPORT POP-UP
 import DesmarcarConclusao from './Pop-Ups/Desmarcar_Conclusao'; 

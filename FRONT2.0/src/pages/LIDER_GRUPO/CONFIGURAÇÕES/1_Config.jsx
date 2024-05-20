@@ -10,11 +10,11 @@ import {
 } from '@mui/material';
 import Link from '@mui/material/Link';
 import SettingsIcon from '@mui/icons-material/Settings';
-import Menu_Superior2 from '../../../Components/Menus/menu_superior2';
-import Menu_Inferior from '../../../Components/Menus/menu_inferior';
-import Cabecalho1 from '../../../Components/Cabeçalhos/Cabeçalho1';
+import Menu_Superior2 from '../../../Components/MENUS_LIDER/menu_superior2';
+import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
+import Cabecalho1 from '../../../Components/CABEÇALHOS/Cabeçalho1';
 import CustomLink from '../../../Components/LINKS/CustomLink';
-import Popup from "../CONFIGURAÇÕES/Avaliacao";
+import Popup from "./3_Avaliacao";
 
 export default function Configuracoes() {
 

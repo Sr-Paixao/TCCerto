@@ -1,23 +1,15 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {  
-    Box, 
-    Container, 
-    CssBaseline, 
-    Paper, 
-    Typography, 
-    Divider, 
-    IconButton,
-    Grid,
-    Button
-} from '@mui/material';
+        Box, Container, CssBaseline,
+        Paper, Typography, IconButton, Grid
+        } from '@mui/material';
 import { List, ListItem, ListItemAvatar, Avatar } from '@mui/material';
 import Stack from '@mui/material/Stack';
-import Link from '@mui/material/Link';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import RedButton from '../../../Components/Btns/btn_red';
 import Box_2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
-import Menu_Inferior from '../../../Components/Menus/menu_inferior';
+import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
 
 
 const members = [

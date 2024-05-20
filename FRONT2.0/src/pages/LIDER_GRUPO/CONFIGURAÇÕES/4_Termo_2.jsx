@@ -11,8 +11,8 @@ import {
 
 
 import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined';
-import Cabecalho2 from '../../../Components/Cabeçalhos/Cabeçalho2';
-import Menu_Inferior from '../../../Components/Menus/menu_inferior';
+import Cabecalho2 from '../../../Components/CABEÇALHOS/Cabeçalho2';
+import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
 
 
 

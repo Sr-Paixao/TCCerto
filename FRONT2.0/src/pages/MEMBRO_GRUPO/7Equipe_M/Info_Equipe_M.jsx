@@ -7,9 +7,9 @@ import {
 import Stack from '@mui/material/Stack';
 
 //IMPORTS DE COMPONENTES 
-import Menu_Superior from '../../../Components/Menus_Membro/menu_superior2_M';
-import Box_2 from '../../../Components/Tarefas_Membro/Box_Form/Box_form2';
-import Menu_Inferior from '../../../Components/Menus_Membro/menu_inferior_M';
+import Menu_Superior from '../../../Components/MENUS_MEMBROS/menu_superior2_M';
+import Box_2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
+import Menu_Inferior from '../../../Components/MENUS_MEMBROS/menu_inferior_M';
 
 
 const members = [

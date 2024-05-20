@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
-import { Modal, Typography, Button, Grid } from '@mui/material';
-import CurrencyExchangeOutlinedIcon from '@mui/icons-material/CurrencyExchangeOutlined';
+import { Modal, Typography, Grid, Avatar } from '@mui/material';
+import pc_preço from '../../../../img/orçamento 4.svg';
 import { useNavigate } from 'react-router-dom';
+import Orçamento_Criado from './pop-up02'; 
+import GreenButton from '../../../../Components/Btns/btn_green';
+import RedButton from '../../../../Components/Btns/btn_red';
 
-const RefazerPopup = ({ open, handleClose }) => {
+const Orçamento04 = ({ open, handleClose }) => {
     const navigate = useNavigate();
     const [criado, setCriado] = useState(false); 
 
     const handleSim = () => {
-        navigate('/Orçamento'); 
+        navigate('/Software_Pagos2'); 
     };
 
     const handleNao = () => {
-        navigate('/'); // DIRECIONAR PARA HOME
+        setCriado(true); 
     };
 
     return (
@@ -33,16 +36,23 @@ const RefazerPopup = ({ open, handleClose }) => {
                     borderRadius: '6px'
                 }}
             >
+                                                             {/* AVATAR  */}
                 <div style={{ textAlign: 'center' }}>
-                    <CurrencyExchangeOutlinedIcon
+                    <Avatar
+                        alt="Software"
+                        src={pc_preço}
+                        variant="square"
                         sx={{ 
-                            width: 100, 
-                            height: 100, 
-                            color: '#07382E' 
-                        }} 
+                            width: 'auto', 
+                            height: 'auto', 
+                            maxWidth: '50%', 
+                            maxHeight: '50%', 
+                            marginBottom: 2,
+                            margin: '0 auto',
+                        }}
                     />
                 </div>
-
+                                                            {/* TEXTO INFORMATIVO */}
                 <Typography
                     variant="h5"
                     sx={{
@@ -52,7 +62,7 @@ const RefazerPopup = ({ open, handleClose }) => {
                         marginTop: 2, 
                     }}
                 >
-                    Deseja Refazer o Orçamento?
+                    Utilizou Algum Software Pago?
                 </Typography>
 
                 <Typography
@@ -65,60 +75,41 @@ const RefazerPopup = ({ open, handleClose }) => {
                 >
                     Exemplos: Microsoft Project, Canva Pro, Entre Outros.
                 </Typography>
-
+                                                            {/* BOTÕES  */}
                 <Grid 
                     container 
                     spacing={2} 
                     sx={{ marginTop: '6%' }}
                 >
                     <Grid item xs={6}>
-                        <Button
-                            onClick={handleSim} 
-                            fullWidth
-                            variant="outlined"
-                            sx={{
-                                mt: -1,
-                                mb: 5,
-                                maxWidth: '180px',
-                                backgroundColor: '#FFFFFF',
-                                color: '#07382E',
-                                borderColor: '#07382E',
-                                '&:hover': {
-                                    backgroundColor: '#07382E',
-                                    color: '#FFFFFF'
-                                }
-                            }}
+                        <GreenButton
+                        onClick={handleSim} 
+                        fullWidth
                         >
                             Sim
-                        </Button>
+                        </GreenButton>
                     </Grid>
 
                     <Grid item xs={6}>
-                        <Button
+                        <RedButton
                             onClick={handleNao} 
                             fullWidth
-                            variant="outlined"
-                            sx={{
-                                mt: -1,
-                                mb: 5,
-                                maxWidth: '180px',
-                                backgroundColor: 'transparent',
-                                color: '#FF0000',
-                                borderColor: '#FF0000',
-                                '&:hover': {
-                                    backgroundColor: '#FF0000',
-                                    color: '#FFFFFF',
-                                    borderBlockColor: 'transparent'
-                                }
-                            }}
                         >
                             Não
-                        </Button>
+                        </RedButton>
                     </Grid>
                 </Grid>
+
+                                                            {/* POP-UP  */}
+                {criado && 
+                <Orçamento_Criado 
+                    open={true} 
+                    handleClose={() => 
+                    setCriado(false)} 
+                />}
             </div>
         </Modal>
     );
 };
 
-export default RefazerPopup;
+export default Orçamento04;

@@ -36,7 +36,7 @@ const Orçamento_Criado = ({ open, handleClose }) => {
                 borderRadius: '6px'
               }}
             >
-
+                                      {/* ICONE  */}
               <CheckCircleOutlineIcon 
                 sx={{ 
                   width: 300, 
@@ -45,6 +45,7 @@ const Orçamento_Criado = ({ open, handleClose }) => {
                   }} 
               />
 
+                                      {/* TEXTO INFORMATIVO  */}
               <Typography 
                 variant="h5"
                 sx={{ 

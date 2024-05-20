@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Button, Container, CssBaseline, Paper, Typography, IconButton, Grid, List, ListItemButton, ListItemIcon, ListItemText, Collapse, Avatar, Menu, MenuItem, Checkbox, TextField, Dialog, DialogTitle, DialogContent, DialogActions } from '@mui/material';
+import { 
+        Container, CssBaseline, Paper, 
+        Typography, IconButton,Grid, TextField
+        } from '@mui/material';
 import AddTaskIcon from '@mui/icons-material/AddTask';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import EditNoteOutlinedIcon from '@mui/icons-material/EditNoteOutlined';
 import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
-import Menu_Inferior from '../../../Components/Menus/menu_inferior';
-import Cabecalho2 from '../../../Components/Cabeçalhos/Cabeçalho2';
+import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
+import Cabecalho2 from '../../../Components/CABEÇALHOS/Cabeçalho2';
 import Box1 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form1';
 import Box2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
 import GreenButton from '../../../Components/Btns/btn_green';

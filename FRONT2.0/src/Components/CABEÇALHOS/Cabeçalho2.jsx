@@ -3,7 +3,9 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
-function Cabecalho2({ icon, text, iconSize, handleBack }) {
+function Cabecalho2({ icon, text, iconSize, handleBack, avatar, avatarSize }) {
+    const size = avatarSize || iconSize || 40; 
+
     return (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
             {handleBack && (
@@ -11,8 +13,8 @@ function Cabecalho2({ icon, text, iconSize, handleBack }) {
                     onClick={handleBack}
                     sx={{ 
                         alignSelf: 'flex-start',
-                        // marginBottom: '10px',
-                        marginLeft: '-10%', mb: 3
+                        marginLeft: '-5%', 
+                        mb: 3
                     }}
                 >
                     <ArrowBackIcon 
@@ -24,15 +26,25 @@ function Cabecalho2({ icon, text, iconSize, handleBack }) {
                 </IconButton>
             )}
             <div style={{ display: 'flex', alignItems: 'center' }}>
-                <div style={{ marginRight: '8px', mb: 5 }}>
-                    {React.cloneElement(icon, { 
-                        style: { 
-                            fontSize: iconSize || 'inherit', 
-                            color: '#07382E',
-                            
-
-                        } 
-                    })}
+                <div style={{ marginRight: '8px', marginBottom: '5px' }}>
+                    {avatar ? (
+                        <img 
+                            src={avatar} 
+                            alt="avatar" 
+                            style={{ 
+                                width: size, 
+                                height: size, 
+                                objectFit: 'contain'
+                            }} 
+                        />
+                    ) : (
+                        React.cloneElement(icon, { 
+                            style: { 
+                                fontSize: size, 
+                                color: '#07382E'
+                            } 
+                        })
+                    )}
                 </div>
                 <Typography
                     component="h1"
@@ -40,8 +52,10 @@ function Cabecalho2({ icon, text, iconSize, handleBack }) {
                     sx={{
                         color: '#07382E',
                         fontSize: '200%',
+                        textAlign: 'CENTER',
                         mb: 5,
                         mt: 4
+
                     }}
                 >
                     {text}

@@ -6,11 +6,11 @@ import {
 //IMPORT ICONE
 import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined';
 //IMPORT COMPONENTS
-import Menu_Superior2 from '../../../Components/Menus_Membro/menu_superior2_M';
-import Cabecalho1 from '../../../Components/Cabeçalhos2/Cabeçalho1';
-import Card_Tarefa from '../../../Components/Tarefas_Membro/CARDS_TAREFAS_M/Card_Tarefas_M';
-import Card_Tarefa_Completa from '../../../Components/Tarefas_Membro/CARDS_TAREFAS_M/Card_Concluida_M';
-import Menu_Inferior from '../../../Components/Menus_Membro/menu_inferior_M';
+import Menu_Superior2 from '../../../Components/MENUS_MEMBROS/menu_superior2_M';
+import Cabecalho1 from '../../../Components/CABEÇALHOS/Cabeçalho1';
+import Card_Tarefa from '../../../Components/COMPONENTES_TAREFAS/CARDS_MEMBROS/Card_Tarefas_M';
+import Card_Tarefa_Completa from '../../../Components/COMPONENTES_TAREFAS/CARDS_MEMBROS/Card_Concluida_M';
+import Menu_Inferior from '../../../Components/MENUS_MEMBROS/menu_inferior_M';
 
 
 export default function Central_Tarefa_M() {

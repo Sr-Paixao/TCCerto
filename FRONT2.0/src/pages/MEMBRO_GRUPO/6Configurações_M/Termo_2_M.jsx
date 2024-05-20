@@ -9,8 +9,8 @@ import {
 import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined';
 
 //IMPORT COMPONENTES
-import Cabecalho2 from '../../../Components/Cabeçalhos2/Cabeçalho2';
-import Menu_Inferior from '../../../Components/Menus_Membro/menu_inferior_M';
+import Cabecalho2 from '../../../Components/CABEÇALHOS/Cabeçalho2';
+import Menu_Inferior from '../../../Components/MENUS_MEMBROS/menu_inferior_M';
 
 
 export default function Termos_e_Politicas_M() {

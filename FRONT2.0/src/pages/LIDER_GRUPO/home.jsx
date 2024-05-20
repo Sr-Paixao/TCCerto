@@ -1,8 +1,11 @@
 import React from 'react';
-import { Paper, Box, Typography, IconButton, BottomNavigation, BottomNavigationAction } from '@mui/material';
+import { 
+        Paper, Box, Typography, IconButton,
+        BottomNavigation, BottomNavigationAction 
+        } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import Menu_Inferior from "../../Components/Menus/menu_inferior";
-import Menu_Superior from '../../Components/Menus/menu_superior';
+import Menu_Inferior from "../../Components/MENUS_LIDER/menu_inferior";
+import Menu_Superior from '../../Components/MENUS_LIDER/menu_superior';
 
 // import TaskProgressBar from './HomeTarefa';
 

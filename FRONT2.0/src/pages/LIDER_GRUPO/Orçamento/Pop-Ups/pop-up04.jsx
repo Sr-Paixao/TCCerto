@@ -11,7 +11,7 @@ const Relatorio02 = ({ open, handleClose }) => {
     useEffect(() => {
         if (open) {
         const redirectTimeout = setTimeout(() => {
-            navigate('/'); // AQUI DEVE SER MODIFICADO PARA IR PARA HOME.
+            navigate('/Index');
         }, 2000);
         return () => clearTimeout(redirectTimeout);
         }
@@ -36,7 +36,7 @@ const Relatorio02 = ({ open, handleClose }) => {
                     borderRadius: '6px'
                 }}
                 >
-
+                                                            {/* ICONE */}
                 <MarkEmailReadOutlinedIcon
                     sx={{ 
                     width: 300, 
@@ -45,6 +45,7 @@ const Relatorio02 = ({ open, handleClose }) => {
                     }} 
                 />
 
+                                                            {/* TEXTO INFORMATIVO */}
                 <Typography 
                     variant="h5"
                     sx={{ 

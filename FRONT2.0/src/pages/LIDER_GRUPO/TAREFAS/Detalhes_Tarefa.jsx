@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Box,Button, Container, CssBaseline, Paper, 
-        Typography, IconButton, Grid, List, ListItemButton, 
-        ListItemIcon, ListItemText, Collapse, Avatar } from '@mui/material';
-import Menu_Inferior from '../../../Components/Menus/menu_inferior';
-import Cabecalho2 from '../../../Components/Cabeçalhos/Cabeçalho2';
+import { 
+        Container, CssBaseline, Paper, Typography, 
+        IconButton, Grid, List, ListItemButton, 
+        ListItemIcon, ListItemText, Collapse, Avatar 
+        } from '@mui/material';
+import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
+import Cabecalho2 from '../../../Components/CABEÇALHOS/Cabeçalho2';
 import Box1 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form1';
 import Box2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
 import RedButton from '../../../Components/Btns/btn_red';

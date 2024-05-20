@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {  
-    Box, Container, CssBaseline, 
-    Paper, Divider, 
-    } from '@mui/material';
+import {  Box, Container, CssBaseline, Paper, Divider} from '@mui/material';
 
 // IMPORT ICONES 
 import SettingsIcon from '@mui/icons-material/Settings';
 
 //IMPORT COMPONENTES
-import Menu_Superior2 from '../../../Components/Menus_Membro/menu_superior2_M';
-import Cabecalho1 from '../../../Components/Cabeçalhos2/Cabeçalho1';
-import CustomLink from '../../../Components/LINKS2/CustomLink';
-import Menu_Inferior from '../../../Components/Menus_Membro/menu_inferior_M';
+import Menu_Superior2 from '../../../Components/MENUS_MEMBROS/menu_superior2_M';
+import Cabecalho1 from '../../../Components/CABEÇALHOS/Cabeçalho1';
+import CustomLink from '../../../Components/LINKS/CustomLink';
+import Menu_Inferior from '../../../Components/MENUS_MEMBROS/menu_inferior_M';
 
 //IMPORT POP-UP
 import Popup from "./Avaliacao_M";

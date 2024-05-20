@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Modal, Typography, Button, Grid, Avatar } from '@mui/material';
+import { Modal, Typography, Button, Grid } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import AttachEmailOutlinedIcon from '@mui/icons-material/AttachEmailOutlined';
+import GreenButton from '../../../../Components/Btns/btn_green';
+import RedButton from '../../../../Components/Btns/btn_red'
 import Relatorio02 from './pop-up04';
 
 const Relatorio01 = ({ open, handleClose }) => {
@@ -13,7 +15,7 @@ const Relatorio01 = ({ open, handleClose }) => {
     };
 
     const handleNao = () => {
-        handleClose(); //AQUI TAMBEM DEVE SER REDIRECIONADO PARA HOME 
+        navigate('/Index');  
     };
 
     return (
@@ -35,6 +37,7 @@ const Relatorio01 = ({ open, handleClose }) => {
                         borderRadius: '6px'
                     }}
                 >
+                                                            {/* ICONE  */}
                     <div style={{ textAlign: 'center' }}>
                         <AttachEmailOutlinedIcon
                             sx={{ 
@@ -45,6 +48,7 @@ const Relatorio01 = ({ open, handleClose }) => {
                         />
                     </div>
 
+                                                            {/* TEXTO INFORMATIVO */}
                     <Typography
                         variant="h5"
                         sx={{
@@ -57,60 +61,33 @@ const Relatorio01 = ({ open, handleClose }) => {
                         Gostaria que o Relatório seja enviado para o seu Email?
                     </Typography>
 
+                                                            {/* BOTÕES  */}
                     <Grid 
                         container 
                         spacing={2} 
                         sx={{ marginTop: '6%' }}
                     >
                         <Grid item xs={6}>
-                            <Button
+                            <GreenButton
                                 onClick={handleSim} 
                                 fullWidth
-                                variant="outlined"
-                                sx={{
-                                    mt: -1,
-                                    mb: 5,
-                                    maxWidth: '180px',
-                                    backgroundColor: '#FFFFFF',
-                                    color: '#07382E',
-                                    borderColor: '#07382E',
-                                    '&:hover': {
-                                        backgroundColor: '#07382E',
-                                        color: '#FFFFFF'
-                                    }
-                                }}
                             >
                                 Sim
-                            </Button>
+                            </GreenButton>
                         </Grid>
 
                         <Grid item xs={6}>
-                            <Button
+                            <RedButton
                                 onClick={handleNao} 
                                 fullWidth
-                                variant="outlined"
-                                sx={{
-                                    mt: -1,
-                                    mb: 5,
-                                    maxWidth: '180px',
-                                    backgroundColor: 'transparent',
-                                    color: '#FF0000',
-                                    borderColor: '#FF0000',
-                                    '&:hover': {
-                                        backgroundColor: '#FF0000',
-                                        color: '#FFFFFF',
-                                        borderBlockColor: 'transparent'
-                                    }
-                                }}
                             >
                                 Não
-                            </Button>
+                            </RedButton>
                         </Grid>
                     </Grid>
                 </div>
             </Modal>
-
-          
+                                                            {/* POP-UP  */}
             {showRelatorio2 && 
                 <Relatorio02 
                     open={showRelatorio2} 

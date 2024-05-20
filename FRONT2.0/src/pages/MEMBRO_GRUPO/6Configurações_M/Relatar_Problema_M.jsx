@@ -9,12 +9,12 @@ import {
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 
 //IMPORT DE COMPONENTES
-import Cabecalho2 from '../../../Components/Cabeçalhos2/Cabeçalho2';
-import InstagramBox from '../../../Components/BOXES/Box_Instagram';
-import EmailBox from '../../../Components/BOXES/Box_Outlook';
-import Box1 from '../../../Components/Tarefas_Membro/Box_Form/Box_form1';
+import Cabecalho2 from '../../../Components/CABEÇALHOS/Cabeçalho2';
+import InstagramBox from '../../../Components/BOX/Box_Instagram';
+import EmailBox from '../../../Components/BOX/Box_Outlook';
+import Box1 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form1';
 import GreenButton from '../../../Components/Btns/btn_green';
-import Menu_Inferior from '../../../Components/Menus_Membro/menu_inferior_M';
+import Menu_Inferior from '../../../Components/MENUS_MEMBROS/menu_inferior_M';
 
 // IMPORT POP-UP 
 import Popup from './Pop_Ups/Relato_Enviado_M';

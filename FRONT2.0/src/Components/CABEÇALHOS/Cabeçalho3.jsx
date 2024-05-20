@@ -1,23 +1,23 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import CloseIcon from '@mui/icons-material/Close';
 
-function Cabecalho2({ icon, text, iconSize, handleBack, avatar, avatarSize }) {
+function Cabecalho3({ icon, text, iconSize, handleBack, avatar, avatarSize }) {
     const size = avatarSize || iconSize || 40; 
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
             {handleBack && (
                 <IconButton 
                     onClick={handleBack}
                     sx={{ 
-                        alignSelf: 'flex-start',
-                        marginLeft: '-5%', 
+                        alignSelf: 'flex-end',
+                        marginRight: '-5%', 
                         mb: 3
                     }}
                 >
-                    <ArrowBackIcon 
+                    <CloseIcon 
                         sx={{ 
                             fontSize: 40, 
                             color: '#07382E' 
@@ -55,7 +55,6 @@ function Cabecalho2({ icon, text, iconSize, handleBack, avatar, avatarSize }) {
                         textAlign: 'CENTER',
                         mb: 5,
                         mt: 4
-
                     }}
                 >
                     {text}
@@ -65,4 +64,4 @@ function Cabecalho2({ icon, text, iconSize, handleBack, avatar, avatarSize }) {
     );
 }
 
-export default Cabecalho2;
+export default Cabecalho3;

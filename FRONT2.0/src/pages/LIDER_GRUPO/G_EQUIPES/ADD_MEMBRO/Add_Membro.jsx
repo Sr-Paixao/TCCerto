@@ -6,7 +6,7 @@ import {
     CssBaseline, 
     Paper, 
     Typography, 
-    IconButton, 
+   
     List, 
     ListItem, 
     ListItemAvatar, 
@@ -15,7 +15,7 @@ import {
     Divider 
 } from '@mui/material';
 import GroupAddIcon from '@mui/icons-material/GroupAdd';
-import Cabecalho2 from '../../../../Components/Cabeçalhos/Cabeçalho2';
+import Cabecalho2 from '../../../../Components/CABEÇALHOS/Cabeçalho2';
 import PopUpAddMembro from './pop-up_add_membro';
 
 export default function Add_Membro() {
@@ -67,7 +67,7 @@ export default function Add_Membro() {
                     handleBack={handleBack}
                     icon={<GroupAddIcon />}
                     text="Adicionar Membro"
-                    iconSize={60}
+                    iconSize={70}
                 />
 
                 {/* Lista de Membros */}

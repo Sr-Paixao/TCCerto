@@ -15,10 +15,10 @@ import Dt_Tarefa from './pages/LIDER_GRUPO/TAREFAS/Detalhes_Tarefa.jsx';
 import Edt_Tarefa from './pages/LIDER_GRUPO/TAREFAS/Editar_Tarefa.jsx';
 import Tarefa_Concluida from './pages/LIDER_GRUPO/TAREFAS/Tarefa_Concluida.jsx';
 
-import Config from './pages/LIDER_GRUPO/CONFIGURAÇÕES/Config.jsx';
-import Relatar_Problema from './pages/LIDER_GRUPO/CONFIGURAÇÕES/Central_Ajuda.jsx';
-import Avalicao from './pages/LIDER_GRUPO/CONFIGURAÇÕES/Avaliacao.jsx';
-import Termo_2 from './pages/LIDER_GRUPO/CONFIGURAÇÕES/Termo_2.jsx';
+import Config from './pages/LIDER_GRUPO/CONFIGURAÇÕES/1_Config.jsx';
+import Relatar_Problema from './pages/LIDER_GRUPO/CONFIGURAÇÕES/2_Central_Ajuda.jsx';
+import Avalicao from './pages/LIDER_GRUPO/CONFIGURAÇÕES/3_Avaliacao.jsx';
+import Termo_2 from './pages/LIDER_GRUPO/CONFIGURAÇÕES/4_Termo_2.jsx';
 
 import Geral_Equipe from './pages/LIDER_GRUPO/G_EQUIPES/Gerenciamento.jsx';
 import Info_Equipe from './pages/LIDER_GRUPO/G_EQUIPES/Info_Equipe.jsx';
@@ -28,12 +28,12 @@ import Desfazer_Equipe from     './pages/LIDER_GRUPO/G_EQUIPES/DESFAZER EQUIPE/D
 
 import Modelo from './pages/LIDER_GRUPO/MODELO/Modelo.jsx';
 
-import Orcamento from './pages/LIDER_GRUPO/Orçamento/Orcamento.jsx';
-import Area_de_atuação from './pages/LIDER_GRUPO/Orçamento/Orçamento2.jsx';
-import Horas_Trabalhadas from './pages/LIDER_GRUPO/Orçamento/Orçamento3.jsx';
-import Software_Pagos2 from './pages/LIDER_GRUPO/Orçamento/Orçamento4.jsx';
-import Orçamento_Total from './pages/LIDER_GRUPO/Orçamento/Orçamento5.jsx';
-import Dt_Orçamento from './pages/LIDER_GRUPO/Orçamento/orçamento6.jsx';
+import Orcamento from './pages/LIDER_GRUPO/Orçamento/1_Central_Orçamento.jsx';
+import Area_de_atuação from './pages/LIDER_GRUPO/Orçamento/2_Area_de_atuação.jsx';
+import Horas_Trabalhadas from './pages/LIDER_GRUPO/Orçamento/3_Horas_Trabalhadas.jsx';
+import Software_Pagos2 from './pages/LIDER_GRUPO/Orçamento/4_Software_Pagos2.jsx';
+import Orçamento_Total from './pages/LIDER_GRUPO/Orçamento/5_Orçamento_Total.jsx';
+import Dt_Orçamento from './pages/LIDER_GRUPO/Orçamento/6_Dt_Orçamento.jsx';
 
 
                                     //MEMBRO GRUPO

@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {  
-    Box, 
-    Container, 
-    CssBaseline, 
-    Paper, 
-    Divider, 
-    IconButton
-} from '@mui/material';
+        Box, Container, 
+        CssBaseline, Paper, Divider
+        } from '@mui/material';
 import Link from '@mui/material/Link';
 import GroupsIcon from '@mui/icons-material/Groups';
-import Menu_Superior2 from '../../../Components/Menus/menu_superior2';
-import Menu_Inferior from '../../../Components/Menus/menu_inferior';
-import Cabecalho1 from '../../../Components/Cabeçalhos/Cabeçalho1';
+import Menu_Superior2 from '../../../Components/MENUS_LIDER/menu_superior2';
+import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
+import Cabecalho1 from '../../../Components/CABEÇALHOS/Cabeçalho1';
 import CustomLink from '../../../Components/LINKS/CustomLink';
 
 export default function Geral_Equipe() {
