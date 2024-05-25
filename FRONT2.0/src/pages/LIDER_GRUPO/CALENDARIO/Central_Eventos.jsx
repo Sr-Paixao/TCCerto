@@ -1,19 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Container, CssBaseline, Paper, Box, Grid } from '@mui/material';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-import ptBR from 'date-fns/locale/pt-BR';
+// IMPORT DE COMPONENTES 
 import Menu_Superior2 from '../../../Components/MENUS_LIDER/menu_superior2';
+import Cabecalho1 from '../../../Components/CABEÇALHOS/Cabeçalho1';
+import Calendario from '../../../Components/COMPONENTES_EVENTOS/CALENDARIO';
+import HojeButton from '../../../Components/COMPONENTES_EVENTOS/Hoje';
+import CardLider from '../../../Components/COMPONENTES_EVENTOS/Card_Evento_L';
 import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
-import Calendar from '../../../Components/COMPONENTES_EVENTOS/CALENDARIO';
-import Cabecalho_1 from '../../../Components/CABEÇALHOS/Cabeçalho1';
-import calendario_a from '../../../img/calendario2.svg';
+import Btn_Novo from   '../../../Components/Btns/Btn_criar';
+// IMPORTE DE ICONE 
+import iconCalendario from '../../../img/calendario2.svg';
 
-export default function Central_Tarefa() {
+export default function Central_Eventos() {
+    const [calendarHeight, setCalendarHeight] = useState(0);
+
+    const handleHeightChange = (height) => {
+        setCalendarHeight(height);
+    };
+
+    const navigate = useNavigate();
+
+    const handleNovaEvento = () => {
+        navigate('/Index');
+    };
+
     return (
-        // <LocalizationProvider dateAdapter={AdapterDateFns} locale={ptBR}>
         <Container component="main" maxWidth="xs">
-        <CssBaseline />
+            <CssBaseline />
             <Paper
                 elevation={2} 
                 sx={{ 
@@ -25,33 +39,49 @@ export default function Central_Tarefa() {
                     boxShadow: "0", 
                     width: '100%', 
                     height: '100%' 
-                    }}
+                }}
             >
-                    <Grid container justifyContent="center" alignItems="center" direction="column">
-                        <Grid item xs={12} sx={{ width: '100%' }}>
-                            <Paper elevation={2} sx={{ p: 2, boxShadow: "0", width: '100%' }}>
+                <Grid container justifyContent="center" alignItems="center">
+                    <Grid item xs={12}>
 
-                                {/* MENU SUPERIOR */}
-                                <Menu_Superior2 />
+                        {/* / MENU SUPERIOR  */}
+                        <Menu_Superior2 />
+                        
+                        {/* CABEÇALHO */}
+                        <Box sx={{ mt: '5%' }}>
+                            <Cabecalho1 
+                                avatar={iconCalendario} 
+                                text='Eventos' 
+                                iconSize="60px"
+                            />
+                        </Box>
 
-                                {/* CABEÇALHO */}
-                                <Cabecalho_1
-                                    avatar={calendario_a}
-                                    text="Orçamento"
-                                    iconSize={70}
-                                />
+                        {/* CALENDÁRIO */}
+                        <Box sx={{ mt: 2, width: '100%' }}>
+                            <Calendario onHeightChange={handleHeightChange} />  
+                        </Box>
 
-                                <Box sx={{ display: 'flex', justifyContent: 'center', mt:-5 }}>
-                                    <Calendar />
-                                </Box>
-                                
-                                {/* MENU INFERIOR */}
-                                <Menu_Inferior />
-                            </Paper>
-                        </Grid>
+                        {/* PROXIMOS EVENTOS */}
+                        <Box sx={{ mt: 2, display: 'flex', justifyContent: 'center' }}>
+                            <HojeButton />
+                        </Box>
+                        
+                        {/* CARDS LIDER */}
+                        <Box sx={{ mt: 2, width: '100%' }}>
+                            <CardLider />
+                        </Box>
+
+                        {/* MENU INFERIOR */}
+                        <Box sx={{ mt: 10 }}>
+                            <Menu_Inferior />
+                        </Box>
+                         {/* BOTÃO CRIAR EVENTO */}
+                         <Btn_Novo 
+                         onClick={handleNovaEvento}
+                          />
                     </Grid>
-                </Paper>
-            </Container>
-        // </LocalizationProvider>
+                </Grid>
+            </Paper>
+        </Container>
     );
 }

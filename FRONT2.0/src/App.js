@@ -35,7 +35,7 @@ import Software_Pagos2 from './pages/LIDER_GRUPO/Orçamento/4_Software_Pagos2.js
 import Orçamento_Total from './pages/LIDER_GRUPO/Orçamento/5_Orçamento_Total.jsx';
 import Dt_Orçamento from './pages/LIDER_GRUPO/Orçamento/6_Dt_Orçamento.jsx';
 
-import Central_Eventos from './pages/LIDER_GRUPO/CALENDARIO/Eventos1.jsx';
+import Central_Eventos from './pages/LIDER_GRUPO/CALENDARIO/Central_Eventos.jsx';
 import Criar_Evento from './pages/LIDER_GRUPO/CALENDARIO/Eventos2.jsx';
 import Eventos3 from './pages/LIDER_GRUPO/CALENDARIO/Eventos3.jsx';
 import Eventos4 from './pages/LIDER_GRUPO/CALENDARIO/Eventos4.jsx';

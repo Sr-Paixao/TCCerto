@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import HomeIcon from '@mui/icons-material/Home';
-import TimelineIcon from '@mui/icons-material/Timeline';
 import GroupIcon from '@mui/icons-material/Group';
-
+import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
 function Menu_Inferior({ value, onChange }) {
     return (
         <BottomNavigation
@@ -30,7 +29,7 @@ function Menu_Inferior({ value, onChange }) {
             <BottomNavigationAction 
                 label="Progresso" 
                 value="progresso" 
-                icon={<TimelineIcon sx={{ fontSize: 35 }} />} 
+                icon={<SchoolRoundedIcon sx={{ fontSize: 35 }} />} 
                 component={Link}
                 to="/progresso"
             />

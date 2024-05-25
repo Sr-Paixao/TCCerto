@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Drawer, List, ListItem, ListItemAvatar, Avatar, ListItemIcon, ListItemText, Divider } from '@mui/material';
-import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
-import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined';
 import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlined';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
@@ -13,7 +11,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import EventAvailableRoundedIcon from '@mui/icons-material/EventAvailableRounded';
 
 import TCCERTOImage from '../../img/logo.svg'; 
-import { Link } from 'react-router-dom'; // Import React Router's Link component
+import { Link } from 'react-router-dom'; 
 
 function MenuLateral({ open, onClose }) {
   const [selectedIndex, setSelectedIndex] = useState(null);
@@ -24,7 +22,7 @@ function MenuLateral({ open, onClose }) {
 
   const menuItems = [
     {
-      icon: selectedIndex === 0 ? <CheckBoxIcon sx={{ color: '#07382E' }} /> : <CheckBoxOutlinedIcon />,
+      icon: selectedIndex === 0 ? <TaskAltOutlinedIcon sx={{ color: '#07382E' }} /> : <TaskAltOutlinedIcon />,
       text: "Tarefas",
       path: "/Central_Tarefas" // Define o caminho para a página de Tarefas
     },

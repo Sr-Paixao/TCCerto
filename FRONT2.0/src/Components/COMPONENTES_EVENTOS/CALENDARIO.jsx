@@ -1,23 +1,62 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Box, Grid, IconButton, Typography } from '@mui/material';
+import { 
+        format, addMonths, subMonths, startOfMonth, endOfMonth, startOfWeek, 
+        endOfWeek, addDays, isSameMonth, isSameDay, startOfToday 
+      } from 'date-fns';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule';
-import { format, addMonths, subMonths, startOfMonth, endOfMonth, startOfWeek, endOfWeek, addDays, isSameMonth, isSameDay, startOfToday } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 
-const Calendar = ({ events = [], tasks = [] }) => {
+
+
+const Calendar = ({ events = [], tasks = [], onHeightChange }) => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [showWeek, setShowWeek] = useState(false);
+  const calendarRef = useRef(null);
+
+  useEffect(() => {
+    if (calendarRef.current && onHeightChange) {
+      onHeightChange(calendarRef.current.clientHeight);
+    }
+  }, [showWeek, currentDate]);
 
   const renderHeader = () => {
     return (
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', bgcolor: '#174728', color: '#fff', p: 1 }}>
+
+      <Box 
+        sx={{ 
+          display: 'flex', 
+          justifyContent: 'space-between', 
+          alignItems: 'center', 
+          bgcolor: '#174728', 
+          color: '#fff', 
+          p: 1 
+          }}
+      >
         <IconButton onClick={prevMonth}>
           <ArrowBackIosIcon sx={{ color: '#fff' }} />
         </IconButton>
-        <Typography variant="h6" sx={{ display: 'flex', alignItems: 'center' }}>
-          <span style={{ fontWeight: 'bold' }}>{format(currentDate, 'MMMM', { locale: ptBR }).toUpperCase()}</span>,<span style={{ marginLeft: '5px', fontWeight: 'normal' }}>{format(currentDate, 'yyyy')}</span>
+
+        <Typography 
+          variant="h6" 
+          sx={{ 
+            display: 'flex', 
+            alignItems: 'center' 
+            }}
+        >
+          <span 
+          style={{ fontWeight: 'bold' }}>
+            {format(currentDate, 'MMMM', 
+            { locale: ptBR }).toUpperCase()}
+            </span>,
+            <span 
+            style={{ 
+              marginLeft: '5px', 
+              fontWeight: 'normal' }}>
+                {format(currentDate, 'yyyy')}
+            </span>
         </Typography>
         <IconButton onClick={nextMonth}>
           <ArrowForwardIosIcon sx={{ color: '#fff' }} />
@@ -29,10 +68,23 @@ const Calendar = ({ events = [], tasks = [] }) => {
   const renderDays = () => {
     const days = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'];
     return (
-      <Grid container sx={{ textAlign: 'center', bgcolor: '#fff', p: 1 }}>
+      <Grid 
+      container 
+      sx={{
+            textAlign: 'center', 
+            bgcolor: '#fff', p: 1 
+          }}
+      >
         {days.map((day, index) => (
           <Grid item xs key={index}>
-            <Typography variant="body1" sx={{ fontWeight: 'bold' }}>{day}</Typography>
+
+            <Typography 
+              variant="body1" 
+              sx={{ fontWeight: 'bold' }}
+            >
+                {day}
+            </Typography>
+
           </Grid>
         ))}
       </Grid>
@@ -58,7 +110,15 @@ const Calendar = ({ events = [], tasks = [] }) => {
         const isTask = tasks.some(task => isSameDay(task.date, cloneDay));
 
         days.push(
-          <Grid item xs key={day} sx={{ textAlign: 'center', p: 1, bgcolor: isSameMonth(day, monthStart) ? '#fff' : '#f0f0f0' }}>
+          <Grid 
+            item xs key={day} 
+            sx={{
+                textAlign: 'center', 
+                p: 1, 
+                bgcolor: isSameMonth(day, monthStart) ? '#fff' 
+                : '#f0f0f0' 
+                }}
+            >
             <Box
               sx={{
                 width: 24,
@@ -67,8 +127,12 @@ const Calendar = ({ events = [], tasks = [] }) => {
                 alignItems: 'center',
                 justifyContent: 'center',
                 borderRadius: '50%',
-                bgcolor: isSameDay(day, new Date()) ? '#07382E' : isEvent ? '#105F4F' : isTask ? '#1D8570' : 'inherit',
-                color: isSameDay(day, new Date()) || isEvent || isTask ? '#fff' : isSameMonth(day, monthStart) ? 'inherit' : '#c0c0c0',
+                bgcolor: isSameDay(day, new Date()) ? '#07382E' 
+                : isEvent ? '#105F4F' 
+                : isTask ? '#1D8570' 
+                : 'inherit',
+                color: isSameDay(day, new Date()) || isEvent || isTask ? '#fff' 
+                : isSameMonth(day, monthStart) ? 'inherit' : '#c0c0c0',
                 fontWeight: isSameDay(day, new Date()) ? 'bold' : 'normal'
               }}
             >
@@ -81,7 +145,10 @@ const Calendar = ({ events = [], tasks = [] }) => {
         day = addDays(day, 1);
       }
       rows.push(
-        <Grid container key={day} sx={{ textAlign: 'center' }}>
+        <Grid 
+          container key={day} 
+          sx={{ textAlign: 'center' }}
+        >
           {days}
         </Grid>
       );
@@ -103,35 +170,37 @@ const Calendar = ({ events = [], tasks = [] }) => {
   };
 
   return (
-    <Box sx={{ width: '500px', borderRadius: '10px', overflow: 'hidden', boxShadow: '0px 2px 10px rgba(0,0,0,0.1)' }}>
+    <Box ref={calendarRef} 
+      sx={{ 
+        width: '100%',
+        borderRadius: '10px', 
+        overflow: 'hidden', 
+        boxShadow: '0px 2px 10px rgba(0,0,0,0.1)' 
+        }}
+    >
       {renderHeader()}
       <Box sx={{ p: 1 }}>
         {renderDays()}
         {renderCells()}
       </Box>
-      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', bgcolor: '#fff', p: 1 }}>
+
+      <Box 
+        sx={{ 
+          display: 'flex', 
+          justifyContent: 'center', 
+          bgcolor: '#fff',
+          p: 1 
+          }}
+      >
         <IconButton onClick={toggleView}>
-          <HorizontalRuleIcon sx={{ color: '#07382E' }} />
+          <HorizontalRuleIcon 
+            sx={{ color: '#07382E' }} 
+          />
         </IconButton>
       </Box>
+
     </Box>
   );
 };
 
-const App = () => {
-  const events = [
-    { date: new Date(2024, 4, 15) }  // Evento em 15 de maio de 2024
-  ];
-
-  const tasks = [
-    { date: new Date(2024, 4, 20) }  // Tarefa em 20 de maio de 2024
-  ];
-
-  return (
-    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      <Calendar events={events} tasks={tasks} />
-    </Box>
-  );
-};
-
-export default App;
+export default Calendar;
