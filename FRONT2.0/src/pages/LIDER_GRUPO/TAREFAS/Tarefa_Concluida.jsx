@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
-        Container, CssBaseline, Paper, Typography, IconButton, Grid
+        Container, CssBaseline, Paper, Typography, IconButton, Grid, Box
         } from '@mui/material';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import EditNoteOutlinedIcon from '@mui/icons-material/EditNoteOutlined';
@@ -11,6 +11,7 @@ import Box2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
 import Cabecalho2 from '../../../Components/CABEÇALHOS/Cabeçalho2';
 import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
 import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined';
+import GreenButton from '../../../Components/Btns/btn_green';
 
 export default function Tarefa_Concluida() {
   const navigate = useNavigate();
@@ -18,6 +19,10 @@ export default function Tarefa_Concluida() {
   const handleBack = () => {
     navigate('/Central_Tarefas');
   };
+
+  const handleRedefinir = () => {
+    navigate('/Edt_Tarefa');
+};
 
   return (
     <Container component="main" maxWidth="xs">
@@ -99,7 +104,7 @@ export default function Tarefa_Concluida() {
 
                                       {/* CAMPO DE LEITURA DESCRIÇÃO */}
         <Box2
-        SX={{mt: '5%'}}>
+        SX={{mt: '5%' }}>
           <Grid 
             container 
             alignItems="center" 
@@ -142,6 +147,14 @@ export default function Tarefa_Concluida() {
                 Descrição da tarefa
           </Typography>
         </Box2>
+
+        
+        <GreenButton
+        onClick={handleRedefinir}
+        >
+          Reabrir Tarefa
+        </GreenButton>
+
 
         
 

@@ -36,7 +36,7 @@ function MenuLateral({ open, onClose }) {
     {
       icon: selectedIndex === 2 ? <MonetizationOnIcon sx={{ color: '#07382E' }} /> : <MonetizationOnOutlinedIcon />,
       text: "Orçamento",
-      path: "/orcamento" // Define o caminho para a página de Orçamento
+      path: "/orcamento_M" // Define o caminho para a página de Orçamento
     },
     {
       icon: selectedIndex === 3 ? <DescriptionIcon sx={{ color: '#07382E' }} /> : <DescriptionOutlinedIcon />,

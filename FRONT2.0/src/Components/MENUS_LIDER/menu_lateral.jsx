@@ -31,7 +31,7 @@ function MenuLateral({ open, onClose }) {
     {
       icon: selectedIndex === 1 ? <EventAvailableRoundedIcon sx={{ color: '#07382E' }} /> : <CalendarTodayOutlinedIcon />,
       text: "Agenda",
-      path: "/agenda" // Define o caminho para a página de Agenda
+      path: "/Eventos" // Define o caminho para a página de Agenda
     },
     {
       icon: selectedIndex === 2 ? <MonetizationOnIcon sx={{ color: '#07382E' }} /> : <MonetizationOnOutlinedIcon />,

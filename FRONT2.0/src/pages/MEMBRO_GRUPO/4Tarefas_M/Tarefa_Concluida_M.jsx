@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { 
-        Container, CssBaseline, Paper, 
-        Typography, Grid, IconButton 
-        } from '@mui/material';
+import { Container, CssBaseline, Paper, Typography, Grid, IconButton } from '@mui/material';
 
 //IMPORTS ICONES
 import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined';

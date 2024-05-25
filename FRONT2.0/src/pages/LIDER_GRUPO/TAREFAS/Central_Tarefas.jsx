@@ -5,7 +5,7 @@ import Cabecalho1 from '../../../Components/CABEÇALHOS/Cabeçalho1';
 import Menu_Superior2 from '../../../Components/MENUS_LIDER/menu_superior2';
 import Menu_Inferior from '../../../Components//MENUS_LIDER/menu_inferior';
 import Card_Tarefa from '../../../Components/COMPONENTES_TAREFAS/CARDS_LIDER/Card_Tarefas';
-import Card_Tarefa_Completa from '../../../Components/COMPONENTES_TAREFAS/CARDS_MEMBROS/Card_Concluida_M';
+import Card_Tarefa_Completa from '../../../Components/COMPONENTES_TAREFAS/CARDS_LIDER/Card_Concluida';
 import Btn_Criar_Tarefa from '../../../Components/Btns/btn_criar_tarefa';
 
 export default function Central_Tarefa() {

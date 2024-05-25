@@ -2,7 +2,9 @@ import React from 'react';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 
-function Cabecalho_1({ icon, text, iconSize }) {
+function Cabecalho_1({ icon, text, iconSize, avatar, avatarSize }) {
+  const size = avatarSize || iconSize || 'inherit';
+
   return (
     <Grid 
       container
@@ -16,12 +18,24 @@ function Cabecalho_1({ icon, text, iconSize }) {
       }}
     >
       <Grid item>
-        {React.cloneElement(icon, { 
-          style: { 
-            fontSize: iconSize || 'inherit', 
-            color: '#07382E' 
+        {avatar ? (
+          <img 
+            src={avatar} 
+            alt="avatar" 
+            style={{ 
+              width: size, 
+              height: size, 
+              objectFit: 'contain' 
+            }} 
+          />
+        ) : (
+          React.cloneElement(icon, { 
+            style: { 
+              fontSize: iconSize || 'inherit', 
+              color: '#07382E' 
             } 
-          })} 
+          })
+        )}
       </Grid>
       <Grid item>
         <Typography

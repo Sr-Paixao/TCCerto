@@ -35,6 +35,11 @@ import Software_Pagos2 from './pages/LIDER_GRUPO/Orçamento/4_Software_Pagos2.js
 import Orçamento_Total from './pages/LIDER_GRUPO/Orçamento/5_Orçamento_Total.jsx';
 import Dt_Orçamento from './pages/LIDER_GRUPO/Orçamento/6_Dt_Orçamento.jsx';
 
+import Central_Eventos from './pages/LIDER_GRUPO/CALENDARIO/Eventos1.jsx';
+import Criar_Evento from './pages/LIDER_GRUPO/CALENDARIO/Eventos2.jsx';
+import Eventos3 from './pages/LIDER_GRUPO/CALENDARIO/Eventos3.jsx';
+import Eventos4 from './pages/LIDER_GRUPO/CALENDARIO/Eventos4.jsx';
+
 
                                     //MEMBRO GRUPO
 import Login from './pages/MEMBRO_GRUPO/1Login/Login.jsx';
@@ -53,6 +58,7 @@ import Relatar_Problema_M from './pages/MEMBRO_GRUPO/6Configurações_M/Relatar_
 import Termo_2_M from './pages/MEMBRO_GRUPO/6Configurações_M/Termo_2_M.jsx';
 import Avaliacao_M from './pages/MEMBRO_GRUPO/6Configurações_M/Avaliacao_M.jsx';
 
+import Orcamento_M from './pages/MEMBRO_GRUPO/8Orçamento_M/Orçamento_M.jsx';
 
 import Info_Equipe_M from './pages/MEMBRO_GRUPO/7Equipe_M/Info_Equipe_M.jsx';
 
@@ -105,6 +111,13 @@ function App() {
                     <Route path='/Orçamento_Total' element={<Orçamento_Total/>}/>
                     <Route path='/Dt_Orçamento' element={<Dt_Orçamento/>}/>
 
+                    <Route path='/Eventos' element={<Central_Eventos/>}/>
+                    <Route path='/Criar_Evento' element={<Criar_Evento/>}/>
+                    <Route path='/Eventos3' element={<Eventos3/>}/>
+                    <Route path='/Eventos4' element={<Eventos4/>}/>
+
+
+
                                             {/* //MEMBRO GRUPO  */}
                     <Route path="/Login" element={<Login />} />
                     <Route path="/Cadastro" element={<Cadastro />} />
@@ -121,6 +134,8 @@ function App() {
                     <Route path="/Relatar_Problema_M" element={<Relatar_Problema_M />} />
                     <Route path="/Termo_2_M" element={<Termo_2_M />} />
                     <Route path="/Avaliacao_M" element={<Avaliacao_M />} />
+
+                    <Route path="/Orcamento_M" element={<Orcamento_M />} />
 
                     <Route path="/Info_Equipe_M" element={<Info_Equipe_M />} />
 

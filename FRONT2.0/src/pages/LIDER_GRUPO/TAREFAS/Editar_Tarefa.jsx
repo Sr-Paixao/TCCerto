@@ -8,7 +8,7 @@ import EditNoteOutlinedIcon from '@mui/icons-material/EditNoteOutlined';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import TaskList from '../../../Components/COMPONENTES_TAREFAS/TaskLists/TaskList';
 import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
-import Cabecalho1 from '../../../Components/CABEÇALHOS/Cabeçalho1';
+import Cabecalho2 from '../../../Components/CABEÇALHOS/Cabeçalho2';
 import GreenButton from '../../../Components/Btns/btn_green';
 import RedButton from '../../../Components/Btns/btn_red';
 import Box1 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form1';
@@ -64,7 +64,7 @@ export default function Edt_Tarefa() {
                     }}
             >
                 {/* CABEÇALHO */}
-                <Cabecalho1 
+                <Cabecalho2 
                     icon={<PublishedWithChangesOutlinedIcon />} 
                     text='Editar Tarefa' 
                     iconSize="70px"
