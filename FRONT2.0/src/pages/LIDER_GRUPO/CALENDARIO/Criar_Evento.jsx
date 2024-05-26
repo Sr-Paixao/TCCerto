@@ -16,7 +16,6 @@ import GreenButton from '../../../Components/Btns/btn_green';
 import Box1 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form1';
 import Box2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
 import TaskList from '../../../Components/COMPONENTES_EVENTOS/TaskList';
-import TextField1 from '../../../Components/TextField';
 
 export default function CriarEvento() {
     const [titulo, setTitulo] = useState('');
@@ -74,7 +73,6 @@ export default function CriarEvento() {
                     text="Novo Evento"
                     iconSize={70}
                 />
-                
 
                                                             {/* INICIO FORMULARIO */}
                 <form onSubmit={handleSubmit}>
@@ -92,7 +90,8 @@ export default function CriarEvento() {
                                         sx={{ 
                                             color: '#07382E', 
                                             marginLeft: '60%', 
-                                            alignItems: 'center' 
+                                            alignItems: 'center',
+                                            fontSize: '100%' 
                                             }} 
                                     />
                                 </IconButton>
@@ -105,7 +104,8 @@ export default function CriarEvento() {
                                     sx={{ 
                                         marginTop: '10%', 
                                         textAlign: 'center', 
-                                        fontWeight: 'bold' 
+                                        fontWeight: 'bold',
+                                        fontSize: '100%' 
                                         }}
                                 >
                                         Título:
@@ -113,12 +113,13 @@ export default function CriarEvento() {
                             </Grid>
 
                             <Grid item>
-                                <TextField1 
+                                <TextField 
                                     fullWidth 
                                     value={titulo}
                                     onChange={(event) =>
                                     setTitulo(event.target.value)} 
                                     variant="standard" 
+                                    sx={{ width: '100%' }} 
                                 />
                             </Grid>
 
@@ -137,7 +138,8 @@ export default function CriarEvento() {
                                     <CalendarMonthIcon 
                                         sx={{ 
                                             color: '#07382E',
-                                            marginLeft: '60%' 
+                                            marginLeft: '60%',
+                                            fontSize: '120%' 
                                             }} 
                                     />
                                 </IconButton>
@@ -150,7 +152,8 @@ export default function CriarEvento() {
                                     sx={{ 
                                         marginTop: '5%', 
                                         textAlign: 'center', 
-                                        fontWeight: 'bold' 
+                                        fontWeight: 'bold',
+                                        fontSize: '100%'  
                                         }}
                                 >
                                         Data:
@@ -158,13 +161,14 @@ export default function CriarEvento() {
                             </Grid>
 
                             <Grid item>
-                                <TextField1 
+                                <TextField 
                                     fullWidth 
                                     type="date" 
                                     value={data} 
                                     onChange={(event) => 
                                     setData(event.target.value)} 
                                     variant="standard" 
+                                    sx={{ width: '11vh' }}
                                 />
                             </Grid>
                         </Grid>
@@ -182,7 +186,8 @@ export default function CriarEvento() {
                                     <AlarmIcon 
                                         sx={{ 
                                             color: '#07382E', 
-                                            marginLeft: '60%' 
+                                            marginLeft: '60%',
+                                            fontSize: '130%' 
                                             }} 
                                     />
                                 </IconButton>
@@ -203,13 +208,14 @@ export default function CriarEvento() {
                             </Grid>
 
                             <Grid item>
-                                <TextField1 
+                                <TextField 
                                     fullWidth 
                                     type="time" 
                                     value={hora} 
                                     onChange={(event) => 
                                     setHora(event.target.value)} 
                                     variant="standard" 
+                                    sx={{ width: '11vh' }}
                                 />
                             </Grid>
                         </Grid>
@@ -237,51 +243,44 @@ export default function CriarEvento() {
                                 <Typography 
                                     variant="subtitle1" 
                                     gutterBottom 
-                                    sx={{ fontWeight: 'bold' }}
+                                    sx={{   fontWeight: 'bold',
+                                            fontSize: '120%' 
+                                        }}
                                 >
                                     Descrição:
                                 </Typography>
                                 
                             </Grid>
-
-                            <Grid item>
-                                <TextField1 
+                                <TextField 
                                 fullWidth 
                                 value={descricao} 
                                 onChange={(event) => 
                                 setDescricao1(event.target.value)} 
                                 variant="standard" 
                                 />
-                            </Grid>
+                            
                         </Grid>
                     </Box2>
 
                                                             {/* BOTÃO DE CRIAR EVENTO  */}
-                    <Grid 
-                        container 
-                        justifyContent="center" 
-                        alignItems="center" 
-                        spacing={2}
-                    >
-                        <Grid item xs={6}>
                             <GreenButton
                             type="submit"
                             onClick={handleOpenPopup}
                             >
                                 Criar Evento
                             </GreenButton>
-                        </Grid>
-                    </Grid>
                 </form>
 
-                                                            {/* ABERTURA DO FORMULARIO */}
+                                                            {/* MENU INFERIOR */}
+                <Menu_Inferior/>
+
+                                                            {/* POP-UP DE CONFIRMAÇÃO */}
                 <Popup 
                     open={openPopup} 
                     handleClose={handleClosePopup} 
                 />
 
-                                                            {/* MENU INFERIOR */}
-                <Menu_Inferior/>
+
             </Paper>
 
         </Container>

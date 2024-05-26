@@ -22,7 +22,7 @@ export default function Central_Eventos() {
     const navigate = useNavigate();
 
     const handleNovaEvento = () => {
-        navigate('/Index');
+        navigate('/Criar_Evento');
     };
 
     return (

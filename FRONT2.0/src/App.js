@@ -36,9 +36,9 @@ import Orçamento_Total from './pages/LIDER_GRUPO/Orçamento/5_Orçamento_Total.
 import Dt_Orçamento from './pages/LIDER_GRUPO/Orçamento/6_Dt_Orçamento.jsx';
 
 import Central_Eventos from './pages/LIDER_GRUPO/CALENDARIO/Central_Eventos.jsx';
-import Criar_Evento from './pages/LIDER_GRUPO/CALENDARIO/Eventos2.jsx';
-import Eventos3 from './pages/LIDER_GRUPO/CALENDARIO/Eventos3.jsx';
-import Eventos4 from './pages/LIDER_GRUPO/CALENDARIO/Eventos4.jsx';
+import Criar_Evento from './pages/LIDER_GRUPO/CALENDARIO/Criar_Evento.jsx';
+import Dt_Evento from './pages/LIDER_GRUPO/CALENDARIO/Dt_Evento.jsx';
+import Edt_Evento from './pages/LIDER_GRUPO/CALENDARIO/Edt_Evento.jsx';
 
 
                                     //MEMBRO GRUPO
@@ -113,8 +113,8 @@ function App() {
 
                     <Route path='/Eventos' element={<Central_Eventos/>}/>
                     <Route path='/Criar_Evento' element={<Criar_Evento/>}/>
-                    <Route path='/Eventos3' element={<Eventos3/>}/>
-                    <Route path='/Eventos4' element={<Eventos4/>}/>
+                    <Route path='/Dt_Evento' element={<Dt_Evento/>}/>
+                    <Route path='/Edt_Evento' element={<Edt_Evento/>}/>
 
 
 
