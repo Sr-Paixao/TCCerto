@@ -9,7 +9,7 @@ const GreenButton = ({ onClick, children, href, disabled }) => {
             variant="outlined"
             sx={{
                 mt: 2,
-                mb: 2,
+                mb: 5,
                 maxWidth: '600px',
                 fontSize: '100%',
                 backgroundColor: disabled ? '#f0f0f0' : '#FFFFFF',

@@ -50,7 +50,7 @@ const Evento_Excluido = ({ open, handleClose }) => {
             fontWeight: 'bold'
           }}
         >
-          Evento Excluída
+          Evento Excluído
         </Typography>
 
         <Typography

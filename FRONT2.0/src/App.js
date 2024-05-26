@@ -38,7 +38,7 @@ import Dt_Orçamento from './pages/LIDER_GRUPO/Orçamento/6_Dt_Orçamento.jsx';
 import Central_Eventos from './pages/LIDER_GRUPO/CALENDARIO/Central_Eventos.jsx';
 import Criar_Evento from './pages/LIDER_GRUPO/CALENDARIO/Criar_Evento.jsx';
 import Dt_Evento from './pages/LIDER_GRUPO/CALENDARIO/Dt_Evento.jsx';
-import Edt_Evento from './pages/LIDER_GRUPO/CALENDARIO/Edt_Evento.jsx';
+import Edt_Eventos from './pages/LIDER_GRUPO/CALENDARIO/Edt_Eventos.jsx';
 
 
                                     //MEMBRO GRUPO
@@ -114,7 +114,7 @@ function App() {
                     <Route path='/Eventos' element={<Central_Eventos/>}/>
                     <Route path='/Criar_Evento' element={<Criar_Evento/>}/>
                     <Route path='/Dt_Evento' element={<Dt_Evento/>}/>
-                    <Route path='/Edt_Evento' element={<Edt_Evento/>}/>
+                    <Route path='/Edt_Eventos' element={<Edt_Eventos/>}/>
 
 
 

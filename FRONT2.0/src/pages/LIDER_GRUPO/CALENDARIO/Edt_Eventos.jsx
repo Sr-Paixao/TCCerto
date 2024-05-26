@@ -17,7 +17,7 @@ import Box1 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form1';
 import Box2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
 import TaskList from '../../../Components/COMPONENTES_EVENTOS/TaskList';
 
-export default function CriarEvento() {
+export default function EditarEvento() {
     const [titulo, setTitulo] = useState('');
     const [data, setData] = useState('');
     const [hora, setHora] = useState('');
@@ -72,7 +72,7 @@ export default function CriarEvento() {
                 <Cabecalho2
                     handleBack={handleBack}
                     icon={<EditCalendarIcon />}
-                    text="Novo Evento"
+                    text="Editar Evento"
                     iconSize={70}
                 />
 
@@ -269,7 +269,7 @@ export default function CriarEvento() {
                             type="submit"
                             onClick={handleOpenPopup}
                             >
-                                Criar Evento
+                                Salvar Alterações
                             </GreenButton>
                 </form>
 
