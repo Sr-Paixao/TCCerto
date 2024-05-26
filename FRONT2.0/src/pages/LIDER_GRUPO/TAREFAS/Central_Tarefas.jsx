@@ -1,37 +1,41 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Container, CssBaseline, Paper, Typography, Box, Grid } from '@mui/material';
 import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined';
 import Cabecalho1 from '../../../Components/CABEÇALHOS/Cabeçalho1';
 import Menu_Superior2 from '../../../Components/MENUS_LIDER/menu_superior2';
-import Menu_Inferior from '../../../Components//MENUS_LIDER/menu_inferior';
+import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
 import Card_Tarefa from '../../../Components/COMPONENTES_TAREFAS/CARDS_LIDER/Card_Tarefas';
 import Card_Tarefa_Completa from '../../../Components/COMPONENTES_TAREFAS/CARDS_LIDER/Card_Concluida';
-import Btn_Criar_Tarefa from '../../../Components/Btns/btn_criar_tarefa';
+import Btn_Criar from '../../../Components/Btns/Btn_criar';
 
 export default function Central_Tarefa() {
+    const navigate = useNavigate();
+
+    const handleNovaTarefa = () => {
+        navigate('/Criar_Tarefa');
+    };
+
     return (
         <Container component="main" maxWidth="xs">
             <CssBaseline />
             <Grid container justifyContent="center" alignItems="center">
                 <Grid item xs={12}>
                     <Paper elevation={2} sx={{ p: 2, boxShadow: "0" }}>
-                                            {/* MENU SUPERIOR */}
+                        {/* MENU SUPERIOR */}
                         <Menu_Superior2 />
                         
-                                            {/* CABEÇALHO */}
-                        <Box
-                        sx={{mt: '5%'}}
-                        >
-                        <Cabecalho1 
-                            icon={<TaskAltOutlinedIcon />} 
-                            text='Tarefas' 
-                            iconSize="70px"
-                        />
+                        {/* CABEÇALHO */}
+                        <Box sx={{mt: '5%'}}>
+                            <Cabecalho1 
+                                icon={<TaskAltOutlinedIcon />} 
+                                text='Tarefas' 
+                                iconSize="70px"
+                            />
                         </Box>
-                                            {/* AQUI VIRAM OS CARDS DE TAREFAS */}
-                        <Box
-                        sx={{mt: '5%'}}
-                        >
+                        
+                        {/* AQUI VIRAM OS CARDS DE TAREFAS */}
+                        <Box sx={{mt: '5%'}}>
                             <Card_Tarefa 
                                 nomeTarefa="Nome da Tarefa"
                                 diasRestantes={7}
@@ -43,7 +47,7 @@ export default function Central_Tarefa() {
                             />
                         </Box>
                         
-                                            {/* Tarefas Concluidas */}
+                        {/* Tarefas Concluidas */}
                         <Typography
                             component="h2" 
                             variant="h6" 
@@ -55,7 +59,7 @@ export default function Central_Tarefa() {
                             Tarefas Concluidas
                         </Typography>
                         
-                                            {/* AQUI VIRAM OS CARDS DE TAREFAS CONCLUIDAS */}
+                        {/* AQUI VIRAM OS CARDS DE TAREFAS CONCLUIDAS */}
                         <Box>
                             <Card_Tarefa_Completa 
                                 nomeTarefa="Nome da Tarefa"
@@ -68,16 +72,11 @@ export default function Central_Tarefa() {
                             />
                         </Box>
                         
-                                            {/* Botão Criar Tarefa */}
-                        <Box sx={{ position: 'fixed', zIndex: 1000 }}>
-                            <Btn_Criar_Tarefa
-                            onClick={'Criar_Tarefa'}
-                            />
-                        </Box>
-                        
-                                            {/* MENU INFERIOR */}
+                        {/* Botão Criar Tarefa */}
+                        <Btn_Criar onClick={handleNovaTarefa} />
+
+                        {/* MENU INFERIOR */}
                         <Menu_Inferior />
-                        
                     </Paper>
                 </Grid>
             </Grid>

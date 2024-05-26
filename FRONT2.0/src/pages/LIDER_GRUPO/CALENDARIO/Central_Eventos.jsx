@@ -76,9 +76,9 @@ export default function Central_Eventos() {
                             <Menu_Inferior />
                         </Box>
                          {/* BOTÃO CRIAR EVENTO */}
-                         <Btn_Novo 
-                         onClick={handleNovaEvento}
-                          />
+                            <Btn_Novo 
+                            onClick={handleNovaEvento}
+                            />
                     </Grid>
                 </Grid>
             </Paper>

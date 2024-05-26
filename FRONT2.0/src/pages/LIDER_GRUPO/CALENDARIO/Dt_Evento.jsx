@@ -36,11 +36,34 @@ export default function DtEventos() {
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
-      <Paper elevation={2} sx={{ mt: 5, p: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', boxShadow: "0" }}>
+      <Paper 
+        elevation={2} 
+        sx={{ 
+          mt: 5, 
+          p: 2, 
+          display: 'flex', 
+          flexDirection: 'column', 
+          alignItems: 'center', 
+          boxShadow: "0" 
+          }}
+      >
         
-        <Cabecalho2 handleBack={() => navigate('/Eventos')} icon={<EventAvailableIcon />} text="Nome Evento" iconSize={'70px'} />
+        <Cabecalho2 h
+          andleBack={() => navigate('/Eventos')} 
+          icon={<EventAvailableIcon />}
+          text="Nome Evento" 
+          iconSize={'70px'} 
+        />
 
-        <Grid container spacing={2} justifyContent="center" sx={{ marginTop: '2%', justifyContent: 'center' }}>
+        <Grid 
+          container 
+          spacing={2} 
+          justifyContent="center" 
+          sx={{ 
+            marginTop: '2%', 
+            justifyContent: 'center' 
+            }}
+        >
           <Grid item xs={6}>
             <DateTimeDisplay
               icon={<CalendarMonthIcon />}
@@ -48,6 +71,7 @@ export default function DtEventos() {
               value="15/07/2024"
             />
           </Grid>
+
           <Grid item xs={6}>
             <DateTimeDisplay
               icon={<AlarmIcon />}
@@ -58,23 +82,42 @@ export default function DtEventos() {
         </Grid>
 
         <Box1>
-          <TaskListItem users={assignedUsers} open={open} handleClick={handleClick} />
+          <TaskListItem 
+          users={assignedUsers} 
+          open={open} 
+          handleClick={handleClick} 
+          />
         </Box1>
 
         <Box2>
           <DescriptionField description={descricao} />
         </Box2>
 
-        <Grid container spacing={2} sx={{ marginTop: '6%' }}>
+        <Grid 
+        container 
+        spacing={2} 
+        sx={{ marginTop: '6%' }}
+        >
           <Grid item xs={6}>
-            <GreenButton onClick={handleEditClick}>EDITAR</GreenButton>
+            <GreenButton 
+            onClick={handleEditClick}
+            >
+              EDITAR
+            </GreenButton>
           </Grid>
           <Grid item xs={6}>
-            <RedButton onClick={handleOpenPopup}>EXCLUIR</RedButton>
+            <RedButton 
+            onClick={handleOpenPopup}
+            >
+              EXCLUIR
+            </RedButton>
           </Grid>
         </Grid>
 
-        <Popup open={openPopup} handleClose={handleClosePopup} />
+        <Popup 
+        open={openPopup} 
+        handleClose={handleClosePopup} 
+        />
         <Menu_Inferior />
       </Paper>
     </Container>
