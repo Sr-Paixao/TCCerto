@@ -5,7 +5,10 @@ import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import HomeIcon from '@mui/icons-material/Home';
 import GroupIcon from '@mui/icons-material/Group';
 import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
+
 function Menu_Inferior({ value, onChange }) {
+    const activeColor = '#07382E';
+
     return (
         <BottomNavigation
             value={value}
@@ -16,7 +19,7 @@ function Menu_Inferior({ value, onChange }) {
                 bottom: 0, 
                 left: 0, 
                 right: 0, 
-                backgroundColor:'#E3FAF4' 
+                backgroundColor: '#E3FAF4' 
             }}
         >
             <BottomNavigationAction 
@@ -25,13 +28,25 @@ function Menu_Inferior({ value, onChange }) {
                 icon={<HomeIcon sx={{ fontSize: 35 }} />}
                 component={Link}
                 to="/Index"
+                sx={{ 
+                    color: value === 'home' ? activeColor : 'inherit',
+                    '&.Mui-selected': {
+                        color: activeColor,
+                    }
+                }}
             />
             <BottomNavigationAction 
                 label="Progresso" 
                 value="progresso" 
                 icon={<SchoolRoundedIcon sx={{ fontSize: 35 }} />} 
                 component={Link}
-                to="/progresso"
+                to="/Central_Progresso"
+                sx={{ 
+                    color: value === 'progresso' ? activeColor : 'inherit',
+                    '&.Mui-selected': {
+                        color: activeColor,
+                    }
+                }}
             />
             <BottomNavigationAction 
                 label="Equipe" 
@@ -39,6 +54,12 @@ function Menu_Inferior({ value, onChange }) {
                 icon={<GroupIcon sx={{ fontSize: 35 }} />} 
                 component={Link}
                 to="/Geral_Equipe"
+                sx={{ 
+                    color: value === 'equipe' ? activeColor : 'inherit',
+                    '&.Mui-selected': {
+                        color: activeColor,
+                    }
+                }}
             />
         </BottomNavigation>
     );

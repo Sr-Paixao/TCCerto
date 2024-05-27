@@ -40,6 +40,8 @@ import Criar_Evento from './pages/LIDER_GRUPO/CALENDARIO/Criar_Evento.jsx';
 import Dt_Evento from './pages/LIDER_GRUPO/CALENDARIO/Dt_Evento.jsx';
 import Edt_Eventos from './pages/LIDER_GRUPO/CALENDARIO/Edt_Eventos.jsx';
 
+import Central_Progresso from './pages/LIDER_GRUPO/PROGESSO/Central_Progesso.jsx'
+
 
                                     //MEMBRO GRUPO
 import Login from './pages/MEMBRO_GRUPO/1Login/Login.jsx';
@@ -115,6 +117,8 @@ function App() {
                     <Route path='/Criar_Evento' element={<Criar_Evento/>}/>
                     <Route path='/Dt_Evento' element={<Dt_Evento/>}/>
                     <Route path='/Edt_Eventos' element={<Edt_Eventos/>}/>
+
+                    <Route path='/Central_Progresso' element={<Central_Progresso/>}/>
 
 
 
