@@ -12,6 +12,7 @@ import Cabecalho1 from '../../../Components/CABEÇALHOS/Cabeçalho1';
 import CustomLink from '../../../Components/LINKS/CustomLink';
 
 export default function Geral_Equipe() {
+    const [value, setValue] = React.useState('equipe');
 
     const navigate = useNavigate();
 
@@ -20,6 +21,13 @@ export default function Geral_Equipe() {
         navigate('/');
     };
 
+
+        
+
+        const handleChange = (event, newValue) => {
+            setValue(newValue);
+        };
+        
 
     return (
         <Container 
@@ -76,7 +84,7 @@ export default function Geral_Equipe() {
                             <CustomLink href="/Desfazer_Equipe" text="Desfazer Equipe" />
                     </Box>
                                             {/*MENU INFERIOR */}
-                    <Menu_Inferior />
+                    <Menu_Inferior value={value} onChange={handleChange} />
                     
                 </Paper>
         </Container>

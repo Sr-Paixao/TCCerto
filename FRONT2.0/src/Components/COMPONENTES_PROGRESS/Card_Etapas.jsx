@@ -4,12 +4,12 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const EtapaButton = ({ icon: Icon, label }) => {
   return (
-    <Box sx={{ mb: 1, width: '100%' }}> {/* Diminuído o margin-bottom para 1 */}
+    <Box sx={{ mb: 1, width: '100%' }}> 
       <Button
         variant="outlined"
         fullWidth
-        startIcon={<Icon sx={{ fontSize: '1.5rem' }} />} // Aumenta o tamanho do ícone
-        endIcon={<ArrowForwardIcon sx={{ fontSize: '1.5rem' }} />} // Aumenta o tamanho da seta
+        startIcon={<Icon sx={{ fontSize: '1.5rem' }} />}
+        endIcon={<ArrowForwardIcon sx={{ fontSize: '1.5rem' }} />} 
         sx={{ 
             boxShadow: '2px 0px 12px 5px rgba(0, 0, 0, 0.2)',
             borderRadius: '5px',
@@ -17,9 +17,9 @@ const EtapaButton = ({ icon: Icon, label }) => {
             justifyContent: 'space-between',
             backgroundColor: '#fff',
             color: '#07382E',
-            borderColor: 'transparent', // Remove a borda
+            borderColor: 'transparent', 
             '&:focus-visible': {
-                outline: 'none', // Remove a borda azul no foco
+                outline: 'none', 
             },
             '&:hover': {
                 backgroundColor: '#f0f0f0',

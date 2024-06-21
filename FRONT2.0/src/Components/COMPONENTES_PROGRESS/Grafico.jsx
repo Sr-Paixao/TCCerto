@@ -1,7 +1,9 @@
 import React from 'react';
 import { Box, Typography, CircularProgress } from '@mui/material';
 
-const CircularProgressWithLabel = ({ value, icon: Icon, size = 150, color = '#004d40' }) => {
+const CircularProgressWithLabel = ({ value, icon, size = 150, color = '#004d40' }) => {
+  const isIconComponent = typeof icon !== 'string';
+
   return (
     <Box
       sx={{
@@ -34,7 +36,13 @@ const CircularProgressWithLabel = ({ value, icon: Icon, size = 150, color = '#00
           flexDirection: 'column',
         }}
       >
-        <Icon sx={{ fontSize: size / 2, color: color }} />
+        {isIconComponent ? (
+          React.createElement(icon, { sx: { fontSize: size / 2, color: color } })
+        ) : (
+          // Em CircularProgressWithLabel
+        <img src={icon} alt="icon" style={{ width: size / 2, height: size / 3, objectFit: 'contain', color: color }} />
+
+        )}
         <Typography variant="h6" component="div" color="textSecondary" sx={{ mt: 0.5, fontWeight: 'bold' }}>
           {`${value}%`}
         </Typography>

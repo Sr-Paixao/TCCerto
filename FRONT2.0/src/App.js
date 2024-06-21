@@ -42,7 +42,9 @@ import Edt_Eventos from './pages/LIDER_GRUPO/CALENDARIO/Edt_Eventos.jsx';
 
 import Central_Progresso from './pages/LIDER_GRUPO/PROGESSO/Central_Progesso.jsx'
 import Criar_Etapa from './pages/LIDER_GRUPO/PROGESSO/Criar_Etapa.jsx';
+import Edt_Etapa from './pages/LIDER_GRUPO/PROGESSO/Edt_Etapa.jsx';
 import Documentacao from './pages/LIDER_GRUPO/PROGESSO/Documentacao.jsx';
+import Pratica from './pages/LIDER_GRUPO/PROGESSO/Pratica.jsx';
 
                                     //MEMBRO GRUPO
 import Login from './pages/MEMBRO_GRUPO/1Login/Login.jsx';
@@ -121,7 +123,9 @@ function App() {
 
                     <Route path='/Central_Progresso' element={<Central_Progresso/>}/>
                     <Route path='/Criar_Etapa' element={<Criar_Etapa/>}/>
+                    <Route path='/Edt_Etapa' element={<Edt_Etapa/>}/>
                     <Route path='/Documentacao' element={<Documentacao/>}/>
+                    <Route path='/Pratica' element={<Pratica/>}/>
 
 
 

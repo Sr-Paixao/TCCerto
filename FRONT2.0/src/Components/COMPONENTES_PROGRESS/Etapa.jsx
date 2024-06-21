@@ -66,7 +66,7 @@ const SelecionarEtapa = ({ etapa, setEtapa }) => {
                             <ListItemIcon>
                                 <PersonIcon style={{ width: '30px', height: '26px',
                                 color: '#07382E',
-                                 }} />
+                                }} />
                             </ListItemIcon>
                             <ListItemText primary="Prática" />
                         </ListItemButton>
