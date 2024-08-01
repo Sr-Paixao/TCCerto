@@ -98,7 +98,7 @@ export default function TaskList({ assignedUsers, setAssignedUsers }) {
                     primaryTypographyProps={{ variant: 'body2', fontSize: '0.79rem' }}
                     sx={{ marginLeft: 1 }}
                 />
-                <IconButton onClick={handleMenuClick}>
+                <IconButton>
                     {open ? <ExpandLess /> : <ExpandMore />}
                 </IconButton>
             </ListItemButton>
