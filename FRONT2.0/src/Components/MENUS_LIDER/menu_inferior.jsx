@@ -6,8 +6,10 @@ import HomeIcon from '@mui/icons-material/Home';
 import GroupIcon from '@mui/icons-material/Group';
 import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
 
-function Menu_Inferior({ value, onChange }) {
+function Menu_Inferior({ value, onChange, routes }) {
     const activeColor = '#07382E';
+    
+    
 
     return (
         <BottomNavigation
@@ -27,7 +29,7 @@ function Menu_Inferior({ value, onChange }) {
                 value="home" 
                 icon={<HomeIcon sx={{ fontSize: 35 }} />}
                 component={Link}
-                to="/Index"
+                // to={routes.home}
                 sx={{ 
                     color: value === 'home' ? activeColor : 'inherit',
                     '&.Mui-selected': {
@@ -40,7 +42,7 @@ function Menu_Inferior({ value, onChange }) {
                 value="progresso" 
                 icon={<SchoolRoundedIcon sx={{ fontSize: 35 }} />} 
                 component={Link}
-                to="/Central_Progresso"
+                // to={routes.progresso}
                 sx={{ 
                     color: value === 'progresso' ? activeColor : 'inherit',
                     '&.Mui-selected': {
@@ -53,7 +55,7 @@ function Menu_Inferior({ value, onChange }) {
                 value="equipe" 
                 icon={<GroupIcon sx={{ fontSize: 35 }} />} 
                 component={Link}
-                to="/Geral_Equipe"
+                // to={routes.equipe}
                 sx={{ 
                     color: value === 'equipe' ? activeColor : 'inherit',
                     '&.Mui-selected': {

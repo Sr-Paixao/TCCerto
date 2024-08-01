@@ -24,27 +24,27 @@ function MenuLateral({ open, onClose }) {
     {
       icon: selectedIndex === 0 ? <TaskAltOutlinedIcon sx={{ color: '#07382E' }} /> : <TaskAltOutlinedIcon />,
       text: "Tarefas",
-      path: "/Central_Tarefas" // Define o caminho para a página de Tarefas
+      path: "/Central_Tarefas" 
     },
     {
       icon: selectedIndex === 1 ? <EventAvailableRoundedIcon sx={{ color: '#07382E' }} /> : <CalendarTodayOutlinedIcon />,
-      text: "Agenda",
-      path: "/Eventos" // Define o caminho para a página de Agenda
+      text: "Eventos",
+      path: "/Eventos" 
     },
     {
       icon: selectedIndex === 2 ? <MonetizationOnIcon sx={{ color: '#07382E' }} /> : <MonetizationOnOutlinedIcon />,
       text: "Orçamento",
-      path: "/orcamento" // Define o caminho para a página de Orçamento
+      path: "/orcamento" 
     },
     {
       icon: selectedIndex === 3 ? <DescriptionIcon sx={{ color: '#07382E' }} /> : <DescriptionOutlinedIcon />,
       text: "Modelo",
-      path: "/Modelo" // Define o caminho para a página de Modelo
+      path: "/Modelo" 
     },
     {
       icon: selectedIndex === 4 ? <SettingsIcon sx={{ color: '#07382E' }} /> : <SettingsOutlinedIcon />,
       text: "Configurações",
-      path: "/config" // Define o caminho para a página de Configurações
+      path: "/config" 
     }
   ];
 

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Box, IconButton, useMediaQuery, useTheme } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import MenuLateral from './menu_lateral';
+
 
 function Menu_Superior({ backgroundColor }) {
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -17,6 +19,11 @@ function Menu_Superior({ backgroundColor }) {
         setMenuOpen(false);
     };
 
+    const navigate = useNavigate();
+    const handlePerfilClick = () => {
+        navigate('/Perfil_L');
+    };
+
     return (
         <Box
             sx={{
@@ -26,10 +33,10 @@ function Menu_Superior({ backgroundColor }) {
                 alignItems: 'center',
                 px: 2,
                 backgroundColor,
-                width: '100%', // Define a largura como 100%
+                width: '100%', 
             }}
         >
-            <Box sx={{ flexGrow: 1 }}> {/* Adiciona uma caixa flexível para ocupar o espaço restante */}
+            <Box sx={{ flexGrow: 1 }}> 
                 <IconButton
                     edge="start"
                     color="inherit"
@@ -48,10 +55,11 @@ function Menu_Superior({ backgroundColor }) {
                 color="inherit"
                 aria-label="account"
                 sx={{
-                    top: isMobile ? '-10px' : '0', // Ajusta a posição do ícone com base no dispositivo
+                    top: isMobile ? '-10px' : '0', 
                 }}
             >
-                <AccountCircleIcon sx={{ fontSize: isMobile ? '40px' : '40px' }} /> {/* Ajusta o tamanho do ícone com base no dispositivo */}
+                <AccountCircleIcon sx={{ fontSize: isMobile ? '40px' : '40px' }} 
+                onClick={handlePerfilClick}/> 
             </IconButton>
 
             <MenuLateral

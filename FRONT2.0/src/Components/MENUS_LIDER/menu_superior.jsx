@@ -24,7 +24,7 @@ function Menu_Superior({ backgroundColor }) {
             alignItems: 'center', 
             px: 2, 
             backgroundColor,
-            width: '100' // Ajustando para ocupar 100% da largura
+            width: '100' 
           }}
         >
           <IconButton 

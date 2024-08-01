@@ -9,6 +9,8 @@ import Add_Membro from './pages/LIDER_GRUPO/G_EQUIPES/ADD_MEMBRO/Add_Membro.jsx'
 
 import Index from "./pages/LIDER_GRUPO/home.jsx";
 
+import Perfil_L from "./pages/LIDER_GRUPO/Perfil_L.jsx";
+
 import Central_Tarefa from './pages/LIDER_GRUPO/TAREFAS/Central_Tarefas.jsx';
 import Criar_Tarefa from './pages/LIDER_GRUPO/TAREFAS/Criar_Tarefa.jsx';
 import Dt_Tarefa from './pages/LIDER_GRUPO/TAREFAS/Detalhes_Tarefa.jsx';
@@ -89,6 +91,8 @@ function App() {
                     <Route path="/Add_Membro" element={<Add_Membro />} />
 
                     <Route path="/Index" element={<Index />} />
+
+                    <Route path="/Perfil_L" element={<Perfil_L />} />
 
                     <Route path='/Central_Tarefas' element={<Central_Tarefa/>}/>
                     <Route path='/Criar_Tarefa' element={<Criar_Tarefa/>}/>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Paper, Box, Typography} from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Menu_Inferior from "../../Components/MENUS_LIDER/menu_inferior";
@@ -22,6 +22,12 @@ const theme = createTheme({
 
 export default function HomeScreen() {
     const [value, setValue] = React.useState('home');
+
+    const routes = {
+        home: '/Index',
+        progresso: '/Central_Progresso',
+        equipe: '/Geral_Equipe',
+    };
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -192,7 +198,7 @@ export default function HomeScreen() {
 
             </Box>
 
-            <Menu_Inferior value={value} onChange={handleChange} />
+            <Menu_Inferior value={value} onChange={(event, newValue) => setValue(newValue)} routes={routes} />
 
         </ThemeProvider>
     );
