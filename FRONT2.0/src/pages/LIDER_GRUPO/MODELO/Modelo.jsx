@@ -10,12 +10,13 @@ import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 
 export default function Modelo() {
-    const [value, setValue] = useState(0); // Estado para controlar o valor selecionado do BottomNavigation
+    const [value, setValue] = useState(0); 
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
 
     const handleDownload = (fileNumber) => {
-        // Lógica para baixar o arquivo
-        // Por exemplo, você pode usar a API do navegador para baixar um arquivo
-        // Aqui está um exemplo simples:
+        
         const url = `URL_DO_ARQUIVO_${fileNumber}_PARA_DOWNLOAD`;
         const link = document.createElement('a');
         link.href = url;
@@ -133,7 +134,7 @@ export default function Modelo() {
                 </Box>
                 
                 {/* MENU PRINCIPAL  */}
-            <Menu_Inferior/>
+                <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
             
             </Paper>
         </Container>

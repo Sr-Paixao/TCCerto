@@ -17,6 +17,11 @@ import TaskList from '../../../Components/COMPONENTES_TAREFAS/TaskLists/TaskList
 import Tarefa_Criada from './Pop-Ups/Pop_Up_1'; 
 
 export default function Criar_Tarefa() {
+    const [value, setValue] = React.useState('');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
 
 
     const handleClick = () => {
@@ -134,7 +139,7 @@ export default function Criar_Tarefa() {
                         </Grid>
                     </Box1>
 
-                                            {/* Box para data de conclusão da tarefa */}
+                                {/* Box para data de conclusão da tarefa */}
                     <Box1>
                         <Grid 
                             container 
@@ -182,7 +187,7 @@ export default function Criar_Tarefa() {
                         </Grid>
                     </Box1>
 
-                                            {/* CAMPO USUARIOS ATRIBUIDOS */}
+                                {/* CAMPO USUARIOS ATRIBUIDOS */}
                     <Box1>
                         <TaskList 
                             assignedUsers={[
@@ -196,7 +201,7 @@ export default function Criar_Tarefa() {
                         />
                     </Box1>
 
-                                            {/* CAMPO PARA DESCRIÇÃO DA TAREFA */}
+                                {/* CAMPO PARA DESCRIÇÃO DA TAREFA */}
                     <Box2>
                         <Grid 
                             container 
@@ -238,7 +243,7 @@ export default function Criar_Tarefa() {
                         />
                     </Box2>
 
-                                            {/* Botão para criar tarefa */}
+                                {/* Botão para criar tarefa */}
                     <GreenButton 
                         onClick={handleClick}
                     >
@@ -246,10 +251,10 @@ export default function Criar_Tarefa() {
                     </GreenButton>
                 </form>
 
-                                            {/* Menu inferior */}
-                <Menu_Inferior />
+                                {/* Menu inferior */}
+                <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
 
-                                            {/* Pop-up de tarefa criada com sucesso */}
+                                {/* Pop-up de tarefa criada com sucesso */}
                 <Tarefa_Criada 
                 open={openDialog} 
                 handleClose={() => 

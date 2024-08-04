@@ -1,19 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { 
-    Box, 
-    Container, 
-    CssBaseline, 
-    Paper, 
-    Typography, 
-   
-    List, 
-    ListItem, 
-    ListItemAvatar, 
-    Avatar, 
-    Button, 
-    Divider 
-} from '@mui/material';
+import { Box, Container, CssBaseline, Paper, Typography, List, ListItem, ListItemAvatar, Avatar, Button, Divider } from '@mui/material';
 import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import Cabecalho2 from '../../../../Components/CABEÇALHOS/Cabeçalho2';
 import PopUpAddMembro from './pop-up_add_membro';

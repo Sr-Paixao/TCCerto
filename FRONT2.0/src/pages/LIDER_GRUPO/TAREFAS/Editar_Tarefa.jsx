@@ -16,7 +16,15 @@ import Box2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
 import PublishedWithChangesOutlinedIcon from '@mui/icons-material/PublishedWithChangesOutlined';
 import Popup from './Pop-Ups/Pop_Up_1';
 
+
 export default function Edt_Tarefa() {
+
+    const [value, setValue] = React.useState('');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
     const navigate = useNavigate();
 
     const handleCancelarClick = () => {
@@ -254,7 +262,8 @@ export default function Edt_Tarefa() {
             </Paper>
 
             {/* MENU Inferior  */}
-            <Menu_Inferior />
+            <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
+
         </Container>
     );
 }

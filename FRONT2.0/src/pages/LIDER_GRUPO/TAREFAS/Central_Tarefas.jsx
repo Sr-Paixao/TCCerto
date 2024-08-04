@@ -10,6 +10,11 @@ import Card_Tarefa_Completa from '../../../Components/COMPONENTES_TAREFAS/CARDS_
 import Btn_Criar from '../../../Components/Btns/Btn_criar';
 
 export default function Central_Tarefa() {
+    const [value, setValue] = React.useState('');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
     const navigate = useNavigate();
 
     const handleNovaTarefa = () => {
@@ -76,7 +81,8 @@ export default function Central_Tarefa() {
                         <Btn_Criar onClick={handleNovaTarefa} />
 
                         {/* MENU INFERIOR */}
-                        <Menu_Inferior />
+                        <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
+
                     </Paper>
                 </Grid>
             </Grid>

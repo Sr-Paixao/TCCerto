@@ -14,6 +14,13 @@ import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined';
 import GreenButton from '../../../Components/Btns/btn_green';
 
 export default function Tarefa_Concluida() {
+
+  const [value, setValue] = React.useState('');
+
+  const handleChange = (event, newValue) => {
+      setValue(newValue);
+  };
+
   const navigate = useNavigate();
 
   const handleBack = () => {
@@ -159,7 +166,7 @@ export default function Tarefa_Concluida() {
         
 
                                               {/* MENU INFERIOR */}
-        <Menu_Inferior />
+        <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
 
       </Paper>
     </Container>

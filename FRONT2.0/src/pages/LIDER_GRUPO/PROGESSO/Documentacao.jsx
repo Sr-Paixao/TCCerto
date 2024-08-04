@@ -10,6 +10,7 @@ import EtapaButton from '../../../Components/COMPONENTES_PROGRESS/Card_Etapa';
 import SomeIcon from '@mui/icons-material/ErrorOutline';
 
 const ProgressoPage = () => {
+
     const [value, setValue] = React.useState('progresso');
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -92,7 +93,8 @@ const ProgressoPage = () => {
 
           <Btn_Criar onClick={handleNovaEtapa} />
 
-          <Menu_Inferior value={value} onChange={handleChange} />
+          <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
+          
         </Paper>
       </Container>
     );

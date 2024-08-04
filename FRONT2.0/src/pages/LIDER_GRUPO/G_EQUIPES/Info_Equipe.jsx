@@ -17,7 +17,7 @@ const members = [
 
 export default function Info_Equipe() {
 
-    const [value, setValue] = useState('equipe'); // Mantendo esta declaração
+    const [value, setValue] = useState('equipe'); 
 
     const navigate = useNavigate();
     const handleBack = () => {
@@ -28,7 +28,7 @@ export default function Info_Equipe() {
         setValue(newValue);
     };
 
-    const descricao = "Descrição do Grupo"; // Definindo a descrição aqui
+    const descricao = "Descrição do Grupo";
 
     return (
         <Container component="main" maxWidth="xs">
@@ -122,7 +122,7 @@ export default function Info_Equipe() {
                 </Box>
 
                 {/* MENU INFERIOR */}
-                <Menu_Inferior value={value} onChange={handleChange} />
+                <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
             </Paper>
         </Container>
     )

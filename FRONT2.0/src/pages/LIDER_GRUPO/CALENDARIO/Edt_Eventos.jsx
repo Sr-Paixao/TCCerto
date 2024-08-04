@@ -18,6 +18,13 @@ import Box2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
 import TaskList from '../../../Components/COMPONENTES_EVENTOS/TaskList';
 
 export default function EditarEvento() {
+
+    const [value, setValue] = React.useState('');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
     const [titulo, setTitulo] = useState('');
     const [data, setData] = useState('');
     const [hora, setHora] = useState('');
@@ -68,7 +75,7 @@ export default function EditarEvento() {
                     height: '100%' 
                     }}
             >
-                                                            {/* CABEÇALHO  */}
+                                                {/* CABEÇALHO  */}
                 <Cabecalho2
                     handleBack={handleBack}
                     icon={<EditCalendarIcon />}
@@ -76,7 +83,7 @@ export default function EditarEvento() {
                     iconSize={70}
                 />
 
-                                                            {/* INICIO FORMULARIO */}
+                                                {/* INICIO FORMULARIO */}
                 <form onSubmit={handleSubmit}>
                     <Box1>
                         <Grid 
@@ -85,7 +92,7 @@ export default function EditarEvento() {
                             spacing={1}
                         >
 
-                                                            {/* CAMPO TITULO  */}
+                                                {/* CAMPO TITULO  */}
                             <Grid item>
                                 <IconButton disabled>
                                     <CreateOutlinedIcon 
@@ -127,7 +134,7 @@ export default function EditarEvento() {
 
                         </Grid>
                     </Box1>
-                                                            {/* CAMPO DATA  */}
+                                                {/* CAMPO DATA  */}
                     <Box1>
                         <Grid 
                             container 
@@ -176,7 +183,7 @@ export default function EditarEvento() {
                         </Grid>
                     </Box1>
 
-                                                            {/* CAMPO HORARIO */}
+                                                {/* CAMPO HORARIO */}
                     <Box1>
                         <Grid 
                             container 
@@ -223,7 +230,7 @@ export default function EditarEvento() {
                         </Grid>
                     </Box1>
 
-                                                            {/* CAMPO CONNVIDAR  */}
+                                                {/* CAMPO CONNVIDAR  */}
                     <Box1>
                         <TaskList 
                             assignedUsers={assignedUsers} 
@@ -231,7 +238,7 @@ export default function EditarEvento() {
                         />
                     </Box1>
 
-                                                            {/* CAMPO DESCRIÇÃO */}
+                                                {/* CAMPO DESCRIÇÃO */}
                     <Box2>
                         <Grid container alignItems="center" spacing={1}>
                             <Grid item>
@@ -264,7 +271,7 @@ export default function EditarEvento() {
                         </Grid>
                     </Box2>
 
-                                                            {/* BOTÃO DE CRIAR EVENTO  */}
+                                            {/* BOTÃO DE CRIAR EVENTO  */}
                             <GreenButton
                             type="submit"
                             onClick={handleOpenPopup}
@@ -273,10 +280,10 @@ export default function EditarEvento() {
                             </GreenButton>
                 </form>
 
-                                                            {/* MENU INFERIOR */}
-                <Menu_Inferior/>
+                                                    {/* MENU INFERIOR */}
+                <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
 
-                                                            {/* POP-UP DE CONFIRMAÇÃO */}
+                                            {/* POP-UP DE CONFIRMAÇÃO */}
                 <Popup 
                     open={openPopup} 
                     handleClose={handleClosePopup} 

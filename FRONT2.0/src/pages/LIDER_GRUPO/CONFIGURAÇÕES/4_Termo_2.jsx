@@ -1,24 +1,17 @@
 import * as React from 'react'; 
 import { useNavigate } from 'react-router-dom';
-import {
-    Box,
-    Container,
-    CssBaseline,
-    Paper,
-    Typography,
-    IconButton
-    } from '@mui/material';
-
+import {Box,Container,CssBaseline,Paper,Typography,IconButton} from '@mui/material';
 
 import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined';
 import Cabecalho2 from '../../../Components/CABEÇALHOS/Cabeçalho2';
 import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
 
-
-
-
-
 export default function Termos_e_Politicas() {
+    const [value, setValue] = React.useState('');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
     const navigate = useNavigate();
 
     const handleBack = () => {
@@ -93,7 +86,7 @@ export default function Termos_e_Politicas() {
                     </Box>
 
                     {/* MENU INFERIOR  */}
-                    <Menu_Inferior />
+                    <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
 
                 </Paper>
 

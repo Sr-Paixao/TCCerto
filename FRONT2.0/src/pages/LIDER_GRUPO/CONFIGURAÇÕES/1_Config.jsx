@@ -1,13 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {  
-    Box, 
-    Container, 
-    CssBaseline, 
-    Paper, 
-    Typography, 
-    Divider, 
-} from '@mui/material';
+import {  Box, Container, CssBaseline, Paper, Typography, Divider, } from '@mui/material';
 import Link from '@mui/material/Link';
 import SettingsIcon from '@mui/icons-material/Settings';
 import Menu_Superior2 from '../../../Components/MENUS_LIDER/menu_superior2';
@@ -17,6 +10,11 @@ import CustomLink from '../../../Components/LINKS/CustomLink';
 import Popup from "./3_Avaliacao";
 
 export default function Configuracoes() {
+    const [value, setValue] = React.useState('');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
 
     const [openPopup, setOpenPopup] = useState(false);
     const navigate = useNavigate();
@@ -82,7 +80,8 @@ export default function Configuracoes() {
                     </Box>
                     
                                             {/*MENU INFERIOR */}
-                    <Menu_Inferior />
+                    <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
+
                     <Popup 
                         open={openPopup} 
                         handleClose={handleClosePopup} 

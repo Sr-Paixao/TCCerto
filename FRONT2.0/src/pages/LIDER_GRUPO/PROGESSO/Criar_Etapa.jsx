@@ -11,6 +11,13 @@ import SelectPersonalizado from '../../../Components/COMPONENTES_PROGRESS/Etapa'
 import Etapa_Criada from './Pop_Up_1'; 
 
 export default function Criar_Etapa() {
+
+    const [value, setValue] = React.useState('');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
     const navigate = useNavigate();
     const [titulo, setTitulo] = useState('');
     const [prioridade, setPrioridade] = useState('');
@@ -79,7 +86,9 @@ export default function Criar_Etapa() {
                     <SelectPersonalizado etapa={etapa} setEtapa={setEtapa} />
                     <GreenButton type="submit" sx={{ mt: 2 }}>Criar Etapa</GreenButton>
                 </form>
-                <Menu_Inferior />
+
+                <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
+
                 <Etapa_Criada open={openDialog} handleClose={() => setOpenDialog(false)} />
             </Paper>
         </Container>

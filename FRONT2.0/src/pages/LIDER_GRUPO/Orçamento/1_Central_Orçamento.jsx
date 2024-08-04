@@ -13,9 +13,15 @@ import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
 import Cabecalho_1 from '../../../Components/CABEÇALHOS/Cabeçalho1';
 
 export default function CENTRAL_ORCAMENTO() {
+
+    const [value, setValue] = React.useState('');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
     const navigate = useNavigate();
 
-    // Função para voltar para a página inicial
     const handleBack = () => {
         navigate('/');
     };
@@ -37,17 +43,17 @@ export default function CENTRAL_ORCAMENTO() {
                     }}
             >
 
-                                                            {/* MENU_SUPERIOR  */}
+                                                {/* MENU_SUPERIOR  */}
                     <Menu_Superior/>
 
-                                                            {/* CABEÇALHO */}
+                                                {/* CABEÇALHO */}
                     <Cabecalho_1
                     icon={<PaidOutlinedIcon />}
                     text="Orçamento"
                     iconSize={75}
                     />
 
-                                                            {/* TEXTOS INFORMATIVOS  */}
+                                                {/* TEXTOS INFORMATIVOS  */}
                     <Box 
                         sx={{ 
                             width: '110%', 
@@ -84,7 +90,7 @@ export default function CENTRAL_ORCAMENTO() {
 
                         </Box>
 
-                                                            {/* BOTÃO PARA INICIAR O ORÇAMENTO  */}
+                                                {/* BOTÃO PARA INICIAR O ORÇAMENTO  */}
                         <GreenButton
                             href={'/Area_de_atuação'}
                             type="submit"
@@ -93,8 +99,8 @@ export default function CENTRAL_ORCAMENTO() {
                         >
                                     iniciar
                             </GreenButton>
-                                                            {/* MENU INFERIOR  */}
-                            <Menu_Inferior/>
+                                                {/* MENU INFERIOR  */}
+                            <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
                     </Paper>
         </Container>
     );

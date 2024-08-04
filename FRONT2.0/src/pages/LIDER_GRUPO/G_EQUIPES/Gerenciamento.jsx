@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {  
-        Box, Container, 
-        CssBaseline, Paper, Divider
-        } from '@mui/material';
+import {  Box, Container, CssBaseline, Paper, Divider} from '@mui/material';
 import Link from '@mui/material/Link';
 import GroupsIcon from '@mui/icons-material/Groups';
 import Menu_Superior2 from '../../../Components/MENUS_LIDER/menu_superior2';
@@ -14,20 +11,16 @@ import CustomLink from '../../../Components/LINKS/CustomLink';
 export default function Geral_Equipe() {
     const [value, setValue] = React.useState('equipe');
 
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
     const navigate = useNavigate();
 
     // Função para voltar para a página inicial
     const handleBack = () => {
         navigate('/');
     };
-
-
-        
-
-        const handleChange = (event, newValue) => {
-            setValue(newValue);
-        };
-        
 
     return (
         <Container 
@@ -84,7 +77,7 @@ export default function Geral_Equipe() {
                             <CustomLink href="/Desfazer_Equipe" text="Desfazer Equipe" />
                     </Box>
                                             {/*MENU INFERIOR */}
-                    <Menu_Inferior value={value} onChange={handleChange} />
+                    <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
                     
                 </Paper>
         </Container>

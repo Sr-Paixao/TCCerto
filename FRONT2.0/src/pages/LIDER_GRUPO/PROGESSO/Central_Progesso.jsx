@@ -10,8 +10,9 @@ import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
 import EtapaButton from '../../../Components/COMPONENTES_PROGRESS/Card_Etapas'; 
 import Menu_Superior from '../../../Components/MENUS_LIDER/menu_superior2';
 
-const ProgressoPage = () => {
+const Progresso = () => {
   const [value, setValue] = React.useState('progresso');
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -96,10 +97,10 @@ const ProgressoPage = () => {
             </Box>
           </Box>
         </Box>
-        <Menu_Inferior value={value} onChange={handleChange} />
+        <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
       </Paper>
     </Container>
   );
 };
 
-export default ProgressoPage;
+export default Progresso;

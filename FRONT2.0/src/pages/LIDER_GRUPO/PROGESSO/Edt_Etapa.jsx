@@ -13,7 +13,12 @@ import SelectPersonalizado from '../../../Components/COMPONENTES_PROGRESS/Etapa'
 import Etapa_Criada from './Pop_Up_1';
 import Excluir_Etapa from './Pop_up_2';
 
-export default function Criar_Tarefa() {
+export default function Edt_Etapa() {
+    const [value, setValue] = React.useState('progresso');
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
     const navigate = useNavigate();
 
     const [titulo, setTitulo] = useState('');
@@ -94,8 +99,10 @@ export default function Criar_Tarefa() {
                     </Grid>
                 </form>
 
-                <Menu_Inferior />
+                <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
+
                 <Etapa_Criada open={openDialog} handleClose={() => setOpenDialog(false)} />
+
                 <Excluir_Etapa open={openExcluirDialog} handleClose={() => setOpenExcluirDialog(false)} />
             </Paper>
         </Container>

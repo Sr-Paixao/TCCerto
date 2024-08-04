@@ -17,15 +17,15 @@ const members = [
 
 export default function Info_Equipe() {
 
-    const [value, setValue] = useState('equipe'); // Mantendo esta declaração
+    const [value, setValue] = React.useState('');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
 
     const navigate = useNavigate();
     const handleBack = () => {
         navigate('/Geral_Equipe');
-    };
-
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
     };
 
     const descricao = "Descrição do Grupo"; // Definindo a descrição aqui
@@ -62,7 +62,8 @@ export default function Info_Equipe() {
                 </Box>
 
                 {/* MENU INFERIOR */}
-                <Menu_Inferior value={value} onChange={handleChange} />
+                <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
+
             </Paper>
         </Container>
     )

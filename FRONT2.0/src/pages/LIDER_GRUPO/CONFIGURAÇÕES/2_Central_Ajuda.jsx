@@ -19,6 +19,12 @@ import Popup from './Pop_Ups/POP_UP_HELP';
 
 
 export default function Central_Ajuda() {
+    const [value, setValue] = React.useState('');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
     const [assunto, setAssunto] = useState('');
     const [descricao, setDescricao] = useState('');
 
@@ -265,8 +271,10 @@ export default function Central_Ajuda() {
                             Enviar
                         </GreenButton>
                     </form>
+
                     {/* MENU_INFERIOR  */}
-                    <Menu_Inferior />                
+                    <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" /> 
+
                 </Paper>
                 <Popup 
                     open={openPopup} 

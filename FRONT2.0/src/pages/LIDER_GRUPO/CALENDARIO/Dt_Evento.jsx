@@ -18,6 +18,13 @@ import TaskListItem from '../../../Components/COMPONENTES_EVENTOS/TaskLitItem';
 import DescriptionField from '../../../Components/COMPONENTES_EVENTOS/DescriptionField';
 
 export default function DtEventos() {
+
+  const [value, setValue] = React.useState('');
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   const navigate = useNavigate();
   const [openPopup, setOpenPopup] = useState(false);
   const [open, setOpen] = useState(false);
@@ -98,6 +105,7 @@ export default function DtEventos() {
         spacing={2} 
         sx={{ marginTop: '6%' }}
         >
+          
           <Grid item xs={6}>
             <GreenButton 
             onClick={handleEditClick}
@@ -105,6 +113,7 @@ export default function DtEventos() {
               EDITAR
             </GreenButton>
           </Grid>
+
           <Grid item xs={6}>
             <RedButton 
             onClick={handleOpenPopup}
@@ -118,7 +127,9 @@ export default function DtEventos() {
         open={openPopup} 
         handleClose={handleClosePopup} 
         />
-        <Menu_Inferior />
+
+        <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
+
       </Paper>
     </Container>
   );

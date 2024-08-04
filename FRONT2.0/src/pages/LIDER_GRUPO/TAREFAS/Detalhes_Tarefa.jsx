@@ -25,6 +25,10 @@ import Popup from './Pop-Ups/Pop_Up_2';
 
 export default function Detalhes_Tarefa() {
 
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
   // POP-UP 
     const [openPopup, setOpenPopup] = useState(false);
     const navigate = useNavigate();
@@ -327,7 +331,7 @@ export default function Detalhes_Tarefa() {
             />
 
                                         {/* MENU Inferior  */}
-                <Menu_Inferior />
+                <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
 
             </Paper>
 

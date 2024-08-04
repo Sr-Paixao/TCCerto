@@ -93,7 +93,8 @@ const ProgressoPage = () => {
 
             <Btn_Criar onClick={handleNovaEtapa} />
 
-            <Menu_Inferior value={value} onChange={handleChange} />
+            <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
+            
             </Paper>
         </Container>
     );

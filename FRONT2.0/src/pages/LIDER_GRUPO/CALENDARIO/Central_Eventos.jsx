@@ -13,6 +13,13 @@ import Btn_Novo from   '../../../Components/Btns/Btn_criar';
 import iconCalendario from '../../../img/calendario2.svg';
 
 export default function Central_Eventos() {
+
+    const [value, setValue] = React.useState('');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+    
     const [calendarHeight, setCalendarHeight] = useState(0);
 
     const handleHeightChange = (height) => {
@@ -73,8 +80,9 @@ export default function Central_Eventos() {
 
                         {/* MENU INFERIOR */}
                         <Box sx={{ mt: 10 }}>
-                            <Menu_Inferior />
+                        <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
                         </Box>
+
                          {/* BOTÃO CRIAR EVENTO */}
                             <Btn_Novo 
                             onClick={handleNovaEvento}
