@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import {  Box, Container, CssBaseline, Paper, Typography, Divider, } from '@mui/material';
 import Link from '@mui/material/Link';
 import SettingsIcon from '@mui/icons-material/Settings';
-import Menu_Superior2 from '../../../Components/MENUS_LIDER/menu_superior2';
-import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
+import Menu_Superior from '../../../Components/MENUS/menu_superior';
+import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 import Cabecalho1 from '../../../Components/CABEÇALHOS/Cabeçalho1';
 import CustomLink from '../../../Components/LINKS/CustomLink';
 import Popup from "./3_Avaliacao";
@@ -47,11 +47,10 @@ export default function Configuracoes() {
                         }}
                 >
 
-                                            {/* Menu Superior */}
-                    <Menu_Superior2
-                    sx={{ mt: '15%'}} />
+                                {/* Menu Superior */}
+                    <Menu_Superior backgroundColor="#someColor" interfaceType="Lider_Grupo" />
 
-                                            {/* CABEÇALHO */}
+                                {/* CABEÇALHO */}
                     <Box
                     sx={{mt: '15%'}}
                     >
@@ -61,7 +60,7 @@ export default function Configuracoes() {
                         iconSize="70px"
                     />
                     </Box>
-                                            {/* ITENS CONFIGURAÇÕES */}
+                                {/* ITENS CONFIGURAÇÕES */}
                     <Box 
                         sx={{ 
                             width: '100%', 
@@ -79,7 +78,7 @@ export default function Configuracoes() {
 
                     </Box>
                     
-                                            {/*MENU INFERIOR */}
+                                {/*MENU INFERIOR */}
                     <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
 
                     <Popup 

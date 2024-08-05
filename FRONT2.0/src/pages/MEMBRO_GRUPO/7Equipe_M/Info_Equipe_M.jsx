@@ -7,9 +7,9 @@ import {
 import Stack from '@mui/material/Stack';
 
 //IMPORTS DE COMPONENTES 
-import Menu_Superior from '../../../Components/MENUS_MEMBROS/menu_superior2_M';
+import Menu_Superior from '../../../Components/MENUS/menu_superior';
 import Box_2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
-import Menu_Inferior from '../../../Components/MENUS_MEMBROS/menu_inferior_M';
+import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 
 
 const members = [
@@ -25,6 +25,11 @@ export default function Info_Equipe_M() {
 
     const [value, setValue] = React.useState(0);
     const descricao = "Descrição do Grupo"; // Definindo a descrição aqui
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
 
 
     return (
@@ -46,7 +51,7 @@ export default function Info_Equipe_M() {
                 >
 
                                                             {/* MENU SUPERIOR  */}
-                <Menu_Superior/>
+                <Menu_Superior backgroundColor="#someColor" interfaceType="Membro_Grupo" />
 
                                                             {/* CABEÇALHO */}
                     <Stack 
@@ -161,7 +166,8 @@ export default function Info_Equipe_M() {
                     </List>
                 </Box>
                                                             {/*MENU INFERIOR */}
-                <Menu_Inferior />
+                <Menu_Inferior value={value} onChange={handleChange} interfaceType="Membro_Grupo" />
+
             </Paper>
         </Container>
     )

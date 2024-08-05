@@ -2,8 +2,8 @@ import React from 'react';
 import { Paper, Box, Typography} from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 //IMPORT COMPONENTS
-import Menu_Inferior from "../../../Components/MENUS_MEMBROS/menu_inferior_M";
-import Menu_Superior from '../../../Components/MENUS_MEMBROS/menu_superior_M';
+import Menu_Inferior from "../../../Components/MENUS/menu_inferior";
+import Menu_Superior from '../../../Components/MENUS/menu_superior';
 
 // import TaskProgressBar from './HomeTarefa';
 
@@ -22,7 +22,7 @@ const theme = createTheme({
 });
 
 export default function HomeScreen() {
-    const [value, setValue] = React.useState('home');
+    const [value, setValue] = React.useState('Home_M');
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -94,11 +94,7 @@ export default function HomeScreen() {
                     }}
             >
 
-                <Menu_Superior 
-                    backgroundColor={
-                        theme.palette.tertiary.main
-                        } 
-                />
+                <Menu_Superior backgroundColor="#someColor" interfaceType="Membro_Grupo" />
 
                 <Box 
                     sx={{
@@ -193,10 +189,7 @@ export default function HomeScreen() {
 
             </Box>
 
-            <Menu_Inferior 
-            value={value} 
-            onChange={handleChange} 
-            />
+            <Menu_Inferior value={value} onChange={handleChange} interfaceType="Membro_Grupo" />
 
         </ThemeProvider>
     );

@@ -5,7 +5,7 @@ import {
         IconButton, Grid, List, ListItemButton, 
         ListItemIcon, ListItemText, Collapse, Avatar 
         } from '@mui/material';
-import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
+import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 import Cabecalho2 from '../../../Components/CABEÇALHOS/Cabeçalho2';
 import Box1 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form1';
 import Box2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';

@@ -6,15 +6,21 @@ import {  Box, Container, CssBaseline, Paper, Divider} from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
 
 //IMPORT COMPONENTES
-import Menu_Superior2 from '../../../Components/MENUS_MEMBROS/menu_superior2_M';
+import Menu_Superior from '../../../Components/MENUS/menu_superior';
 import Cabecalho1 from '../../../Components/CABEÇALHOS/Cabeçalho1';
 import CustomLink from '../../../Components/LINKS/CustomLink';
-import Menu_Inferior from '../../../Components/MENUS_MEMBROS/menu_inferior_M';
+import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 
 //IMPORT POP-UP
 import Popup from "./Avaliacao_M";
 
 export default function Configuracoes_M() {
+    const [value, setValue] = React.useState('');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
     const [openPopup, setOpenPopup] = useState(false);
     const navigate = useNavigate();
 
@@ -44,7 +50,7 @@ export default function Configuracoes_M() {
                 }}
             >
                                                             {/* MENU SUPERIOR  */}
-                <Menu_Superior2 sx={{ mt: '15%' }} />
+                <Menu_Superior backgroundColor="#someColor" interfaceType="Membro_Grupo" />
                 <Box sx={{ mt: '15%' }}>
 
                                                             {/* CABEÇALHO  */}
@@ -74,7 +80,7 @@ export default function Configuracoes_M() {
                 </Box>
 
                                                             {/* MENU INFERIOR  */}
-                <Menu_Inferior />
+                <Menu_Inferior value={value} onChange={handleChange} interfaceType="Membro_Grupo" />
             </Paper>
 
                                                             {/* ABERTURA POP-UP  */}

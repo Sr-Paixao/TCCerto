@@ -13,8 +13,8 @@ function Cabecalho_1({ icon, text, iconSize, avatar, avatarSize }) {
       justifyContent="center"
       spacing={1}
       sx={{ 
-        marginTop: '90p%', 
-        marginBottom: '90p%', 
+        marginTop: '2%', 
+        marginBottom: '1%', 
       }}
     >
       <Grid item>

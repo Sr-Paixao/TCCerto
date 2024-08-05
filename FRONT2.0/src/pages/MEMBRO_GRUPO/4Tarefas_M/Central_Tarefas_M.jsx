@@ -6,14 +6,20 @@ import {
 //IMPORT ICONE
 import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined';
 //IMPORT COMPONENTS
-import Menu_Superior2 from '../../../Components/MENUS_MEMBROS/menu_superior2_M';
+import Menu_Superior from '../../../Components/MENUS/menu_superior';
 import Cabecalho1 from '../../../Components/CABEÇALHOS/Cabeçalho1';
 import Card_Tarefa from '../../../Components/COMPONENTES_TAREFAS/CARDS_MEMBROS/Card_Tarefas_M';
 import Card_Tarefa_Completa from '../../../Components/COMPONENTES_TAREFAS/CARDS_MEMBROS/Card_Concluida_M';
-import Menu_Inferior from '../../../Components/MENUS_MEMBROS/menu_inferior_M';
+import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 
 
 export default function Central_Tarefa_M() {
+    const [value, setValue] = React.useState('');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
     return (
         <Container 
             component="main" 
@@ -31,7 +37,7 @@ export default function Central_Tarefa_M() {
                         sx={{ p: 2, boxShadow: "0" }}
                     >
                                                             {/* MENU SUPERIOR */}
-                        <Menu_Superior2 />
+                        <Menu_Superior backgroundColor="#someColor" interfaceType="Membro_Grupo" />
                         
                                                             {/* CABEÇALHO */}
                         <Box
@@ -84,7 +90,7 @@ export default function Central_Tarefa_M() {
                         </Box>
                         
                                                             {/* MENU INFERIOR */}
-                        <Menu_Inferior />
+                        <Menu_Inferior value={value} onChange={handleChange} interfaceType="Membro_Grupo" />
                         
                     </Paper>
                 </Grid>

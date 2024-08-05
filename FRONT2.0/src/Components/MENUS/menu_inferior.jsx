@@ -23,13 +23,12 @@ function Menu_Inferior({ value, onChange, interfaceType }) {
             home: '/Index',
             progresso: '/Central_Progresso',
             equipe: '/Geral_Equipe'
-        }
-        //,
-        // Membro_Grupo: {
-        //     home: '/Home3',
-        //     progresso: '/novo_progresso',
-        //     equipe: '/Nova_Equipe'
-        // },
+        },
+        Membro_Grupo: {
+            home: '/Home2',
+            progresso: '/Membro_progresso',
+            equipe: '/Membro_Equipe'
+        },
         // Orientador: {
         //     home: '/Home4',
         //     progresso: '/progresso4',

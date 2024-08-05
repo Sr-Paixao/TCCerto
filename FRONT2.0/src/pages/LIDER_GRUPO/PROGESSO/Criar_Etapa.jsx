@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Box, Container, CssBaseline, Paper, Typography, IconButton, Grid, TextField } from '@mui/material';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
-import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
+import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 import Cabecalho2 from '../../../Components/CABEÇALHOS/Cabeçalho2';
 import GreenButton from '../../../Components/Btns/btn_green';
 import Select_Prioridade from '../../../Components/COMPONENTES_PROGRESS/Selecionar_Prioridade';

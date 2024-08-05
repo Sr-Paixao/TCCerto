@@ -11,7 +11,7 @@ import Cabecalho2 from '../../../Components/CABEÇALHOS/Cabeçalho2';
 import Box1 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form1';
 import Box2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
 import GreenButton from '../../../Components/Btns/btn_green';
-import Menu_Inferior from '../../../Components/MENUS_MEMBROS/menu_inferior_M';
+import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 
 // IMPORT ICONES 
 import RadioButtonUncheckedOutlinedIcon from '@mui/icons-material/RadioButtonUncheckedOutlined';
@@ -27,6 +27,11 @@ import Popup from './Pop-Ups/Tarefa_Concluida';
 export default function Dt_Tarefa_M() {
     const [openPopup, setOpenPopup] = useState(false);
     const navigate = useNavigate();
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
 
     const handleOpenPopup = () => {
         setOpenPopup(true);
@@ -311,7 +316,7 @@ export default function Dt_Tarefa_M() {
                 /> 
 
                                                             {/* MENU Inferior  */}
-                <Menu_Inferior />
+                <Menu_Inferior value={value} onChange={handleChange} interfaceType="Membro_Grupo" />
             </Paper>
         </Container>
     );

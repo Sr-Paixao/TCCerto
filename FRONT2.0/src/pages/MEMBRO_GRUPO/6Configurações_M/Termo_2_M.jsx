@@ -10,10 +10,17 @@ import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined';
 
 //IMPORT COMPONENTES
 import Cabecalho2 from '../../../Components/CABEÇALHOS/Cabeçalho2';
-import Menu_Inferior from '../../../Components/MENUS_MEMBROS/menu_inferior_M';
+import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 
 
 export default function Termos_e_Politicas_M() {
+
+    const [value, setValue] = React.useState('');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
     const navigate = useNavigate();
 
     const handleBack = () => {
@@ -88,7 +95,7 @@ export default function Termos_e_Politicas_M() {
                     </Box>
 
                                                             {/* MENU INFERIOR  */}
-                    <Menu_Inferior />
+                    <Menu_Inferior value={value} onChange={handleChange} interfaceType="Membro_Grupo" />
 
                 </Paper>
 

@@ -7,7 +7,7 @@ import {
 import EditNoteOutlinedIcon from '@mui/icons-material/EditNoteOutlined';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import TaskList from '../../../Components/COMPONENTES_TAREFAS/TaskLists/TaskList';
-import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
+import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 import Cabecalho2 from '../../../Components/CABEÇALHOS/Cabeçalho2';
 import GreenButton from '../../../Components/Btns/btn_green';
 import RedButton from '../../../Components/Btns/btn_red';

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Box, Container, CssBaseline, Paper, Typography } from '@mui/material';
-import Menu_Superior2 from '../../../Components/MENUS_MEMBROS/menu_superior2_M';
-import Menu_Inferior from '../../../Components/MENUS_MEMBROS/menu_inferior_M';
+import Menu_Superior from '../../../Components/MENUS/menu_superior';
+import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 import Cabecalho1 from '../../../Components/CABEÇALHOS/Cabeçalho1';
 import DownloadBox from '../../../Components/BOX/Box_Modelo';
 
@@ -12,6 +12,11 @@ import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 
 export default function Modelo_M() {
     const [value, setValue] = useState(0); // Estado para controlar o valor selecionado do BottomNavigation
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
 
     const handleDownload = (fileId) => {
         // Lógica para download do arquivo com base no fileId
@@ -39,7 +44,7 @@ export default function Modelo_M() {
                 }}
             >
                                                             {/* MENU SUPERIOR  */}
-                <Menu_Superior2/>
+                <Menu_Superior backgroundColor="#someColor" interfaceType="Membro_Grupo" />
                                                             {/* CABAÇALHO AQUI  */}
                 <Box
                 sx={{ mt: 5}}>
@@ -78,7 +83,7 @@ export default function Modelo_M() {
                 <DownloadBox handleDownload={handleDownload} />
 
                 {/* MENU PRINCIPAL  */}
-            <Menu_Inferior/>
+                <Menu_Inferior value={value} onChange={handleChange} interfaceType="Membro_Grupo" />
             
             </Paper>
         </Container>

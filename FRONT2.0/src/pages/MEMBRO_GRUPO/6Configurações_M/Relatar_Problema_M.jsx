@@ -14,12 +14,18 @@ import InstagramBox from '../../../Components/BOX/Box_Instagram';
 import EmailBox from '../../../Components/BOX/Box_Outlook';
 import Box1 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form1';
 import GreenButton from '../../../Components/Btns/btn_green';
-import Menu_Inferior from '../../../Components/MENUS_MEMBROS/menu_inferior_M';
+import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 
 // IMPORT POP-UP 
 import Popup from './Pop_Ups/Relato_Enviado_M';
 
 export default function Central_Ajuda_M() {
+    const [value, setValue] = React.useState('');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
     const [assunto, setAssunto] = useState('');
     const [descricao, setDescricao] = useState('');
 
@@ -187,7 +193,7 @@ export default function Central_Ajuda_M() {
             />
 
                                                             {/* MENU_INFERIOR  */}
-            <Menu_Inferior  />                
+            <Menu_Inferior value={value} onChange={handleChange} interfaceType="Membro_Grupo" />               
         </Container>
     );
 }

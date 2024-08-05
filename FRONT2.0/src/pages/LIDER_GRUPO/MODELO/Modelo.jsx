@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Box, Container, CssBaseline, Paper, Typography, IconButton } from '@mui/material';
-import Menu_Superior2 from '../../../Components/MENUS_LIDER/menu_superior2';
-import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
+import Menu_Superior from '../../../Components/MENUS/menu_superior';
+import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 import Cabecalho1 from '../../../Components/CABEÇALHOS/Cabeçalho1';
 
 // IMPORT ICONES
@@ -47,7 +47,7 @@ export default function Modelo() {
                 }}
             >
                 {/* MENU SUPERIOR  */}
-                <Menu_Superior2/>
+                <Menu_Superior backgroundColor="#someColor" interfaceType="Lider_Grupo" />
                 {/* CABAÇALHO AQUI  */}
                 <Box
                 sx={{ mt: 5}}>

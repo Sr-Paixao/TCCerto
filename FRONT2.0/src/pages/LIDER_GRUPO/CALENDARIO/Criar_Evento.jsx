@@ -10,7 +10,7 @@ import AlarmIcon from '@mui/icons-material/Alarm';
 
 import Popup from './pop-ups/POP-UP1';
 
-import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
+import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 import Cabecalho2 from '../../../Components/CABEÇALHOS/Cabeçalho2';
 import GreenButton from '../../../Components/Btns/btn_green';
 import Box1 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form1';

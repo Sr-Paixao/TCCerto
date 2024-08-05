@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-import { Paper, Box, Typography } from '@mui/material';
+import React, {useState} from 'react';
+import { Paper, Box, Typography} from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import Menu_Inferior from '../../Components/MENUS_LIDER/menu_inferior';
-import Menu_Superior from '../../Components/MENUS_LIDER/menu_superior';
+import Menu_Inferior from "../../Components/MENUS/menu_inferior";
+import Menu_Superior from '../../Components/MENUS/menu_superior';
+
+// import TaskProgressBar from './HomeTarefa';
 
 const theme = createTheme({
     palette: {
@@ -12,18 +14,19 @@ const theme = createTheme({
         secondary: {
             main: '#0A5A40',
         },
-        tertiary: {
+        tertiary:{
             main: '#fff'
         }
     },
 });
 
-export default function Lider_Grupo() {
-    const [value, setValue] = useState('home');
+export default function HomeScreen() {
+    const [value, setValue] = React.useState('home');
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+
 
     const apiResponse = {
         tasks: [
@@ -87,10 +90,13 @@ export default function Lider_Grupo() {
                     pb: 7, 
                     backgroundColor: theme.palette.secondary.main, 
                     minHeight: '100vh' 
-                }}
+                    }}
             >
+
                 <Menu_Superior 
-                    backgroundColor={theme.palette.tertiary.main} 
+                    backgroundColor={
+                        theme.palette.tertiary.main
+                        } 
                 />
 
                 <Box 
@@ -99,7 +105,7 @@ export default function Lider_Grupo() {
                         justifyContent: 'center', 
                         position: 'relative', 
                         mt: -4  
-                    }}
+                        }}
                 > 
                     <Box 
                         sx={{
@@ -150,27 +156,29 @@ export default function Lider_Grupo() {
                         </Typography>
                         
                         <Typography 
-                            variant="h3" 
-                            component="div" 
-                            color="white"
+                        variant="h3" 
+                        component="div" 
+                        color="white"
                         >
                             10
                         </Typography>
 
                         <Typography 
-                            variant="subtitle1" 
-                            color="white"
+                        variant="subtitle1" 
+                        color="white"
                         >
                             Novembro
                         </Typography>
+
                     </Paper>
+
                 </Box>
 
                 <Box 
                     sx={{ 
                         mt: 2, 
-                        mx: 4 
-                    }}
+                        mx:  4
+                        }}
                 >
                     <Typography 
                         variant="h6" 
@@ -179,11 +187,13 @@ export default function Lider_Grupo() {
                         Tarefas:
                     </Typography>
 
-                    {/* <TaskProgressBar tasks={apiResponse.tasks} /> */}
+                        {/* <TaskProgressBar tasks={apiResponse.tasks}/> */}
                 </Box>
+
             </Box>
 
             <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
+
         </ThemeProvider>
     );
 }

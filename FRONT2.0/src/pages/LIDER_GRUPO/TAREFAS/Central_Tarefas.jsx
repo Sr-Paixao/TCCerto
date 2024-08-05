@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { Container, CssBaseline, Paper, Typography, Box, Grid } from '@mui/material';
 import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined';
 import Cabecalho1 from '../../../Components/CABEÇALHOS/Cabeçalho1';
-import Menu_Superior2 from '../../../Components/MENUS_LIDER/menu_superior2';
-import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
+import Menu_Superior from '../../../Components/MENUS/menu_superior';
+import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 import Card_Tarefa from '../../../Components/COMPONENTES_TAREFAS/CARDS_LIDER/Card_Tarefas';
 import Card_Tarefa_Completa from '../../../Components/COMPONENTES_TAREFAS/CARDS_LIDER/Card_Concluida';
 import Btn_Criar from '../../../Components/Btns/Btn_criar';
@@ -27,8 +27,9 @@ export default function Central_Tarefa() {
             <Grid container justifyContent="center" alignItems="center">
                 <Grid item xs={12}>
                     <Paper elevation={2} sx={{ p: 2, boxShadow: "0" }}>
+                        
                         {/* MENU SUPERIOR */}
-                        <Menu_Superior2 />
+                        <Menu_Superior backgroundColor="#someColor" interfaceType="Lider_Grupo" />
                         
                         {/* CABEÇALHO */}
                         <Box sx={{mt: '5%'}}>

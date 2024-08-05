@@ -6,7 +6,7 @@ import Stack from '@mui/material/Stack';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import RedButton from '../../Components/Btns/btn_red';
 import Box_2 from '../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
-import Menu_Inferior from '../../Components/MENUS_LIDER/menu_inferior';
+import Menu_Inferior from '../../Components/MENUS/menu_inferior';
 
 const members = [
     { id: 1, name: 'Usuário 1', avatarSrc: '/avatar1.jpg' },

@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, CssBaseline, Paper, Box, Grid } from '@mui/material';
 // IMPORT DE COMPONENTES 
-import Menu_Superior2 from '../../../Components/MENUS_LIDER/menu_superior2';
+import Menu_Superior from '../../../Components/MENUS/menu_superior';
 import Cabecalho1 from '../../../Components/CABEÇALHOS/Cabeçalho1';
 import Calendario from '../../../Components/COMPONENTES_EVENTOS/CALENDARIO';
 import HojeButton from '../../../Components/COMPONENTES_EVENTOS/Hoje';
 import CardLider from '../../../Components/COMPONENTES_EVENTOS/Card_Evento_L';
-import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
+import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 import Btn_Novo from   '../../../Components/Btns/Btn_criar';
 // IMPORTE DE ICONE 
 import iconCalendario from '../../../img/calendario2.svg';
@@ -52,7 +52,7 @@ export default function Central_Eventos() {
                     <Grid item xs={12}>
 
                         {/* / MENU SUPERIOR  */}
-                        <Menu_Superior2 />
+                        <Menu_Superior backgroundColor="#someColor" interfaceType="Lider_Grupo" />
                         
                         {/* CABEÇALHO */}
                         <Box sx={{ mt: '5%' }}>

@@ -13,12 +13,19 @@ import Cabecalho2 from '../../../Components/CABEÇALHOS/Cabeçalho2';
 import Box1 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form1';
 import Box2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
 import RedButton from '../../../Components/Btns/btn_red';
-import Menu_Inferior from '../../../Components/MENUS_MEMBROS/menu_inferior_M';
+import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 
 //IMPORT POP-UP
 import DesmarcarConclusao from './Pop-Ups/Desmarcar_Conclusao'; 
 
 export default function Tarefa_Concluida_M() {
+    const [value, setValue] = React.useState('');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
+
     const navigate = useNavigate();
     const [openPopup, setOpenPopup] = useState(false); 
     const handleBack = () => {
@@ -228,7 +235,8 @@ export default function Tarefa_Concluida_M() {
                 />
 
                                                             {/* MENU INFERIOR */}
-                <Menu_Inferior />
+                <Menu_Inferior value={value} onChange={handleChange} interfaceType="Membro_Grupo" />
+
             </Paper>
         </Container>
     );

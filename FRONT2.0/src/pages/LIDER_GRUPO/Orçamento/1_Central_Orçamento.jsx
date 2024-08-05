@@ -7,9 +7,9 @@ import {
 //IMPORT ICONE
 import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined';
 //IMPORT COMPONENTS
-import Menu_Superior from '../../../Components/MENUS_LIDER/menu_superior2';
+import Menu_Superior from '../../../Components/MENUS/menu_superior';
 import GreenButton from '../../../Components/Btns/btn_green';
-import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
+import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 import Cabecalho_1 from '../../../Components/CABEÇALHOS/Cabeçalho1';
 
 export default function CENTRAL_ORCAMENTO() {
@@ -44,7 +44,7 @@ export default function CENTRAL_ORCAMENTO() {
             >
 
                                                 {/* MENU_SUPERIOR  */}
-                    <Menu_Superior/>
+                    <Menu_Superior backgroundColor="#someColor" interfaceType="Lider_Grupo" />
 
                                                 {/* CABEÇALHO */}
                     <Cabecalho_1

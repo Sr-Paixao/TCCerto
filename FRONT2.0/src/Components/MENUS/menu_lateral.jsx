@@ -9,42 +9,67 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import SettingsIcon from '@mui/icons-material/Settings';
 import EventAvailableRoundedIcon from '@mui/icons-material/EventAvailableRounded';
+import TCCERTOImage from '../../img/logo.svg';
+import { Link } from 'react-router-dom';
 
-import TCCERTOImage from '../../img/logo.svg'; 
-import { Link } from 'react-router-dom'; 
-
-function MenuLateral({ open, onClose }) {
+function MenuLateral({ open, onClose, interfaceType }) {
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   const handleListItemClick = (index) => {
     setSelectedIndex(index);
   };
 
+  const routes = {
+    Lider_Grupo: {
+      tarefas: '/Central_Tarefas',
+      eventos: '/Eventos',
+      orcamento: '/orcamento',
+      modelo: '/Modelo',
+      configuracoes: '/config'
+    },
+    Membro_Grupo: {
+      tarefas: '/Membro_Tarefas',
+      eventos: '/Membro_Eventos',
+      orcamento: '/Membro_Orcamento',
+      modelo: '/Membro_Modelo',
+      configuracoes: '/Membro_Config'
+    },
+    // Orientador: {
+    //   tarefas: '/Orientador_Tarefas',
+    //   eventos: '/Orientador_Eventos',
+    //   orcamento: '/Orientador_Orcamento',
+    //   modelo: '/Orientador_Modelo',
+    //   configuracoes: '/Orientador_Config'
+    // }
+  };
+
+  const selectedRoutes = routes[interfaceType] || {};
+
   const menuItems = [
     {
       icon: selectedIndex === 0 ? <TaskAltOutlinedIcon sx={{ color: '#07382E' }} /> : <TaskAltOutlinedIcon />,
       text: "Tarefas",
-      path: "/Central_Tarefas" 
+      path: selectedRoutes.tarefas || '/Central_Tarefas'
     },
     {
       icon: selectedIndex === 1 ? <EventAvailableRoundedIcon sx={{ color: '#07382E' }} /> : <CalendarTodayOutlinedIcon />,
       text: "Eventos",
-      path: "/Eventos" 
+      path: selectedRoutes.eventos || '/Eventos'
     },
     {
       icon: selectedIndex === 2 ? <MonetizationOnIcon sx={{ color: '#07382E' }} /> : <MonetizationOnOutlinedIcon />,
       text: "Orçamento",
-      path: "/orcamento" 
+      path: selectedRoutes.orcamento || '/orcamento'
     },
     {
       icon: selectedIndex === 3 ? <DescriptionIcon sx={{ color: '#07382E' }} /> : <DescriptionOutlinedIcon />,
       text: "Modelo",
-      path: "/Modelo" 
+      path: selectedRoutes.modelo || '/Modelo'
     },
     {
       icon: selectedIndex === 4 ? <SettingsIcon sx={{ color: '#07382E' }} /> : <SettingsOutlinedIcon />,
       text: "Configurações",
-      path: "/config" 
+      path: selectedRoutes.configuracoes || '/config'
     }
   ];
 

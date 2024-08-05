@@ -4,7 +4,7 @@ import {Box,Container,CssBaseline,Paper,Typography,IconButton} from '@mui/materi
 
 import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined';
 import Cabecalho2 from '../../../Components/CABEÇALHOS/Cabeçalho2';
-import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
+import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 
 export default function Termos_e_Politicas() {
     const [value, setValue] = React.useState('');

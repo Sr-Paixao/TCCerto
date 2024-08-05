@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import {  Box, Container, CssBaseline, Paper, Divider} from '@mui/material';
 import Link from '@mui/material/Link';
 import GroupsIcon from '@mui/icons-material/Groups';
-import Menu_Superior2 from '../../../Components/MENUS_LIDER/menu_superior2';
-import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
+import Menu_Superior from '../../../Components/MENUS/menu_superior';
+import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 import Cabecalho1 from '../../../Components/CABEÇALHOS/Cabeçalho1';
 import CustomLink from '../../../Components/LINKS/CustomLink';
 
@@ -40,9 +40,7 @@ export default function Geral_Equipe() {
                         }}
                 >
                                             {/* Menu Superior */}
-                    <Menu_Superior2
-                    sx={{ mt: '15%'}} 
-                    />
+                    <Menu_Superior backgroundColor="#someColor" interfaceType="Lider_Grupo" />
 
                                             {/* CABEÇALHO */}
                     <Box

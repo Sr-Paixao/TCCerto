@@ -4,7 +4,7 @@ import { Container, Grid, Typography, Box, CssBaseline, Paper, IconButton } from
 import iconPratica from '../../../img/ICONPRATICA.png';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CircularProgressWithLabel from '../../../Components/COMPONENTES_PROGRESS/Grafico'; 
-import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
+import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 import Btn_Criar from '../../../Components/Btns/Btn_criar';
 import EtapaButton from '../../../Components/COMPONENTES_PROGRESS/Card_Etapa';
 import SomeIcon from '@mui/icons-material/ErrorOutline'; 

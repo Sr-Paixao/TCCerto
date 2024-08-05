@@ -6,9 +6,9 @@ import WarningIcon from '@mui/icons-material/Warning';
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 import SchoolIcon from '@mui/icons-material/School';
 import CircularProgressWithLabel from '../../../Components/COMPONENTES_PROGRESS/Grafico'; 
-import Menu_Inferior from '../../../Components/MENUS_LIDER/menu_inferior';
+import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 import EtapaButton from '../../../Components/COMPONENTES_PROGRESS/Card_Etapas'; 
-import Menu_Superior from '../../../Components/MENUS_LIDER/menu_superior2';
+import Menu_Superior from '../../../Components/MENUS/menu_superior';
 
 const Progresso = () => {
   const [value, setValue] = React.useState('progresso');
@@ -34,7 +34,9 @@ const Progresso = () => {
           height: '100%' 
         }}
       >
-        <Menu_Superior/>
+
+        <Menu_Superior backgroundColor="#someColor" interfaceType="Lider_Grupo" />  
+
         <Box display="flex" justifyContent="center" alignItems="center" flexDirection="column">
           <CircularProgressWithLabel value={percentage} icon={SchoolIcon} />
           <Typography

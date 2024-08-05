@@ -54,7 +54,7 @@ import Cadastro from './pages/MEMBRO_GRUPO/2Cadastro/Cadastro.jsx';
 
 import Home2 from "./pages/MEMBRO_GRUPO/3Home_M/home.jsx";
 
-import Central_Tarefas_M from './pages/MEMBRO_GRUPO/4Tarefas_M/Central_Tarefas_M.jsx';
+import Membro_Tarefas from './pages/MEMBRO_GRUPO/4Tarefas_M/Central_Tarefas_M.jsx';
 import Dt_Tarefa_M from './pages/MEMBRO_GRUPO/4Tarefas_M/Detalhes_Tarefa_M.jsx'; 
 import Dt_Concluida_M from './pages/MEMBRO_GRUPO/4Tarefas_M/Tarefa_Concluida_M.jsx';
 
@@ -139,20 +139,20 @@ function App() {
 
                     <Route path="/Home2" element={<Home2 />} />
 
-                    <Route path="/Central_Tarefas_M" element={<Central_Tarefas_M />} />
+                    <Route path="/Membro_Tarefas" element={<Membro_Tarefas />} />
                     <Route path="/Dt_Tarefa_M" element={<Dt_Tarefa_M />} />
                     <Route path="/Dt_Concluida_M" element={<Dt_Concluida_M />} />
 
-                    <Route path="/Modelo_M" element={<Modelo_M />} />
+                    <Route path="/Membro_Modelo" element={<Modelo_M />} />
 
-                    <Route path="/Config_M" element={<Config_M />} />
+                    <Route path="/Membro_Config" element={<Config_M />} />
                     <Route path="/Relatar_Problema_M" element={<Relatar_Problema_M />} />
                     <Route path="/Termo_2_M" element={<Termo_2_M />} />
                     <Route path="/Avaliacao_M" element={<Avaliacao_M />} />
 
-                    <Route path="/Orcamento_M" element={<Orcamento_M />} />
+                    <Route path="/Membro_Orcamento" element={<Orcamento_M />} />
 
-                    <Route path="/Info_Equipe_M" element={<Info_Equipe_M />} />
+                    <Route path="/Membro_Equipe" element={<Info_Equipe_M />} />
 
 
 
