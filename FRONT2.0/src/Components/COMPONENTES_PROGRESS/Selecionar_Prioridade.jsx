@@ -45,7 +45,7 @@ const SelectPersonalizado = ({ prioridade, setPrioridade }) => {
                     primaryTypographyProps={{ fontWeight: 'bold' }} 
                 />
                 <ListItemText 
-                    primary={prioridade || "Selecionar prioridade"} 
+                    primary={prioridade || "Selecione"} 
                     primaryTypographyProps={{
                         variant: 'body2', 
                         fontSize: '0.79rem',

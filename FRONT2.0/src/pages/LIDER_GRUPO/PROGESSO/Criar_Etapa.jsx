@@ -82,8 +82,11 @@ export default function Criar_Etapa() {
                                 />
                         </Grid>
                     </Grid>
-                    <Select_Prioridade prioridade={prioridade} setPrioridade={setPrioridade} />
+
                     <SelectPersonalizado etapa={etapa} setEtapa={setEtapa} />
+                    
+                    <Select_Prioridade prioridade={prioridade} setPrioridade={setPrioridade} />
+
                     <GreenButton type="submit" sx={{ mt: 2 }}>Criar Etapa</GreenButton>
                 </form>
 

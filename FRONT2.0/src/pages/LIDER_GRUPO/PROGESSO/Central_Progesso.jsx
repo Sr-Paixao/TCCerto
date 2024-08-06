@@ -63,10 +63,10 @@ const Progresso = () => {
         </Typography>
         <Grid container spacing={1} direction="column">
           <Grid item>
-            <EtapaButton icon={DescriptionIcon} label="DOCUMENTAÇÃO" />
+            <EtapaButton icon={DescriptionIcon} label="DOCUMENTAÇÃO"  to="/Documentacao"/>
           </Grid>
           <Grid item>
-            <EtapaButton icon={PersonIcon} label="PRÁTICA" />
+            <EtapaButton icon={PersonIcon} label="PRÁTICA" to="/Pratica" />
           </Grid>
         </Grid>
         <Box mt={3} mb={7}> 
