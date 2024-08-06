@@ -158,7 +158,7 @@ export default function Edt_Tarefa() {
                                         fontSize: '120%'
                                     }}
                                 >
-                                    Data de Conclusão:
+                                    Conclusão:
                                 </Typography>
                             </Grid>
                             <Grid item>

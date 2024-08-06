@@ -26,7 +26,7 @@ function Cabecalho2({ icon, text, iconSize, handleBack, avatar, avatarSize }) {
                 </IconButton>
             )}
             <div style={{ display: 'flex', alignItems: 'center' }}>
-                <div style={{ marginRight: '8px', marginBottom: '5px' }}>
+                <div style={{ marginRight: '8px', marginBottom: '2px' }}>
                     {avatar ? (
                         <img 
                             src={avatar} 
@@ -53,8 +53,8 @@ function Cabecalho2({ icon, text, iconSize, handleBack, avatar, avatarSize }) {
                         color: '#07382E',
                         fontSize: '200%',
                         textAlign: 'CENTER',
-                        mb: 5,
-                        mt: 4
+                        mb: 2,
+                        mt: 2
 
                     }}
                 >

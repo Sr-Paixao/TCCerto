@@ -43,9 +43,7 @@ export default function Geral_Equipe() {
                     <Menu_Superior backgroundColor="#someColor" interfaceType="Lider_Grupo" />
 
                                             {/* CABEÇALHO */}
-                    <Box
-                    sx={{mt: '15%'}}
-                    >
+                    <Box>
                         <Cabecalho1 
                             icon={<GroupsIcon />} 
                             text='Equipe' 

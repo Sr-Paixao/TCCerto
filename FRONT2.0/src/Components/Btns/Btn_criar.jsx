@@ -15,7 +15,7 @@ const StyledFab = styled(Fab)(({ theme }) => ({
     zIndex: 1000,
 }));
 
-const Btn_criar_Eventos = ({ onClick }) => {
+const Btn_criar = ({ onClick }) => {
     return (
         <StyledFab onClick={onClick}>
             <AddIcon />
@@ -23,4 +23,4 @@ const Btn_criar_Eventos = ({ onClick }) => {
     );
 };
 
-export default Btn_criar_Eventos;
+export default Btn_criar;

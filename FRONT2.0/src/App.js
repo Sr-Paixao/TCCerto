@@ -37,10 +37,10 @@ import Software_Pagos2 from './pages/LIDER_GRUPO/Orçamento/4_Software_Pagos2.js
 import Orçamento_Total from './pages/LIDER_GRUPO/Orçamento/5_Orçamento_Total.jsx';
 import Dt_Orçamento from './pages/LIDER_GRUPO/Orçamento/6_Dt_Orçamento.jsx';
 
-import Central_Eventos from './pages/LIDER_GRUPO/CALENDARIO/Central_Eventos.jsx';
-import Criar_Evento from './pages/LIDER_GRUPO/CALENDARIO/Criar_Evento.jsx';
-import Dt_Evento from './pages/LIDER_GRUPO/CALENDARIO/Dt_Evento.jsx';
-import Edt_Eventos from './pages/LIDER_GRUPO/CALENDARIO/Edt_Eventos.jsx';
+import Central_Eventos from './pages/LIDER_GRUPO/EVENTOS/Central_Eventos.jsx';
+import Criar_Evento from './pages/LIDER_GRUPO/EVENTOS/Criar_Evento.jsx';
+import Dt_Evento from './pages/LIDER_GRUPO/EVENTOS/Dt_Evento.jsx';
+import Edt_Eventos from './pages/LIDER_GRUPO/EVENTOS/Edt_Eventos.jsx';
 
 import Central_Progresso from './pages/LIDER_GRUPO/PROGESSO/Central_Progesso.jsx'
 import Criar_Etapa from './pages/LIDER_GRUPO/PROGESSO/Criar_Etapa.jsx';
