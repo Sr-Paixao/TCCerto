@@ -51,6 +51,7 @@ export default function HomeScreen() {
 
     return (
         <ThemeProvider theme={theme}>
+        <Menu_Superior backgroundColor="white" profileRoute="/Perfil_L" interfaceType="Lider_Grupo" />
             <Box 
                 sx={{ 
                     pb: 7, 
@@ -58,7 +59,6 @@ export default function HomeScreen() {
                     minHeight: '100vh' 
                 }}
             >
-                <Menu_Superior backgroundColor="#someColor"  profileRoute="/Perfil_L" interfaceType="Lider_Grupo" />
                 <Box 
                     sx={{
                         height: '100px',
