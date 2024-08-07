@@ -48,8 +48,8 @@ const TaskList3 = () => {
                 {completionDate ? (
                     <span 
                         style={{ 
-                            marginLeft: '6rem',
-                            fontSize: '130%' 
+                            marginLeft: '4.3rem',
+                            fontSize: '100%' 
                         }}
                     >
                     em: 
@@ -59,9 +59,9 @@ const TaskList3 = () => {
                     <span 
                     style={{ 
                         color: 'red', 
-                        fontWeight: 'bold', 
-                        marginLeft: '6rem', 
-                        fontSize: '130%'
+                        // fontWeight: 'bold', 
+                        marginLeft: '4.3rem', 
+                        fontSize: '90%'
                     }}
                     >
                         NÃO CONCLUÍDA
@@ -93,7 +93,8 @@ const TaskList3 = () => {
                     style={{ 
                         color: 'red', 
                         fontWeight: 'bold', 
-                        marginLeft: '6rem' 
+                        marginLeft: '4.3rem',
+                        fontSize: '90%' 
                         }}
                 >
                         NÃO CONCLUÍDA

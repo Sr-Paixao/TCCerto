@@ -65,7 +65,7 @@ const Relatorio01 = ({ open, handleClose }) => {
                     <Grid 
                         container 
                         spacing={2} 
-                        sx={{ marginTop: '6%' }}
+                        sx={{ marginTop: '0.5%' }}
                     >
                         <Grid item xs={6}>
                             <GreenButton

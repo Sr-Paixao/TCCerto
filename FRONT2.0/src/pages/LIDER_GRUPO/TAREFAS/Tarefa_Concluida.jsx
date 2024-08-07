@@ -83,7 +83,7 @@ export default function Tarefa_Concluida() {
                   fontSize: '120%'
                   }}
               >
-                Data de Conclusão:
+                Conclusão:
               </Typography>
             </Grid>
 

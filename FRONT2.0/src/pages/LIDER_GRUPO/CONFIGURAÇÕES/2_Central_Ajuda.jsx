@@ -63,7 +63,7 @@ export default function Central_Ajuda() {
                 <Paper 
                     elevation={2} 
                     sx={{
-                        mt: 5, 
+                        mt: 2, 
                         p: 2, 
                         display: 'flex', 
                         flexDirection: 'column', 
@@ -81,7 +81,7 @@ export default function Central_Ajuda() {
 
                     <Typography
                         sx={{
-                            mt: 4,
+                            mt: 2,
                             textAlign: 'center',
                             fontSize: '120%'
                         }}>

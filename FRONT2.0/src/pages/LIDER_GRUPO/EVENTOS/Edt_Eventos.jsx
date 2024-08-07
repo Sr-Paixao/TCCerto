@@ -159,13 +159,13 @@ export default function EditarEvento() {
                                     variant="subtitle1" 
                                     gutterBottom 
                                     sx={{ 
-                                        marginTop: '5%', 
+                                        marginTop: '12%', 
                                         textAlign: 'center', 
                                         fontWeight: 'bold',
                                         fontSize: '100%'  
                                         }}
                                 >
-                                        Data:
+                                        Data :  
                                 </Typography>
                             </Grid>
 
@@ -177,7 +177,7 @@ export default function EditarEvento() {
                                     onChange={(event) => 
                                     setData(event.target.value)} 
                                     variant="standard" 
-                                    sx={{ width: '11vh' }}
+                                    sx={{ width: '20vh' }}
                                 />
                             </Grid>
                         </Grid>
@@ -224,7 +224,7 @@ export default function EditarEvento() {
                                     onChange={(event) => 
                                     setHora(event.target.value)} 
                                     variant="standard" 
-                                    sx={{ width: '11vh' }}
+                                    sx={{ width: '20vh' }}
                                 />
                             </Grid>
                         </Grid>

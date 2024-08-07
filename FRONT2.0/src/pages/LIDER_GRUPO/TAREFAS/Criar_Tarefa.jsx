@@ -169,7 +169,7 @@ export default function Criar_Tarefa() {
                                         fontSize: '100%' 
                                         }}
                                 >
-                                        Data de Conclusão:
+                                    Conclusão:
                                 </Typography>
                             </Grid>
 
@@ -181,7 +181,7 @@ export default function Criar_Tarefa() {
                                     onChange={(event) => 
                                     setDataConclusao(event.target.value)} 
                                     variant="standard" 
-                                    sx={{ width: '11vh' }}
+                                    sx={{ width: '20vh' }}
                                 />
                             </Grid>
                         </Grid>

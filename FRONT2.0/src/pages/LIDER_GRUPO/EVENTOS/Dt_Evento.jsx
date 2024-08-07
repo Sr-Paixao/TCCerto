@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, CssBaseline, Paper, Grid } from '@mui/material';
-import EventAvailableIcon from '@mui/icons-material/EventAvailable'; // Certifique-se de adicionar esta linha
+import EventAvailableIcon from '@mui/icons-material/EventAvailable';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import AlarmIcon from '@mui/icons-material/Alarm';
 
@@ -52,11 +52,11 @@ export default function DtEventos() {
           flexDirection: 'column', 
           alignItems: 'center', 
           boxShadow: "0" 
-          }}
+        }}
       >
         
-        <Cabecalho2 h
-          andleBack={() => navigate('/Eventos')} 
+        <Cabecalho2
+          handleBack={() => navigate('/Eventos')} 
           icon={<EventAvailableIcon />}
           text="Nome Evento" 
           iconSize={'70px'} 
@@ -65,13 +65,12 @@ export default function DtEventos() {
         <Grid 
           container 
           spacing={2} 
-          justifyContent="center" 
           sx={{ 
             marginTop: '2%', 
-            justifyContent: 'center' 
-            }}
+            width: '100%' 
+          }}
         >
-          <Grid item xs={6}>
+          <Grid item xs={12}>
             <DateTimeDisplay
               icon={<CalendarMonthIcon />}
               label="Data:"
@@ -79,7 +78,7 @@ export default function DtEventos() {
             />
           </Grid>
 
-          <Grid item xs={6}>
+          <Grid item xs={12}>
             <DateTimeDisplay
               icon={<AlarmIcon />}
               label="Horário:"
@@ -90,9 +89,9 @@ export default function DtEventos() {
 
         <Box1>
           <TaskListItem 
-          users={assignedUsers} 
-          open={open} 
-          handleClick={handleClick} 
+            users={assignedUsers} 
+            open={open} 
+            handleClick={handleClick} 
           />
         </Box1>
 
@@ -101,14 +100,13 @@ export default function DtEventos() {
         </Box2>
 
         <Grid 
-        container 
-        spacing={2} 
-        sx={{ marginTop: '6%' }}
+          container 
+          spacing={2} 
+          sx={{ marginTop: '6%' }}
         >
-          
           <Grid item xs={6}>
             <GreenButton 
-            onClick={handleEditClick}
+              onClick={handleEditClick}
             >
               EDITAR
             </GreenButton>
@@ -116,7 +114,7 @@ export default function DtEventos() {
 
           <Grid item xs={6}>
             <RedButton 
-            onClick={handleOpenPopup}
+              onClick={handleOpenPopup}
             >
               EXCLUIR
             </RedButton>
@@ -124,8 +122,8 @@ export default function DtEventos() {
         </Grid>
 
         <Popup 
-        open={openPopup} 
-        handleClose={handleClosePopup} 
+          open={openPopup} 
+          handleClose={handleClosePopup} 
         />
 
         <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />

@@ -169,7 +169,7 @@ export default function Edt_Tarefa() {
                                     onChange={(event) =>
                                         setDataConclusao(event.target.value)}
                                     variant="standard"
-                                    sx={{ width: '11vh' }}
+                                    sx={{ width: '18vh' }}
                                 />
                             </Grid>
                         </Grid>
