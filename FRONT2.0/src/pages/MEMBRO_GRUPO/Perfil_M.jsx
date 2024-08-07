@@ -46,7 +46,7 @@ export default function Info_Equipe() {
                     <Avatar
                         alt="img grupo"
                         src="/static/images/avatar/1.jpg"
-                        sx={{ width: 100, height: 100, border: '2px solid #07382E' }}
+                        sx={{ width: 100, height: 100, border: '2px solid #000' }}
                     />
                 </Stack>
 

@@ -52,7 +52,7 @@ export default function Central_Eventos() {
                     <Grid item xs={12}>
 
                         {/* / MENU SUPERIOR  */}
-                        <Menu_Superior backgroundColor="#someColor" interfaceType="Lider_Grupo" />
+                        <Menu_Superior backgroundColor="#someColor"  profileRoute="/Perfil_L" interfaceType="Lider_Grupo" />
                         
                         {/* CABEÇALHO */}
                         <Box sx={{ mt: '5%' }}>

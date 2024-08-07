@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { Box, IconButton, useMediaQuery, useTheme } from '@mui/material';
+import { Box, IconButton, useMediaQuery, useTheme, Avatar } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { useNavigate } from 'react-router-dom';
 import MenuLateral from './menu_lateral';
 
-function Menu_Superior({ backgroundColor = '#E2F8F4', interfaceType }) {
+function Menu_Superior({ backgroundColor = '#E2F8F4', interfaceType, profileRoute }) {
     const [isMenuOpen, setMenuOpen] = useState(false);
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const navigate = useNavigate();
 
     const handleMenuClick = () => {
         setMenuOpen(!isMenuOpen);
@@ -15,6 +16,10 @@ function Menu_Superior({ backgroundColor = '#E2F8F4', interfaceType }) {
 
     const handleCloseMenu = () => {
         setMenuOpen(false);
+    };
+
+    const handleProfileClick = () => {
+        navigate(profileRoute); // Redireciona para a rota de perfil específica
     };
 
     return (
@@ -54,14 +59,11 @@ function Menu_Superior({ backgroundColor = '#E2F8F4', interfaceType }) {
                     <MenuIcon sx={{ fontSize: 35 }} />
                 </IconButton>
 
-                <IconButton 
-                    edge="end" 
-                    color="inherit" 
-                    aria-label="account"
-                >
-                    <AccountCircleIcon sx={{ fontSize: 35 }} />
-                </IconButton>
-            
+                <Avatar 
+                    sx={{ cursor: 'pointer' }}
+                    onClick={handleProfileClick} 
+                />
+
                 <MenuLateral 
                     open={isMenuOpen} 
                     onClose={handleCloseMenu} 

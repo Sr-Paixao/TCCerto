@@ -93,11 +93,7 @@ export default function HomeScreen() {
                     }}
             >
 
-                <Menu_Superior 
-                    backgroundColor={
-                        theme.palette.tertiary.main
-                        } 
-                />
+            <Menu_Superior backgroundColor="#someColor"  profileRoute="/Perfil_L" interfaceType="Lider_Grupo" />
 
                 <Box 
                     sx={{

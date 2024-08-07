@@ -29,7 +29,7 @@ export default function Central_Tarefa() {
                     <Paper elevation={2} sx={{ p: 2, boxShadow: "0" }}>
                         
                         {/* MENU SUPERIOR */}
-                        <Menu_Superior backgroundColor="#someColor" interfaceType="Lider_Grupo" />
+                        <Menu_Superior backgroundColor="#someColor"  profileRoute="/Perfil_L" interfaceType="Lider_Grupo" />
                         
                         {/* CABEÇALHO */}
                         <Box sx={{mt: '5%'}}>

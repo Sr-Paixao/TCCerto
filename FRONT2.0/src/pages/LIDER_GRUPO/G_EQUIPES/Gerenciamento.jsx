@@ -40,8 +40,7 @@ export default function Geral_Equipe() {
                         }}
                 >
                                             {/* Menu Superior */}
-                    <Menu_Superior backgroundColor="#someColor" interfaceType="Lider_Grupo" />
-
+                    <Menu_Superior backgroundColor="#someColor"  profileRoute="/Perfil_L" interfaceType="Lider_Grupo" />
                                             {/* CABEÇALHO */}
                     <Box>
                         <Cabecalho1 

@@ -1,68 +1,60 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Button, Container, CssBaseline, Paper, Typography } from '@mui/material';
-import FormComponent from '../Components/FormComponent';
+import * as React from 'react';
+import {Box,Container,CssBaseline,Paper,Typography,IconButton,TextField} from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import Button from '@mui/material/Button';
+import GroupsIcon from '@mui/icons-material/Groups';
 
-export default function CriarTarefa() {
-    const navigate = useNavigate();
 
-    const [titulo, setTitulo] = useState('');
-    const [dataConclusao, setDataConclusao] = useState('');
-    const [descricao, setDescricao] = useState('');
+export default function Perfil() {
+  return (
+    <Container component="main" maxWidth="xs">
+      <CssBaseline />
+      <Paper elevation={2} sx={{ mt: 8, p: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', boxShadow: "0" }}>
+        <IconButton sx={{ alignSelf: 'flex-start' }}>
+          <ArrowBackIcon />
+        </IconButton>
+        <GroupsIcon 
+          sx={{ width: 100, height: 200  }}>
+          </GroupsIcon>
+        <TextField
+            margin="normal"
+            required
+            fullWidth
+            id="nome"
+            label="Nome"
+            name="nome"
+            autoFocus
+            variant="standard"
+            sx={{alignItems: 'right', color: "#07382E",  borderColor: '#07382E', '&:hover': {borderColor: '#07382E', backgroundColor: 'transparent'} }}
+            >
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log('Título:', titulo);
-        console.log('Data de Conclusão:', dataConclusao);
-        console.log('Descrição:', descricao);
-        // Aqui você pode adicionar a lógica para salvar a tarefa
-        setTitulo('');
-        setDataConclusao('');
-        setDescricao('');
-    };
+        </TextField>
+        <Box sx={{ width: '100%', mt: 3}}>
+        <Typography sx={{mb:2}}>Função:</Typography>
+        <Button
+            fullWidth
+            variant="outlined"
+            sx={{backgroundColor:"#fff", color: "#07382E",  borderColor: '#07382E', '&:hover': {borderColor: '#07382E', backgroundColor: 'transparent',}, }}
+        > Função
+        </Button> 
 
-    const handleCancelarClick = () => {
-        navigate('/'); // Navega de volta para a página inicial
-    };
 
-    return (
-        <Container component="main" maxWidth="xs">
-            <CssBaseline />
-            <Paper elevation={2} sx={{ mt: 5, p: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', boxShadow: "0" }}>
-                <Typography component="h1" variant="h5" sx={{ color: '#07382E', mt: -1 }}>
-                    Criar Tarefa
-                </Typography>
-                <FormComponent
-                    handleSubmit={handleSubmit}
-                    titulo={titulo}
-                    setTitulo={setTitulo}
-                    dataConclusao={dataConclusao}
-                    setDataConclusao={setDataConclusao}
-                    descricao={descricao}
-                    setDescricao={setDescricao}
-                />
-                <Button
-                    onClick={handleCancelarClick}
-                    type="button"
-                    fullWidth
-                    variant="outlined"
-                    sx={{
-                        mt: 2,
-                        mb: 5,
-                        maxWidth: "180px",
-                        backgroundColor: "transparent",
-                        color: "#FF0000",
-                        borderColor: "#FF0000",
-                        "&:hover": {
-                            backgroundColor: "#FF0000",
-                            color: "#FFFFFF",
-                            borderBlockColor: 'transparent'
-                        }
-                    }}
-                >
-                    Cancelar
-                </Button>
-            </Paper>
-        </Container>
-    );
+        <Button
+            fullWidth
+            variant="outlined"
+            sx={{mt:10, backgroundColor:"#fff", color: "#07382E",  borderColor: '#07382E', '&:hover': {borderColor: '#07382E', backgroundColor: 'transparent',}, }}
+        > 
+        Salvar Alterações
+        </Button> 
+        <Button
+            fullWidth
+            variant="outlined"
+            color='error'
+            >
+            Sair do grupo
+        </Button> 
+        </Box>
+      </Paper>
+    </Container>
+  );
 }

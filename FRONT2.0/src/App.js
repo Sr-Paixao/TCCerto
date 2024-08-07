@@ -9,7 +9,8 @@ import Add_Membro from './pages/LIDER_GRUPO/G_EQUIPES/ADD_MEMBRO/Add_Membro.jsx'
 
 import Index from "./pages/LIDER_GRUPO/home.jsx";
 
-import Perfil_L from "./pages/LIDER_GRUPO/Perfil_L.jsx";
+import Perfil_L from "./pages/LIDER_GRUPO/PERFIL/Perfil_L.jsx";
+import Edt_Perfil from "./pages/LIDER_GRUPO/PERFIL/Edt_Perfil.jsx";
 
 import Central_Tarefa from './pages/LIDER_GRUPO/TAREFAS/Central_Tarefas.jsx';
 import Criar_Tarefa from './pages/LIDER_GRUPO/TAREFAS/Criar_Tarefa.jsx';
@@ -69,6 +70,8 @@ import Orcamento_M from './pages/MEMBRO_GRUPO/8Orçamento_M/Orçamento_M.jsx';
 
 import Info_Equipe_M from './pages/MEMBRO_GRUPO/7Equipe_M/Info_Equipe_M.jsx';
 
+import Perfil_M from "./pages/MEMBRO_GRUPO/Perfil_M.jsx";
+
 
 
 
@@ -93,6 +96,7 @@ function App() {
                     <Route path="/Index" element={<Index />} />
 
                     <Route path="/Perfil_L" element={<Perfil_L />} />
+                    <Route path="/Edt_Perfil" element={<Edt_Perfil />} />
 
                     <Route path='/Central_Tarefas' element={<Central_Tarefa/>}/>
                     <Route path='/Criar_Tarefa' element={<Criar_Tarefa/>}/>

@@ -47,7 +47,7 @@ export default function Modelo() {
                 }}
             >
                 {/* MENU SUPERIOR  */}
-                <Menu_Superior backgroundColor="#someColor" interfaceType="Lider_Grupo" />
+                <Menu_Superior backgroundColor="#someColor"  profileRoute="/Perfil_L" interfaceType="Lider_Grupo" />
                 {/* CABAÇALHO AQUI  */}
                 <Box
                 sx={{ mt: 5}}>

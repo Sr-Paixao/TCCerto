@@ -44,7 +44,7 @@ export default function CENTRAL_ORCAMENTO() {
             >
 
                                                 {/* MENU_SUPERIOR  */}
-                    <Menu_Superior backgroundColor="#someColor" interfaceType="Lider_Grupo" />
+                    <Menu_Superior backgroundColor="#someColor"  profileRoute="/Perfil_L" interfaceType="Lider_Grupo" />
 
                                                 {/* CABEÇALHO */}
                     <Cabecalho_1
