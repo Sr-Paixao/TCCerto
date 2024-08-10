@@ -13,7 +13,7 @@ const TaskList = ({ assignedUsers, handleMenuItemClick }) => {
         } else if (assignedUsers.length <= 3) {
             return assignedUsers.join(", ");
         } else {
-            return `${assignedUsers[0]} e +${assignedUsers.length - 1} pessoas`;
+            return `${assignedUsers[0]} e +${assignedUsers.length - 1} `;
         }
     };
 
@@ -90,7 +90,7 @@ const TaskList = ({ assignedUsers, handleMenuItemClick }) => {
                 </ListItemIcon>
 
                 <ListItemText 
-                    primary="Atribuír:"
+                    primary="Atribuir:"
                     primaryTypographyProps={{ fontWeight: 'bold' }} 
                 />
                 {renderAvatars()}

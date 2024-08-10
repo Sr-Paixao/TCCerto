@@ -8,6 +8,7 @@ import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 import Card_Tarefa from '../../../Components/COMPONENTES_TAREFAS/CARDS_LIDER/Card_Tarefas';
 import Card_Tarefa_Completa from '../../../Components/COMPONENTES_TAREFAS/CARDS_LIDER/Card_Concluida';
 import Btn_Criar from '../../../Components/Btns/Btn_criar';
+import Marcador from '../../../Components/COMPONENTES_EVENTOS/Hoje';
 
 export default function Central_Tarefa() {
     const [value, setValue] = React.useState('');
@@ -54,16 +55,9 @@ export default function Central_Tarefa() {
                         </Box>
                         
                         {/* Tarefas Concluidas */}
-                        <Typography
-                            component="h2" 
-                            variant="h6" 
-                            sx={{ 
-                                marginTop: '15px',
-                                color: '#07382E' 
-                            }}
-                        > 
-                            Tarefas Concluidas
-                        </Typography>
+                        <Box sx={{ mt: 2, display: 'flex', justifyContent: 'center' }}>
+                            <Marcador>Tarefas Concluídas</Marcador>
+                        </Box>
                         
                         {/* AQUI VIRAM OS CARDS DE TAREFAS CONCLUIDAS */}
                         <Box>

@@ -70,7 +70,7 @@ export default function Central_Eventos() {
 
                         {/* PROXIMOS EVENTOS */}
                         <Box sx={{ mt: 2, display: 'flex', justifyContent: 'center' }}>
-                            <HojeButton />
+                            <HojeButton>Próximos Eventos</HojeButton>
                         </Box>
                         
                         {/* CARDS LIDER */}

@@ -17,12 +17,13 @@ const CustomButton = styled(Button)({
   pointerEvents: 'none' 
 });
 
-const HojeButton = () => {
+const HojeButton = ({ children }) => {
   return (
     <CustomButton>
-      Próximos Eventos
+      {children}
     </CustomButton>
   );
 };
 
 export default HojeButton;
+
