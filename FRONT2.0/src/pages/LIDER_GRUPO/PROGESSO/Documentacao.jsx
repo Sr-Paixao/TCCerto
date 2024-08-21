@@ -87,8 +87,35 @@ const ProgressoPage = () => {
             Etapas:
           </Typography>
 
-          <Box sx={{ width: '100%'}}>
-          <EtapaButton icon={SomeIcon} label="Minha Etapa" />
+          <Box sx={{ width: '100%', mb: 18}}>
+          <EtapaButton icon={SomeIcon} label="Minha Etapa" /> {/* Exemplo  */}
+          <EtapaButton icon={SomeIcon} label="Capa" />  {/*VERMELHO*/}
+          <EtapaButton icon={SomeIcon} label="Folha de Rosto" /> {/*VERMELHO*/}
+          <EtapaButton icon={SomeIcon} label="Dedicatória" />
+          <EtapaButton icon={SomeIcon} label="Epígrafe" />
+          <EtapaButton icon={SomeIcon} label="Agradecimento" />
+          <EtapaButton icon={SomeIcon} label="Resumo Ling Nacional" /> {/*VERMELHO*/}
+          <EtapaButton icon={SomeIcon} label="Resumo Ling Estrangeira" /> {/*VERMELHO*/}
+          <EtapaButton icon={SomeIcon} label="Lista de Ilustrações" /> {/*VERMELHO*/}
+          <EtapaButton icon={SomeIcon} label="Lista Gráficos" />
+          <EtapaButton icon={SomeIcon} label="Lista de Tabelas" />
+          <EtapaButton icon={SomeIcon} label="Lista de Abreviatura" />
+          <EtapaButton icon={SomeIcon} label="Lista de Símbolos" />
+          <EtapaButton icon={SomeIcon} label="Súmario" /> {/*VERMELHO*/}
+          <EtapaButton icon={SomeIcon} label="Introdução" /> {/*VERMELHO*/}
+          <EtapaButton icon={SomeIcon} label="Delimitação Do Tema" />{/*VERMELHO*/}
+          <EtapaButton icon={SomeIcon} label="Problemática" /> {/*VERMELHO*/}
+          <EtapaButton icon={SomeIcon} label="Hipóteses" /> {/*VERMELHO*/}
+          <EtapaButton icon={SomeIcon} label="Justificativa" /> {/*VERMELHO*/}
+          <EtapaButton icon={SomeIcon} label="Objetivos" /> {/*VERMELHO*/}
+          <EtapaButton icon={SomeIcon} label="Metodologias" /> {/*VERMELHO*/}
+          <EtapaButton icon={SomeIcon} label="Referencial Teórico" /> {/*VERMELHO*/}
+          <EtapaButton icon={SomeIcon} label="Desenvolvimento" />{/*VERMELHO*/}
+          <EtapaButton icon={SomeIcon} label="Considerações Finais" /> {/*VERMELHO*/}
+          <EtapaButton icon={SomeIcon} label="Referências Bibliográficas" /> {/*VERMELHO*/}
+          <EtapaButton icon={SomeIcon} label="Apêndices" /> {/*VERDE*/}
+          <EtapaButton icon={SomeIcon} label="Anexos" /> {/*VERDE*/}
+          <EtapaButton icon={SomeIcon} label="Revisão da Documentação" /> {/*VERDE*/}
           </Box>
 
           <Btn_Criar onClick={handleNovaEtapa} />
