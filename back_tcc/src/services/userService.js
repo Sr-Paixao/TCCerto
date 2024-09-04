@@ -11,7 +11,7 @@ async function login(email, password) {
     connection.end();
     return rows;
   } catch (error) {
-    throw error;
+    console.log(error)
   }
 }
 
@@ -43,4 +43,31 @@ async function cadastrar(name, email, number, password, course, type) {
   }
 }
 
-module.exports = { login, cadastrar };
+async function allUsers() {
+  const sql = "SELECT id, nome, email, celular FROM tbl_usuarios";
+
+  try {
+    const connection = await database.connect();
+    const [rows] = await connection.promise().query(sql);
+    connection.end();
+    return rows;
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+async function userGroup(id) {
+  const sql = "SELECT id FROM tbl_grupos WHERE criador_id = ?";
+  const data = [id];
+
+  try {
+    const connection = await database.connect();
+    const [rows] = await connection.promise().query(sql, data);
+    connection.end();
+    return rows;
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+module.exports = { login, cadastrar, allUsers, userGroup };

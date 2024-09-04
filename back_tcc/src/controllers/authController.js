@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const userService = require('../services/UserService');
+const userService = require('../services/userService');
 const bcrypt = require('bcrypt'); // Adicionando o bcrypt para hash de senhas
 
 const secretKey = process.env.JWT_SECRET || 'chave_secreta'; // Usando variável de ambiente para a chave secreta ou uma chave padrão
