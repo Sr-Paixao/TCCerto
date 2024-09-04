@@ -11,11 +11,7 @@ async function login(email, password) {
     connection.end();
     return rows;
   } catch (error) {
-<<<<<<< HEAD
     console.log(error)
-=======
-    throw error;
->>>>>>> 0f3141d0546780e2df509b8c69fe88bafd11de65
   }
 }
 
@@ -47,7 +43,6 @@ async function cadastrar(name, email, number, password, course, type) {
   }
 }
 
-<<<<<<< HEAD
 async function allUsers() {
   const sql = "SELECT id, nome, email, celular FROM tbl_usuarios";
 
@@ -76,6 +71,3 @@ async function userGroup(id) {
 }
 
 module.exports = { login, cadastrar, allUsers, userGroup };
-=======
-module.exports = { login, cadastrar };
->>>>>>> 0f3141d0546780e2df509b8c69fe88bafd11de65

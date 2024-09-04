@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Container, CssBaseline, Paper, Typography, Box, Grid } from '@mui/material';
 import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined';
@@ -10,15 +11,52 @@ import Card_Tarefa_Completa from '../../../Components/COMPONENTES_TAREFAS/CARDS_
 import Btn_Criar from '../../../Components/Btns/Btn_criar';
 
 export default function Central_Tarefa() {
-    const [value, setValue] = React.useState('');
+    const [value, setValue] = useState('');
+    const [tarefas, setTarefas] = useState([]);
+    const [tarefasConcluidas, setTarefasConcluidas] = useState([]);
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        fetchTarefas();
+    }, []);
+
+    const fetchTarefas = async () => {
+        try {
+            const response = await axios.get('http://localhost:3307/api/tarefas');
+            if (response.data.success) {
+                const todasTarefas = response.data.data;
+                // Adicionar usuários atribuídos manualmente para cada tarefa
+                const tarefasComUsuarios = todasTarefas.map(tarefa => ({
+                    ...tarefa,
+                    usuarios_atribuidos: [
+                        { nome: 'Usuário 1', avatar: 'https://i.pravatar.cc/' },
+                        { nome: 'Usuário 2', avatar: 'https://i.pravatar.cc/150' }
+                    ]
+                }));
+                setTarefas(tarefasComUsuarios.filter(tarefa => !tarefa.concluida));
+                setTarefasConcluidas(tarefasComUsuarios.filter(tarefa => tarefa.concluida));
+            } else {
+                console.error('Erro ao buscar tarefas:', response.data.message);
+            }
+        } catch (error) {
+            console.error('Erro ao buscar tarefas:', error);
+        }
+    };
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
-    const navigate = useNavigate();
 
     const handleNovaTarefa = () => {
         navigate('/Criar_Tarefa');
+    };
+
+    const calcularDiasRestantes = (dataLimite) => {
+        const hoje = new Date();
+        const limite = new Date(dataLimite);
+        const diferenca = limite.getTime() - hoje.getTime();
+        return Math.ceil(diferenca / (1000 * 3600 * 24));
     };
 
     return (
@@ -28,10 +66,8 @@ export default function Central_Tarefa() {
                 <Grid item xs={12}>
                     <Paper elevation={2} sx={{ p: 2, boxShadow: "0" }}>
                         
-                        {/* MENU SUPERIOR */}
-                        <Menu_Superior backgroundColor="#someColor"  profileRoute="/Perfil_L" interfaceType="Lider_Grupo" />
+                        <Menu_Superior backgroundColor="white" profileRoute="/Perfil_L" interfaceType="Lider_Grupo" />
                         
-                        {/* CABEÇALHO */}
                         <Box sx={{mt: '5%'}}>
                             <Cabecalho1 
                                 icon={<TaskAltOutlinedIcon />} 
@@ -40,20 +76,18 @@ export default function Central_Tarefa() {
                             />
                         </Box>
                         
-                        {/* AQUI VIRAM OS CARDS DE TAREFAS */}
                         <Box sx={{mt: '5%'}}>
-                            <Card_Tarefa 
-                                nomeTarefa="Nome da Tarefa"
-                                diasRestantes={7}
-                                usuariosAtribuidos={[
-                                    { nome: "Usuário 1", avatar: "caminho/para/avatar1.jpg" },
-                                    { nome: "Usuário 2", avatar: "caminho/para/avatar2.jpg" }
-                                ]}
-                                maxAvatares={3}
-                            />
+                            {tarefas.map((tarefa) => (
+                                <Card_Tarefa 
+                                    key={tarefa.id}
+                                    nomeTarefa={tarefa.titulo_tarefa}
+                                    diasRestantes={calcularDiasRestantes(tarefa.data_limite)}
+                                    usuariosAtribuidos={tarefa.usuarios_atribuidos}
+                                    maxAvatares={3}
+                                />
+                            ))}
                         </Box>
                         
-                        {/* Tarefas Concluidas */}
                         <Typography
                             component="h2" 
                             variant="h6" 
@@ -65,23 +99,20 @@ export default function Central_Tarefa() {
                             Tarefas Concluidas
                         </Typography>
                         
-                        {/* AQUI VIRAM OS CARDS DE TAREFAS CONCLUIDAS */}
                         <Box>
-                            <Card_Tarefa_Completa 
-                                nomeTarefa="Nome da Tarefa"
-                                dataConclusao={new Date()}
-                                usuariosAtribuidos={[
-                                    { nome: 'Usuário 1', avatar: 'caminho/para/avatar1.png' },
-                                    { nome: 'Usuário 2', avatar: 'caminho/para/avatar2.png' }
-                                ]}
-                                maxAvatares={2}
-                            />
+                            {tarefasConcluidas.map((tarefa) => (
+                                <Card_Tarefa_Completa 
+                                    key={tarefa.id}
+                                    nomeTarefa={tarefa.titulo_tarefa}
+                                    dataConclusao={new Date(tarefa.data_conclusao)}
+                                    usuariosAtribuidos={tarefa.usuarios_atribuidos}
+                                    maxAvatares={2}
+                                />
+                            ))}
                         </Box>
                         
-                        {/* Botão Criar Tarefa */}
                         <Btn_Criar onClick={handleNovaTarefa} />
 
-                        {/* MENU INFERIOR */}
                         <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
 
                     </Paper>

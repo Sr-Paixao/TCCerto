@@ -4,6 +4,7 @@ import {
         Container, CssBaseline, Paper, 
         Typography, IconButton,Grid, TextField
         } from '@mui/material';
+import axios from 'axios';
 import AddTaskIcon from '@mui/icons-material/AddTask';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import EditNoteOutlinedIcon from '@mui/icons-material/EditNoteOutlined';
@@ -45,17 +46,42 @@ export default function Criar_Tarefa() {
     const navigate = useNavigate();
 
     // Função para lidar com o envio do formulário
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log('Título:', titulo);
-        console.log('Data de Conclusão:', dataConclusao);
-        console.log('Descrição:', descricao);
-        setTitulo('');
-        setDataConclusao('');
-        setDescricao('');
-        setOpenDialog(true); 
+        
+        // Assumindo que você tem uma maneira de obter o ID do usuário e do grupo
+        const usuario_id = 1; // Substitua isso pela lógica real para obter o ID do usuário
+        const grupo_id = 1; // Substitua isso pela lógica real para obter o ID do grupo
+    
+        // Formatando a data para o formato esperado (YYYY/MM/DD)
+        const formattedDate = dataConclusao.split('-').join('/');
+    
+        const taskData = {
+            usuario_id: usuario_id,
+            grupo_id: grupo_id,
+            titulo_tarefa: titulo,
+            descricao_tarefa: descricao,
+            data_limite: formattedDate
+        };
+    
+        try {
+            const response = await axios.post('http://localhost:3307/api/tarefas', taskData);
+            
+            if (response.data.success) {
+                console.log('Tarefa criada com sucesso:', response.data);
+                setTitulo('');
+                setDataConclusao('');
+                setDescricao('');
+                setOpenDialog(true);
+            } else {
+                console.error('Erro ao criar tarefa:', response.data.message);
+                // Você pode querer mostrar uma mensagem de erro para o usuário aqui
+            }
+        } catch (error) {
+            console.error('Erro ao enviar dados para o servidor:', error);
+            // Você pode querer mostrar uma mensagem de erro para o usuário aqui
+        }
     };
-
     // Função para voltar para a página anterior
     const handleBack = () => {
         navigate('/Central_Tarefas');
@@ -245,7 +271,8 @@ export default function Criar_Tarefa() {
 
                                 {/* Botão para criar tarefa */}
                     <GreenButton 
-                        onClick={handleClick}
+                        type="submit"
+                        onClick={handleSubmit}
                     >
                         Criar Tarefa
                     </GreenButton>

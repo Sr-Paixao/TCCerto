@@ -48,7 +48,8 @@ function Menu_Inferior({ value, onChange, interfaceType }) {
                 bottom: 0, 
                 left: 0, 
                 right: 0, 
-                backgroundColor: '#E3FAF4' 
+                backgroundColor: '#E3FAF4',
+                zIndex: 1200, 
             }}
         >
             <CustomBottomNavigationAction 

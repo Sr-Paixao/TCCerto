@@ -8,16 +8,11 @@ const cursosController = require('../src/controllers/cursosController.js');
 const gruposController = require('./controllers/gruposController.js');
 const membrosController = require('./controllers/membrosController.js');
 const mensagensController = require('./controllers/mensagensController.js');
-<<<<<<< HEAD
 const taskController = require('./controllers/tarefasController.js/tarefasController.js')
 const userController = require('./controllers/userController.js')
+const eventController = require('./controllers/eventController.js')
 // const tarefasController = require('./controllers/tarefasController.js');
 const invitationController = require("./controllers/invitationController.js")
-=======
-const tarefasController = require('./controllers/tarefasController.js/tarefasController.js')
-const userController = require('./controllers/userController.js')
-// const tarefasController = require('./controllers/tarefasController.js');
->>>>>>> 0f3141d0546780e2df509b8c69fe88bafd11de65
 
 
 const { inserir: inserirUsuario } = require('./services/UsuariosService.js');
@@ -65,20 +60,12 @@ router.post('/mensagem', mensagensController.inserir);
 router.put('/mensagem/:id', mensagensController.alterar);
 router.delete('/mensagem/:id', mensagensController.excluir);
 
-<<<<<<< HEAD
 routes.use("/user", userController)
 routes.use("/invitation", invitationController)
 
 routes.use('/tarefas', taskController);
-=======
-router.get('/tarefas', tarefasController.buscarTodos);
-router.get('/tarefas/:id', tarefasController.buscarUm);
-router.post('/tarefa', tarefasController.inserir);
-router.put('/tarefa/:id', tarefasController.alterar);
-router.delete('/tarefa/:id', tarefasController.excluir);
 
-routes.use("/user", userController)
->>>>>>> 0f3141d0546780e2df509b8c69fe88bafd11de65
+routes.use('/eventos', eventController);
 
 module.exports = router;
 module.exports = routes;

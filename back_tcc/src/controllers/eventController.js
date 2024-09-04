@@ -1,57 +1,97 @@
-const taskService = require('../services/taskService');
+const express = require("express");
+const eventService = require("../services/eventService");
 
-async function getAllTasks(req, res) {
+const router = express.Router();
+
+router.get("/", async (req, res) => {
   try {
-    const tasks = await taskService.getAllTasks();
-    res.json(tasks);
+    const events = await eventService.getAllEvents();
+    res.status(200).json({ success: true, data: events });
   } catch (error) {
-    res.status(500).send('Erro ao buscar tarefas');
+    console.error('Erro ao buscar eventos:', error);
+    res.status(500).json({
+      success: false,
+      message: "Erro ao buscar eventos",
+      error: error.message,
+    });
   }
-}
+});
 
-async function getTaskById(req, res) {
+router.get("/:id", async (req, res) => {
   const { id } = req.params;
   try {
-    const task = await taskService.getTaskById(id);
-    if (task) {
-      res.json(task);
+    const event = await eventService.getEventById(id);
+    if (event) {
+      res.status(200).json({ success: true, data: event });
     } else {
-      res.status(404).send('Tarefa não encontrada');
+      res.status(404).json({ success: false, message: "Evento não encontrado" });
     }
   } catch (error) {
-    res.status(500).send('Erro ao buscar tarefa');
+    console.error('Erro ao buscar evento:', error);
+    res.status(500).json({
+      success: false,
+      message: "Erro ao buscar evento",
+      error: error.message,
+    });
   }
-}
+});
 
-async function createTask(req, res) {
-  const { usuario_id, grupo_id, titulo_tarefa, descricao_tarefa, data_limite } = req.body;
+router.post("/", async (req, res) => {
+  const { usuario_id, grupo_id, titulo, data, horario, convidar, descricao_tarefa } = req.body;
+  if (!usuario_id || !grupo_id || !titulo || !data || !horario || !descricao_tarefa) {
+    return res.status(422).json({ success: false, message: "Dados inválidos" });
+  }
+
   try {
-    await taskService.createTask(usuario_id, grupo_id, titulo_tarefa, descricao_tarefa, data_limite);
-    res.status(201).send('Tarefa criada com sucesso');
+    const eventId = await eventService.createEvent(usuario_id, grupo_id, titulo, descricao_tarefa, data, horario, convidar);
+    res.status(201).json({ success: true, message: "Evento criado com sucesso", data: { id: eventId } });
   } catch (error) {
-    res.status(500).send('Erro ao criar tarefa');
+    console.error('Erro ao criar evento:', error);
+    res.status(500).json({
+      success: false,
+      message: "Erro ao criar evento",
+      error: error.message,
+    });
   }
-}
+});
 
-async function updateTask(req, res) {
+router.put("/:id", async (req, res) => {
   const { id } = req.params;
-  const { usuario_id, grupo_id, titulo_tarefa, descricao_tarefa, data_limite, concluida } = req.body;
+  const { usuario_id, grupo_id, titulo, data, horario, convidar, descricao_tarefa } = req.body;
   try {
-    await taskService.updateTask(id, usuario_id, grupo_id, titulo_tarefa, descricao_tarefa, data_limite, concluida);
-    res.send('Tarefa atualizada com sucesso');
+    const updated = await eventService.updateEvent(id, usuario_id, grupo_id, titulo, descricao_tarefa, data, horario);
+    if (updated) {
+      res.status(200).json({ success: true, message: "Evento atualizado com sucesso" });
+    } else {
+      res.status(404).json({ success: false, message: "Evento não encontrado" });
+    }
   } catch (error) {
-    res.status(500).send('Erro ao atualizar tarefa');
+    console.error('Erro ao atualizar evento:', error);
+    res.status(500).json({
+      success: false,
+      message: "Erro ao atualizar evento",
+      error: error.message,
+    });
   }
-}
+});
 
-async function deleteTask(req, res) {
+router.delete("/:id", async (req, res) => {
   const { id } = req.params;
   try {
-    await taskService.deleteTask(id);
-    res.send('Tarefa deletada com sucesso');
+    const deleted = await eventService.deleteEvent(id);
+    if (deleted) {
+      res.status(200).json({ success: true, message: "Evento deletado com sucesso" });
+    } else {
+      res.status(404).json({ success: false, message: "Evento não encontrado" });
+    }
   } catch (error) {
-    res.status(500).send('Erro ao deletar tarefa');
+    console.error('Erro ao deletar evento:', error);
+    res.status(500).json({
+      success: false,
+      message: "Erro ao deletar evento",
+      error: error.message,
+    });
   }
-}
+});
 
-module.exports = { getAllTasks, getTaskById, createTask, updateTask, deleteTask };
+module.exports = router;

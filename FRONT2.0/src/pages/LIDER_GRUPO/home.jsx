@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Paper, Container, CssBaseline } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Menu_Inferior from "../../Components/MENUS/menu_inferior";
 import Menu_Superior from '../../Components/MENUS/menu_superior';
@@ -51,80 +51,99 @@ export default function HomeScreen() {
 
     return (
         <ThemeProvider theme={theme}>
-        <Menu_Superior backgroundColor="white" profileRoute="/Perfil_L" interfaceType="Lider_Grupo" />
-            <Box 
-                sx={{ 
-                    pb: 7, 
-                    backgroundColor: theme.palette.tertiary.main,
-                    minHeight: '100vh' 
-                }}
-            >
-                <Box 
+            <Container component="main" maxWidth="xs">
+                <CssBaseline />
+                <Paper
                     sx={{
-                        height: '100px',
-                        backgroundColor: theme.palette.tertiary.main,
-                    }}
-                />
-                <Box 
-                    sx={{
-                        position: 'relative',
-                        backgroundColor: theme.palette.secondary.main,
-                        borderTopLeftRadius: '20px',
-                        borderTopRightRadius: '20px',
-                        minHeight: 'calc(100vh - 100px)',
-                        pt: '70px', 
+                        mt: 4,
+                        p: 2,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        boxShadow: "0",
+                        width: '100%',
+                        height: '100%'
                     }}
                 >
-                    <Box
-                        sx={{
-                            position: 'absolute',
-                            top: '-70px',
-                            left: '50%',
-                            transform: 'translateX(-50%)',
-                            width: 140,
-                            height: 140,
-                            borderRadius: '50%',
-                            backgroundColor: theme.palette.secondary.main,
-                            border: '3px solid white',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            boxShadow: '0px 0px 10px rgba(0,0,0,0.1)',
-                        }}
-                    >
-                        <Typography variant="subtitle2" color="white">
-                            Dia
-                        </Typography>
-                        
-                        <Typography variant="h3" component="div" color="white">
-                            10
-                        </Typography>
-
-                        <Typography variant="subtitle2" color="white">
-                            Novembro
-                        </Typography>
-                    </Box>
-
+                    <Menu_Superior backgroundColor="white" profileRoute="/Perfil_L" interfaceType="Lider_Grupo" />
+                    
                     <Box 
                         sx={{ 
-                            mt: 2, 
-                            mx: 4
+                            display: 'flex',
+                            flexDirection: 'column',
+                            minHeight: '100vh',
+                            backgroundColor: theme.palette.tertiary.main,
+                            width: '100%',
                         }}
                     >
-                        <Typography 
-                            variant="h6" 
-                            gutterBottom
-                            color="white"
+                        <Box 
+                            sx={{
+                                flexGrow: 1,
+                                display: 'flex',
+                                flexDirection: 'column',
+                                position: 'relative',
+                                pt: '20px',
+                            }}
                         >
-                            Tarefas:
-                        </Typography>
-                    </Box>
-                    <TaskProgressBar tasks={tasks}/>
-                </Box>
-            </Box>
+                            <Box 
+                                sx={{
+                                    flexGrow: 1,
+                                    backgroundColor: theme.palette.secondary.main,
+                                    borderTopLeftRadius: '20px',
+                                    borderTopRightRadius: '20px',
+                                    pt: '90px',
+                                    px: 3,
+                                    pb: 10,
+                                    position: 'relative',
+                                }}
+                            >
+                                <Box
+                                    sx={{
+                                        position: 'absolute',
+                                        top: '-60px',
+                                        left: '50%',
+                                        transform: 'translateX(-50%)',
+                                        width: 120,
+                                        height: 120,
+                                        borderRadius: '50%',
+                                        backgroundColor: theme.palette.secondary.main,
+                                        border: '3px solid white',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
+                                        boxShadow: '0px 0px 10px rgba(0,0,0,0.1)',
+                                    }}
+                                >
+                                    <Typography variant="subtitle2" color="white">
+                                        Dia
+                                    </Typography>
+                                    
+                                    <Typography variant="h3" component="div" color="white">
+                                        10
+                                    </Typography>
 
-            <Menu_Inferior  value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
+                                    <Typography variant="subtitle2" color="white">
+                                        Novembro
+                                    </Typography>
+                                </Box>
+
+                                <Box sx={{ mt: 2 }}>
+                                    <Typography 
+                                        variant="h6" 
+                                        gutterBottom
+                                        color="white"
+                                    >
+                                        Tarefas:
+                                    </Typography>
+                                </Box>
+                                <TaskProgressBar tasks={tasks}/>
+                            </Box>
+                        </Box>
+                        <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
+                    </Box>
+                </Paper>
+            </Container>
         </ThemeProvider>
     );
 }
