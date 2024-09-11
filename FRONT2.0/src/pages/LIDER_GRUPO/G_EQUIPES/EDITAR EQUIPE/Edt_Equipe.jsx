@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {  Box, Container, CssBaseline, Paper, Typography, IconButton,Grid,TextField} from '@mui/material';
+import { Box, Container, CssBaseline, Paper, Typography, IconButton, Grid, TextField } from '@mui/material';
 import { List, ListItem, ListItemAvatar, Avatar } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import EditNoteOutlinedIcon from '@mui/icons-material/EditNoteOutlined';
 import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
-import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import Box2 from '../../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
 import GreenButton from '../../../../Components/Btns/btn_green';
 import RedButton from '../../../../Components/Btns/btn_red';
+import Edt_avatar from '../../../../Components/EDT_AVATAR/Edt_avatar'; // Importando o componente AvatarUpload
 
 // IMPORT POP-UPS
-import Popup1 from './POPUP_SALVAR'; 
-import Popup2 from './POPUP_CANCELAR'; 
+import Popup1 from './POPUP_SALVAR';
+import Popup2 from './POPUP_CANCELAR';
 
 const members = [
     { id: 1, name: 'Usuário 1', avatarSrc: '/avatar1.jpg' },
@@ -24,6 +24,7 @@ const members = [
 
 export default function Edt_Equipe() {
     const navigate = useNavigate();
+    const [avatarSrc, setAvatarSrc] = useState('/static/images/avatar/1.jpg'); // Estado para o avatar
 
     const handleBack = () => {
         navigate('/Info_Equipe');
@@ -49,10 +50,8 @@ export default function Edt_Equipe() {
         setOpenPopup2(false);
     };
 
-    const handleAvatarChange = () => {
-        // Adicione a lógica para abrir a galeria aqui
-        // Por exemplo:
-        // alert('Abrir galeria para selecionar uma imagem');
+    const handleAvatarChange = (event) => {
+        setAvatarSrc(URL.createObjectURL(event.target.files[0]));
     };
 
     return (
@@ -66,139 +65,53 @@ export default function Edt_Equipe() {
                     flexDirection: 'column', 
                     alignItems: 'center', 
                     boxShadow: "0" 
-                    }}
+                }}
             >
                 {/* CABEÇALHO */}
-                <IconButton 
-                    onClick={handleBack} 
-                    sx={{ 
-                        alignSelf: 'flex-start', 
-                        mt: -2 
-                        }}
-                >
-                    <ArrowBackIcon sx={{ fontSize: 35 }} />
+                <IconButton onClick={handleBack} sx={{ alignSelf: 'flex-start', mt: 2 }}>
+                    {/* <ArrowBackIcon sx={{ fontSize: 35 }} /> */}
                 </IconButton>
 
-                <Stack 
-                    direction="row"
-                    spacing={2} 
-                    sx={{
-                        position: 'relative', 
-                        top: '-20px' 
-                        }}
-                >
-                    {/* EDITAR IMAGEM EQUIPE */}
-                    <Avatar 
-                        alt="img grupo" 
-                        src="/static/images/avatar/1.jpg" 
-                        sx={{ 
-                            width: 100, 
-                            height: 100, 
-                            border: '2px solid #07382E' 
-                            }} 
-                    />
-                    <Box 
-                        sx={{ 
-                            position: 'absolute', 
-                            top: '50%', 
-                            right: '-10px', 
-                            transform: 'translateY(-50%)', 
-                            bgcolor: '#fff8', 
-                            borderRadius: '50%', 
-                            boxShadow: '2px 0px 12px 5px rgba(0, 0, 0, 0.1)', 
-                            }}
-                    >
-                        <IconButton onClick={handleAvatarChange}>
-                            <CameraAltIcon 
-                                sx={{ 
-                                    color: '#07382E', 
-                                    marginTop: '-5%', 
-                                    marginLeft: '-16%' 
-                                    }} 
-                            />
-                        </IconButton>
-                    </Box>
+                <Stack direction="row" spacing={2} sx={{ position: 'relative', top: '-20px' }}>
+                    {/* componente para mudar o avatar */}
+                    <Edt_avatar avatarSrc={avatarSrc} handleAvatarChange={handleAvatarChange} />
                 </Stack>
 
                 {/* EDITAR NOME DA EQUIPE */}
-                <Box 
-                    sx={{ 
-                        width: '100%',
-                        mt: 3 
-                        }}
-                >
-                    <Grid 
-                        container 
-                        alignItems="center" 
-                        spacing={1}
-                    >
+                <Box sx={{ width: '100%', mt: 3,marginLeft: '15%', alignItems: 'center' }}>
+                    <Grid container alignItems="center" spacing={1}>
                         <Grid item>
                             <IconButton disabled>
-                                <CreateOutlinedIcon 
-                                    sx={{ 
-                                        color: '#07382E', 
-                                        marginLeft: '80%', 
-                                        alignItems: 'center' 
-                                        }} 
-                                />
+                                <CreateOutlinedIcon sx={{ color: '#07382E', marginLeft: '150%', alignItems: 'center' }} />
                             </IconButton>
                         </Grid>
                         <Grid item>
-                            <TextField 
-                                fullWidth 
-                                variant="standard" 
-                            />
+                            <TextField fullWidth variant="standard" />
                         </Grid>
                     </Grid>
                 </Box>
+
                 {/* EDITAR DESCRIÇÃO DA EQUIPE */}
                 <Box2>
-                    <Grid 
-                        container 
-                        alignItems="center" 
-                        spacing={1}
-                    >
-
+                    <Grid container alignItems="center" spacing={1}>
                         <Grid item>
                             <IconButton disabled>
-                                <EditNoteOutlinedIcon 
-                                    sx={{ color: '#07382E' }}
-                                /> 
+                                <EditNoteOutlinedIcon sx={{ color: '#07382E' }} /> 
                             </IconButton>
                         </Grid>
-
                         <Grid item>
-                            <Typography 
-                            variant="subtitle1" 
-                            gutterBottom 
-                            sx={{ fontWeight: 'bold' }}
-                            >
+                            <Typography variant="subtitle1" gutterBottom sx={{ fontWeight: 'bold' }}>
                                 Descrição:
                             </Typography>
                         </Grid>
                     </Grid>
 
-                    <TextField 
-                    fullWidth 
-                    variant="standard" 
-                    />
+                    <TextField fullWidth variant="standard" />
                 </Box2>
 
                 {/* LEITURA DE MEMBROS */}
-                <Box 
-                sx={{ textAlign: 'left' }}
-                >
-                    <Typography 
-                        component="h2" 
-                        variant="subtitle1" 
-                        sx={{ 
-                            color: '#07382E', 
-                            mt: 2, 
-                            fontSize: '1.4em', 
-                            fontWeight: 'bold', 
-                            marginLeft: '-30%' 
-                            }}
-                    >
+                <Box sx={{ textAlign: 'left' }}>
+                    <Typography component="h2" variant="subtitle1" sx={{ color: '#07382E', mt: 2, fontSize: '1.4em', fontWeight: 'bold', marginLeft: '-30%' }}>
                         Membros:
                     </Typography>
 
@@ -206,20 +119,12 @@ export default function Edt_Equipe() {
                         {members.map(member => (
                             <ListItem key={member.id}>
                                 <ListItemAvatar>
-                                    <Avatar 
-                                        alt={member.name} 
-                                        src={member.avatarSrc} 
-                                        sx={{ 
-                                            width: 50, 
-                                            height: 50
-                                            }} 
-                                    />
+                                    <Avatar alt={member.name} src={member.avatarSrc} sx={{ width: 50, height: 50 }} />
                                 </ListItemAvatar>
 
                                 <Box ml={8}>
-                                    <Typography 
-                                        variant="subtitle1">
-                                            {member.name}
+                                    <Typography variant="subtitle1">
+                                        {member.name}
                                     </Typography>
                                 </Box>
                             </ListItem>
@@ -228,40 +133,23 @@ export default function Edt_Equipe() {
                 </Box>
 
                 {/* BOTÕES DE CANCELAR OU SALVAR ALTERAÇÕES */}
-                <Grid 
-                    container 
-                    justifyContent="center" 
-                    alignItems="center" 
-                    spacing={2} 
-                    mt={5}
-                >
+                <Grid container justifyContent="center" alignItems="center" spacing={2} mt={5}>
                     <Grid item xs={6}>
-                        <RedButton 
-                        onClick={handleOpenPopup2}
-                        >
-                            Descartar Alterações
+                        <RedButton onClick={handleOpenPopup2}>
+                            Descartar 
                         </RedButton>
                     </Grid>
 
                     <Grid item xs={6}>
-                        <GreenButton 
-                        onClick={handleOpenPopup1}
-                        >
-                            SALVAR ALTERAÇÕES
+                        <GreenButton onClick={handleOpenPopup1}>
+                            SALVAR 
                         </GreenButton>
                     </Grid>
                 </Grid>
 
                 {/* ABERTURA DE POP-UPS */}
-                <Popup1 
-                    open={openPopup1} 
-                    handleClose={handleClosePopup1} 
-                />
-
-                <Popup2 
-                    open={openPopup2} 
-                    handleClose={handleClosePopup2} 
-                />
+                <Popup1 open={openPopup1} handleClose={handleClosePopup1} />
+                <Popup2 open={openPopup2} handleClose={handleClosePopup2} />
             </Paper>
         </Container>
     );

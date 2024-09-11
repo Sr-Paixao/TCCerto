@@ -46,7 +46,7 @@ export default function DtEventos() {
       <Paper 
         elevation={2} 
         sx={{ 
-          mt: 5, 
+          mt: 2, 
           p: 2, 
           display: 'flex', 
           flexDirection: 'column', 
@@ -101,8 +101,8 @@ export default function DtEventos() {
 
         <Grid 
           container 
-          spacing={2} 
-          sx={{ marginTop: '6%' }}
+          spacing={1} 
+          sx={{ marginTop: '2%' }}
         >
           <Grid item xs={6}>
             <GreenButton 

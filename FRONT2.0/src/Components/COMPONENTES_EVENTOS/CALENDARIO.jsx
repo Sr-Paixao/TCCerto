@@ -13,7 +13,7 @@ import { ptBR } from 'date-fns/locale';
 
 const Calendar = ({ events = [], tasks = [], onHeightChange }) => {
   const [currentDate, setCurrentDate] = useState(new Date());
-  const [showWeek, setShowWeek] = useState(false);
+  const [showWeek, setShowWeek] = useState(true);
   const calendarRef = useRef(null);
 
   useEffect(() => {

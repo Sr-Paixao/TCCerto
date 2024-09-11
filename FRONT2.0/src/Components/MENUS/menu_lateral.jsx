@@ -1,23 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Drawer, List, ListItem, ListItemAvatar, Avatar, ListItemIcon, ListItemText, Divider } from '@mui/material';
+import { Link, useLocation } from 'react-router-dom'; 
 import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined';
 import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined';
 import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlined';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import DescriptionIcon from '@mui/icons-material/Description';
+import StarRoundedIcon from '@mui/icons-material/StarRounded';
+import StarBorderRoundedIcon from '@mui/icons-material/StarBorderRounded';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import SettingsIcon from '@mui/icons-material/Settings';
 import EventAvailableRoundedIcon from '@mui/icons-material/EventAvailableRounded';
 import TCCERTOImage from '../../img/logo.svg';
-import { Link } from 'react-router-dom';
 
 function MenuLateral({ open, onClose, interfaceType }) {
+  const location = useLocation(); // Hook para capturar a rota atual
   const [selectedIndex, setSelectedIndex] = useState(null);
 
-  const handleListItemClick = (index) => {
-    setSelectedIndex(index);
-  };
+  useEffect(() => {
+    // Atualize o selectedIndex com base na localização atual (rota)
+    const currentPath = location.pathname;
+    const index = menuItems.findIndex(item => item.path === currentPath);
+    if (index !== -1) {
+      setSelectedIndex(index);
+    }
+  }, [location.pathname]); // Atualiza sempre que a rota mudar
 
   const routes = {
     Lider_Grupo: {
@@ -25,6 +33,7 @@ function MenuLateral({ open, onClose, interfaceType }) {
       eventos: '/Eventos',
       orcamento: '/orcamento',
       modelo: '/Modelo',
+      avaliacao: '/Avaliacao',
       configuracoes: '/config'
     },
     Membro_Grupo: {
@@ -32,15 +41,9 @@ function MenuLateral({ open, onClose, interfaceType }) {
       eventos: '/Membro_Eventos',
       orcamento: '/Membro_Orcamento',
       modelo: '/Membro_Modelo',
+      avaliacao: '/Avaliacao',
       configuracoes: '/Membro_Config'
-    },
-    // Orientador: {
-    //   tarefas: '/Orientador_Tarefas',
-    //   eventos: '/Orientador_Eventos',
-    //   orcamento: '/Orientador_Orcamento',
-    //   modelo: '/Orientador_Modelo',
-    //   configuracoes: '/Orientador_Config'
-    // }
+    }
   };
 
   const selectedRoutes = routes[interfaceType] || {};
@@ -67,7 +70,12 @@ function MenuLateral({ open, onClose, interfaceType }) {
       path: selectedRoutes.modelo || '/Modelo'
     },
     {
-      icon: selectedIndex === 4 ? <SettingsIcon sx={{ color: '#07382E' }} /> : <SettingsOutlinedIcon />,
+      icon: selectedIndex === 4 ? <StarRoundedIcon sx={{ color: '#07382E' }} /> : <StarBorderRoundedIcon />,
+      text: "Avaliação",
+      path: selectedRoutes.avaliacao || '/Avaliacao'
+    },
+    {
+      icon: selectedIndex === 5 ? <SettingsIcon sx={{ color: '#07382E' }} /> : <SettingsOutlinedIcon />,
       text: "Configurações",
       path: selectedRoutes.configuracoes || '/config'
     }
@@ -81,7 +89,7 @@ function MenuLateral({ open, onClose, interfaceType }) {
         '& .MuiDrawer-paper': {
           backgroundColor: '#105F4F',
           borderTopRightRadius: '16px',
-          height: '100vh', 
+          height: '100vh',
         },
         '& .MuiList-root': {
           height: 'calc(100% - 56px)',
@@ -89,74 +97,74 @@ function MenuLateral({ open, onClose, interfaceType }) {
         '& .MuiListItem-root': {
           bgcolor: '#105F4F',
           '&:hover': {
-            bgcolor: '#157A6E', 
+            bgcolor: '#157A6E',
           },
         },
         '& .MuiListItem-root.Mui-selected': {
-          bgcolor: '#157A6E', 
+          bgcolor: '#157A6E',
         },
         '& .MuiListItemIcon-root': {
-          minWidth: '40px', 
-          color: 'white', 
+          minWidth: '40px',
+          color: 'white',
         },
         '& .MuiListItemText-primary': {
-          fontSize: '1.2rem', 
-          fontWeight: 'bold', 
-          color: 'white', 
+          fontSize: '1.2rem',
+          fontWeight: 'bold',
+          color: 'white',
         },
         '& .Mui-selected .MuiListItemText-primary': {
-          color: '#07382E', 
+          color: '#07382E',
         },
       }}
     >
       <List sx={{ height: '100%' }}>
-        <ListItem 
-          disablePadding 
-          sx={{ 
-            display: 'flex', 
-            alignItems: 'center', 
-            marginTop: '10%' 
-            }}
+        <ListItem
+          disablePadding
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            marginTop: '10%'
+          }}
         >
-          <ListItemAvatar 
-            sx={{ 
-              marginLeft: '15px', 
-              width: '60px', 
-              height: '60px' 
-              }}
+          <ListItemAvatar
+            sx={{
+              marginLeft: '15px',
+              width: '60px',
+              height: '60px'
+            }}
           >
-            <Avatar 
+            <Avatar
               sx={{
                 width: '100%',
                 height: '100%',
-                backgroundColor:'rgba(255, 255, 255, 0.2)', 
-                borderRadius: '50%', 
+                backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                borderRadius: '50%',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
               }}
             >
-              <Avatar 
-                alt="TCCERTO" 
-                src={TCCERTOImage} 
-                sx={{ 
-                  width: '90%', 
-                  height: '80%' 
-                  }} 
+              <Avatar
+                alt="TCCERTO"
+                src={TCCERTOImage}
+                sx={{
+                  width: '90%',
+                  height: '80%'
+                }}
               />
             </Avatar>
           </ListItemAvatar>
-          <ListItemText 
-            primary="TCCERTO" 
+          <ListItemText
+            primary="TCCERTO"
             sx={{
               marginLeft: "5%"
-              }} 
+            }}
           />
         </ListItem>
-        <Divider 
-          sx={{ 
-            marginTop: '10%' 
-            }} 
+        <Divider
+          sx={{
+            marginTop: '10%'
+          }}
         />
 
         {menuItems.map((item, index) => (
@@ -164,9 +172,8 @@ function MenuLateral({ open, onClose, interfaceType }) {
             key={index}
             button
             selected={selectedIndex === index}
-            component={Link} // Utilize Link do React Router para navegação
-            to={item.path} // Define o caminho para a página correspondente
-            onClick={() => handleListItemClick(index)}
+            component={Link}
+            to={item.path}
           >
             <ListItemIcon sx={{ fontSize: '2rem' }}>
               {item.icon}

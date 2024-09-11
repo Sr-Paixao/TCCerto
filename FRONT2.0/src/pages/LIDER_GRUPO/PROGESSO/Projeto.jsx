@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, Grid, Typography, Box, CssBaseline, Paper, IconButton } from '@mui/material';
-import iconPratica from '../../../img/ICONPRATICA.png';
+import EmojiEventsSharpIcon from '@mui/icons-material/EmojiEventsSharp';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CircularProgressWithLabel from '../../../Components/COMPONENTES_PROGRESS/Grafico'; 
 import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
@@ -46,7 +46,7 @@ const ProgressoPage = () => {
             </IconButton>
             
             <Box display="flex" justifyContent="center" alignItems="center" flexDirection="column">
-                <CircularProgressWithLabel value={percentage} icon={iconPratica} />
+                <CircularProgressWithLabel value={percentage} icon={EmojiEventsSharpIcon} />
 
                 <Typography
                 component="h1"
@@ -59,7 +59,7 @@ const ProgressoPage = () => {
                     mt: 2
                 }}
                 >
-                Prática
+                Apresentação
                 </Typography>
             </Box>
 
@@ -87,13 +87,14 @@ const ProgressoPage = () => {
                 Etapas:
             </Typography>
 
-            <Box sx={{ width: '100%'}}>
-                <EtapaButton icon={SomeIcon} label="Minha Etapa" />
+            <Box sx={{mb: 12, width: '100%'}}>
+                <EtapaButton icon={SomeIcon} label="Sua Etapa" />
+                
             </Box>
 
             <Btn_Criar onClick={handleNovaEtapa} />
 
-            <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
+            <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo"  />
             
             </Paper>
         </Container>

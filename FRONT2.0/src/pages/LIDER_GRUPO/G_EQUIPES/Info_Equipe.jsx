@@ -31,15 +31,25 @@ export default function Info_Equipe() {
     const descricao = "Descrição do Grupo";
 
     return (
-        <Container component="main" maxWidth="xs">
-            <CssBaseline />
+        <Container 
+        component="main" 
+        maxWidth="xs"
+    >
+        <CssBaseline />
             <Paper 
                 elevation={2} 
-                sx={{ mt: 5, p: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', boxShadow: "0" }}
+                sx={{ 
+                    mt: 5, 
+                    p: 2, 
+                    display: 'flex', 
+                    flexDirection: 'column', 
+                    alignItems: 'center', 
+                    boxShadow: "0" 
+                    }}
             >
                 {/* CABEÇALHO */}
                 <IconButton onClick={handleBack} sx={{ alignSelf: 'flex-start' }}>
-                    <ArrowBackIcon sx={{ fontSize: 35 }} />
+                    <ArrowBackIcon sx={{ fontSize: 35, color: '#07382E'}} />
                 </IconButton>
 
                 <Stack direction="row" spacing={2}>
@@ -53,7 +63,7 @@ export default function Info_Equipe() {
                 <Typography 
                     component="h1" 
                     variant="h9" 
-                    sx={{ color: '#07382E', mt: 2, textAlign:'center', fontSize: '1.8em' }}
+                    sx={{ color: '#07382E', mt: 2, textAlign:'center', fontSize: '1.8em'}}
                 >
                     Nome da Equipe
                 </Typography>
@@ -62,7 +72,7 @@ export default function Info_Equipe() {
                     <Typography 
                         component="h2" 
                         variant="subtitle1" 
-                        sx={{ color: '#07382E', mt: 2, fontSize: '1.4em', fontWeight: 'bold', marginLeft: '-115%' }}
+                        sx={{ color: '#07382E', mt: 2, fontSize: '1.4em', fontWeight: 'bold', marginLeft: '-95%' }}
                     >
                         Descrição:
                     </Typography>
@@ -85,7 +95,7 @@ export default function Info_Equipe() {
                     <Typography 
                         component="h2" 
                         variant="subtitle1" 
-                        sx={{ color: '#07382E', mt: 2, fontSize: '1.4em', fontWeight: 'bold', marginLeft: '-30%' }}
+                        sx={{ color: '#07382E', mt: 2, fontSize: '1.4em', fontWeight: 'bold', marginLeft: '-20%' }}
                     >
                         Membros:
                     </Typography>
@@ -111,7 +121,7 @@ export default function Info_Equipe() {
                 </Box>
 
                 {/* BOTÃO PARA EDITAR INFORMAÇÕES */}
-                <Box sx={{ width: '100%', height: '100%' }}>
+                <Box sx={{ width: '100%', height: '100%', mb: 3 }}>
                     <RedButton 
                         onClick={() => navigate('/Edt_Equipe')}
                         fullWidth

@@ -5,6 +5,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import WarningIcon from '@mui/icons-material/Warning';
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 import SchoolIcon from '@mui/icons-material/School';
+import EmojiEventsSharpIcon from '@mui/icons-material/EmojiEventsSharp';
 import CircularProgressWithLabel from '../../../Components/COMPONENTES_PROGRESS/Grafico'; 
 import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 import EtapaButton from '../../../Components/COMPONENTES_PROGRESS/Card_Etapas'; 
@@ -66,7 +67,10 @@ const Progresso = () => {
             <EtapaButton icon={DescriptionIcon} label="DOCUMENTAÇÃO"  to="/Documentacao"/>
           </Grid>
           <Grid item>
-            <EtapaButton icon={PersonIcon} label="PRÁTICA" to="/Pratica" />
+            <EtapaButton icon={PersonIcon} label="APRESENTAÇÃO" to="/Apresentacao" />
+          </Grid>
+          <Grid item>
+            <EtapaButton icon={EmojiEventsSharpIcon} label="PROJETO" to="/Projeto" />
           </Grid>
         </Grid>
         <Box mt={3} mb={7}> 

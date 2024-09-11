@@ -5,71 +5,77 @@ import api from './api.js';
 
 // Importe suas páginas aqui
 
-import Add_Membro from './pages/LIDER_GRUPO/G_EQUIPES/ADD_MEMBRO/Add_Membro.jsx';
 
+// *************************************************************  Telas_Gerais  **************************************************************************
+import Login from './pages/MEMBRO_GRUPO/1Login/Login.jsx';
+import Cadastro from './pages/MEMBRO_GRUPO/2Cadastro/Cadastro.jsx';
+
+// ***********************************************************   Interface_Lider *************************************************************************
+
+// Home_Lider
 import Index from "./pages/LIDER_GRUPO/home.jsx";
-
+// Perfil_Lider
 import Perfil_L from "./pages/LIDER_GRUPO/PERFIL/Perfil_L.jsx";
 import Edt_Perfil from "./pages/LIDER_GRUPO/PERFIL/Edt_Perfil.jsx";
-
+// Tarefas_Lider
 import Central_Tarefa from './pages/LIDER_GRUPO/TAREFAS/Central_Tarefas.jsx';
 import Criar_Tarefa from './pages/LIDER_GRUPO/TAREFAS/Criar_Tarefa.jsx';
 import Dt_Tarefa from './pages/LIDER_GRUPO/TAREFAS/Detalhes_Tarefa.jsx';
 import Edt_Tarefa from './pages/LIDER_GRUPO/TAREFAS/Editar_Tarefa.jsx';
 import Tarefa_Concluida from './pages/LIDER_GRUPO/TAREFAS/Tarefa_Concluida.jsx';
-
+// Configuracoes_Lider
 import Config from './pages/LIDER_GRUPO/CONFIGURAÇÕES/1_Config.jsx';
 import Relatar_Problema from './pages/LIDER_GRUPO/CONFIGURAÇÕES/2_Central_Ajuda.jsx';
 import Avalicao from './pages/LIDER_GRUPO/CONFIGURAÇÕES/3_Avaliacao.jsx';
 import Termo_2 from './pages/LIDER_GRUPO/CONFIGURAÇÕES/4_Termo_2.jsx';
-
+// Equipe_Lider 
 import Geral_Equipe from './pages/LIDER_GRUPO/G_EQUIPES/Gerenciamento.jsx';
 import Info_Equipe from './pages/LIDER_GRUPO/G_EQUIPES/Info_Equipe.jsx';
 import Edt_Equipe from './pages/LIDER_GRUPO/G_EQUIPES/EDITAR EQUIPE/Edt_Equipe.jsx';
+import Add_Membro from './pages/LIDER_GRUPO/G_EQUIPES/ADD_MEMBRO/Add_Membro.jsx';
 import Remover_Membro from './pages/LIDER_GRUPO/G_EQUIPES/REMOVER MEMBRO/Remover_Membro.jsx';
 import Desfazer_Equipe from     './pages/LIDER_GRUPO/G_EQUIPES/DESFAZER EQUIPE/Desfazer_Equipe.jsx';
-
+// Modelo_Lider
 import Modelo from './pages/LIDER_GRUPO/MODELO/Modelo.jsx';
-
+// Orcamento_Lider
 import Orcamento from './pages/LIDER_GRUPO/Orçamento/1_Central_Orçamento.jsx';
 import Area_de_atuação from './pages/LIDER_GRUPO/Orçamento/2_Area_de_atuação.jsx';
 import Horas_Trabalhadas from './pages/LIDER_GRUPO/Orçamento/3_Horas_Trabalhadas.jsx';
 import Software_Pagos2 from './pages/LIDER_GRUPO/Orçamento/4_Software_Pagos2.jsx';
 import Orçamento_Total from './pages/LIDER_GRUPO/Orçamento/5_Orçamento_Total.jsx';
 import Dt_Orçamento from './pages/LIDER_GRUPO/Orçamento/6_Dt_Orçamento.jsx';
-
+// Eventos_Lider
 import Central_Eventos from './pages/LIDER_GRUPO/EVENTOS/Central_Eventos.jsx';
 import Criar_Evento from './pages/LIDER_GRUPO/EVENTOS/Criar_Evento.jsx';
 import Dt_Evento from './pages/LIDER_GRUPO/EVENTOS/Dt_Evento.jsx';
 import Edt_Eventos from './pages/LIDER_GRUPO/EVENTOS/Edt_Eventos.jsx';
-
+// Progresso_Lider
 import Central_Progresso from './pages/LIDER_GRUPO/PROGESSO/Central_Progesso.jsx'
 import Criar_Etapa from './pages/LIDER_GRUPO/PROGESSO/Criar_Etapa.jsx';
 import Edt_Etapa from './pages/LIDER_GRUPO/PROGESSO/Edt_Etapa.jsx';
 import Documentacao from './pages/LIDER_GRUPO/PROGESSO/Documentacao.jsx';
-import Pratica from './pages/LIDER_GRUPO/PROGESSO/Pratica.jsx';
+import Apresentacao from './pages/LIDER_GRUPO/PROGESSO/Apresentacao.jsx';
+import Projeto from './pages/LIDER_GRUPO/PROGESSO/Projeto.jsx';
 
-                                    //MEMBRO GRUPO
-import Login from './pages/MEMBRO_GRUPO/1Login/Login.jsx';
-import Cadastro from './pages/MEMBRO_GRUPO/2Cadastro/Cadastro.jsx';
+// ***********************************************************   Interface_Membro *************************************************************************
 
 import Home2 from "./pages/MEMBRO_GRUPO/3Home_M/home.jsx";
-
+// TAREFAS_MEMBRO
 import Membro_Tarefas from './pages/MEMBRO_GRUPO/4Tarefas_M/Central_Tarefas_M.jsx';
 import Dt_Tarefa_M from './pages/MEMBRO_GRUPO/4Tarefas_M/Detalhes_Tarefa_M.jsx'; 
 import Dt_Concluida_M from './pages/MEMBRO_GRUPO/4Tarefas_M/Tarefa_Concluida_M.jsx';
-
+// Modelo_Membro
 import Modelo_M from './pages/MEMBRO_GRUPO/5Modelo_M/Modelo_M.jsx';
-
+// Configuracao_Membro
 import Config_M from './pages/MEMBRO_GRUPO/6Configurações_M/Config_M.jsx';
 import Relatar_Problema_M from './pages/MEMBRO_GRUPO/6Configurações_M/Relatar_Problema_M.jsx';
 import Termo_2_M from './pages/MEMBRO_GRUPO/6Configurações_M/Termo_2_M.jsx';
 import Avaliacao_M from './pages/MEMBRO_GRUPO/6Configurações_M/Avaliacao_M.jsx';
-
+// Orcamento_Membro
 import Orcamento_M from './pages/MEMBRO_GRUPO/8Orçamento_M/Orçamento_M.jsx';
-
+// Equipe_Membro
 import Info_Equipe_M from './pages/MEMBRO_GRUPO/7Equipe_M/Info_Equipe_M.jsx';
-
+// Perfil_Membro
 import Perfil_M from "./pages/MEMBRO_GRUPO/Perfil_M.jsx";
 
 
@@ -133,7 +139,8 @@ function App() {
                     <Route path='/Criar_Etapa' element={<Criar_Etapa/>}/>
                     <Route path='/Edt_Etapa' element={<Edt_Etapa/>}/>
                     <Route path='/Documentacao' element={<Documentacao/>}/>
-                    <Route path='/Pratica' element={<Pratica/>}/>
+                    <Route path='/Apresentacao' element={<Apresentacao/>}/>
+                    <Route path='/Projeto' element={<Projeto/>}/>
 
 
 
