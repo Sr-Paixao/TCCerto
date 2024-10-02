@@ -5,7 +5,6 @@ import iconPratica from '../../../img/ICONPRATICA.png';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CircularProgressWithLabel from '../../../Components/COMPONENTES_PROGRESS/Grafico'; 
 import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
-import Btn_Criar from '../../../Components/Btns/Btn_criar';
 import EtapaButton from '../../../Components/COMPONENTES_PROGRESS/Card_Etapa';
 import SomeIcon from '@mui/icons-material/ErrorOutline'; 
 
@@ -19,10 +18,6 @@ const ProgressoPage = () => {
     const navigate = useNavigate();
     const handleBack = () => {
         navigate('/Central_Progresso');
-    };
-
-    const handleNovaEtapa = () => {
-    navigate('/Criar_Etapa');
     };
 
         return (
@@ -106,8 +101,6 @@ const ProgressoPage = () => {
                 <EtapaButton icon={SomeIcon} label="Considerações Finais" />
                 <EtapaButton icon={SomeIcon} label="Agradecimento" />
             </Box>
-
-            <Btn_Criar onClick={handleNovaEtapa} />
 
             <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo"  />
             

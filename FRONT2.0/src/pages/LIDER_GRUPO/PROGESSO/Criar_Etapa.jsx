@@ -52,7 +52,7 @@ export default function Criar_Etapa() {
                 }}
             >
                 <Cabecalho2 handleBack={handleBack} icon={<PlaylistAddIcon />} text="Criar Etapa" iconSize={70} />
-                <Typography variant="subtitle1" sx={{ mt: 1, mb: 1, textAlign: 'Left' }}>
+                <Typography variant="subtitle1" sx={{ mt: 1, mb: 3, textAlign: 'left' }}>
                     Criamos uma lista com itens que consideramos padrão para qualquer curso, 
                     porém criamos esse espaço para você adicionar seus próprios itens de acordo com suas necessidades.
                 </Typography>

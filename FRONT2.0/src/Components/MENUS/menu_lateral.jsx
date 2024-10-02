@@ -7,8 +7,6 @@ import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlin
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import DescriptionIcon from '@mui/icons-material/Description';
-import StarRoundedIcon from '@mui/icons-material/StarRounded';
-import StarBorderRoundedIcon from '@mui/icons-material/StarBorderRounded';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import SettingsIcon from '@mui/icons-material/Settings';
 import EventAvailableRoundedIcon from '@mui/icons-material/EventAvailableRounded';
@@ -33,7 +31,6 @@ function MenuLateral({ open, onClose, interfaceType }) {
       eventos: '/Eventos',
       orcamento: '/orcamento',
       modelo: '/Modelo',
-      avaliacao: '/Avaliacao',
       configuracoes: '/config'
     },
     Membro_Grupo: {
@@ -41,7 +38,6 @@ function MenuLateral({ open, onClose, interfaceType }) {
       eventos: '/Membro_Eventos',
       orcamento: '/Membro_Orcamento',
       modelo: '/Membro_Modelo',
-      avaliacao: '/Avaliacao',
       configuracoes: '/Membro_Config'
     }
   };
@@ -68,11 +64,6 @@ function MenuLateral({ open, onClose, interfaceType }) {
       icon: selectedIndex === 3 ? <DescriptionIcon sx={{ color: '#07382E' }} /> : <DescriptionOutlinedIcon />,
       text: "Modelo",
       path: selectedRoutes.modelo || '/Modelo'
-    },
-    {
-      icon: selectedIndex === 4 ? <StarRoundedIcon sx={{ color: '#07382E' }} /> : <StarBorderRoundedIcon />,
-      text: "Avaliação",
-      path: selectedRoutes.avaliacao || '/Avaliacao'
     },
     {
       icon: selectedIndex === 5 ? <SettingsIcon sx={{ color: '#07382E' }} /> : <SettingsOutlinedIcon />,

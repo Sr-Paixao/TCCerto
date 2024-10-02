@@ -27,7 +27,6 @@ import Tarefa_Concluida from './pages/LIDER_GRUPO/TAREFAS/Tarefa_Concluida.jsx';
 import Config from './pages/LIDER_GRUPO/CONFIGURAÇÕES/1_Config.jsx';
 import Relatar_Problema from './pages/LIDER_GRUPO/CONFIGURAÇÕES/2_Central_Ajuda.jsx';
 import Avalicao from './pages/LIDER_GRUPO/CONFIGURAÇÕES/3_Avaliacao.jsx';
-import Termo_2 from './pages/LIDER_GRUPO/CONFIGURAÇÕES/4_Termo_2.jsx';
 // Equipe_Lider 
 import Geral_Equipe from './pages/LIDER_GRUPO/G_EQUIPES/Gerenciamento.jsx';
 import Info_Equipe from './pages/LIDER_GRUPO/G_EQUIPES/Info_Equipe.jsx';
@@ -113,7 +112,6 @@ function App() {
                     <Route path='/Config' element={<Config/>}/>
                     <Route path='/Relatar_Problema' element={<Relatar_Problema/>}/>
                     <Route path='/Avalicao' element={<Avalicao/>}/>
-                    <Route path='/Termo_2' element={<Termo_2/>}/>
 
                     <Route path='/Geral_Equipe' element={<Geral_Equipe/>}/>
                     <Route path='/Info_Equipe' element={<Info_Equipe/>}/>

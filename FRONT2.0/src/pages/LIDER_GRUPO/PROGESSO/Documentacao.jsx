@@ -5,7 +5,6 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CircularProgressWithLabel from '../../../Components/COMPONENTES_PROGRESS/Grafico'; 
 import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
-import Btn_Criar from '../../../Components/Btns/Btn_criar';
 import EtapaButton from '../../../Components/COMPONENTES_PROGRESS/Card_Etapa'; 
 import SomeIcon from '@mui/icons-material/ErrorOutline';
 
@@ -21,10 +20,6 @@ const ProgressoPage = () => {
     const handleBack = () => {
         navigate('/Central_Progresso');
     };
-
-    const handleNovaEtapa = () => {
-    navigate('/Criar_Etapa');
-  };
 
     return (
       <Container component="main" maxWidth="xs">
@@ -88,7 +83,6 @@ const ProgressoPage = () => {
           </Typography>
 
           <Box sx={{ width: '100%', mb: 18}}>
-          <EtapaButton icon={SomeIcon} label="Minha Etapa" /> {/* Exemplo  */}
           <EtapaButton icon={SomeIcon} label="Capa" />  {/*VERMELHO*/}
           <EtapaButton icon={SomeIcon} label="Folha de Rosto" /> {/*VERMELHO*/}
           <EtapaButton icon={SomeIcon} label="Dedicatória" />
@@ -117,8 +111,6 @@ const ProgressoPage = () => {
           <EtapaButton icon={SomeIcon} label="Anexos" /> {/*VERDE*/}
           <EtapaButton icon={SomeIcon} label="Revisão da Documentação" /> {/*VERDE*/}
           </Box>
-
-          <Btn_Criar onClick={handleNovaEtapa} />
 
           <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
           

@@ -28,7 +28,7 @@ export default function Edt_Etapa() {
     const [openExcluirDialog, setOpenExcluirDialog] = useState(false);
 
     const handleBack = () => {
-        navigate('/Central_Progresso');
+        navigate('/Projeto');
     };
 
     const handleSubmit = (event) => {
@@ -83,7 +83,6 @@ export default function Edt_Etapa() {
                     </Box1>
 
                     <Select_Prioridade prioridade={prioridade} setPrioridade={setPrioridade} />
-                    <SelectPersonalizado etapa={etapa} setEtapa={setEtapa} />
 
                     <Grid container justifyContent="center" alignItems="center" spacing={2}>
                         <Grid item xs={6}>

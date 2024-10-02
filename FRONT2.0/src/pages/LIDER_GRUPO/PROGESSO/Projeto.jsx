@@ -6,7 +6,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CircularProgressWithLabel from '../../../Components/COMPONENTES_PROGRESS/Grafico'; 
 import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 import Btn_Criar from '../../../Components/Btns/Btn_criar';
-import EtapaButton from '../../../Components/COMPONENTES_PROGRESS/Card_Etapa';
+import EtapaButton from '../../../Components/COMPONENTES_PROGRESS/Card_Etapa_Projeto';
 import SomeIcon from '@mui/icons-material/ErrorOutline'; 
 
 const ProgressoPage = () => {
@@ -59,7 +59,7 @@ const ProgressoPage = () => {
                     mt: 2
                 }}
                 >
-                Apresentação
+                Projeto
                 </Typography>
             </Box>
 
@@ -70,8 +70,19 @@ const ProgressoPage = () => {
                     mb: 2
                     }}
             >
-                Marque as etapas que você já concluiu para saber o progresso do seu projeto. 
+                Marque as etapas que você já concluiu para saber o progresso do seu projeto.
             </Typography>
+
+            <Typography
+                sx={{
+                    fontSize: '100%',
+                    textAlign: 'left',
+                    mb: 2
+                    }}
+            >
+                Você tambem pode criar suas próprias etapas para o seu projeto.
+            </Typography>
+            
             <Typography 
                 variant="h6" 
                 component="h2" 

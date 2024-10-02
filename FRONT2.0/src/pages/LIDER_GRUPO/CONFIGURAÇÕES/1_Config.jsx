@@ -71,9 +71,6 @@ export default function Configuracoes() {
                         <CustomLink href="/Relatar_Problema" text="Relatar Problema" />
                             <Divider />
 
-                        <CustomLink href="/Termo_2" text="Termos e Politicas" />
-                            <Divider />
-
                         <CustomLink onClick={handleOpenPopup} style={{ cursor: 'pointer' }} text="Avalie-nos" />
 
                     </Box>
