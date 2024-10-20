@@ -248,7 +248,7 @@ export default function CriarEvento() {
                             <Grid item>
                                 <IconButton disabled>
                                     <EditNoteOutlinedIcon 
-                                        sx={{ color: '#07382E' }}
+                                        sx={{ color: '#07382E'}}
                                     />
                                 </IconButton>
                             </Grid>
@@ -257,7 +257,7 @@ export default function CriarEvento() {
                                     variant="subtitle1" 
                                     gutterBottom 
                                     sx={{   fontWeight: 'bold',
-                                            fontSize: '120%' 
+                                            fontSize: '100%' 
                                         }}
                                 >
                                     Descrição:
