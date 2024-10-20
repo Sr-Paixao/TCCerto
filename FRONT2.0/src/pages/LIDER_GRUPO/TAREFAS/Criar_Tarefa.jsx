@@ -15,6 +15,7 @@ import Box2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
 import GreenButton from '../../../Components/Btns/btn_green';
 import TaskList from '../../../Components/COMPONENTES_TAREFAS/TaskLists/TaskList2';
 import Tarefa_Criada from './Pop-Ups/Pop_Up_1'; 
+import Lembrete from '../../../Components/Lembrete';
 
 export default function Criar_Tarefa() {
     const [value, setValue] = React.useState('');
@@ -201,6 +202,10 @@ export default function Criar_Tarefa() {
                         />
                     </Box1>
 
+                                {/* CAMPO LEMBRETE */}
+                    <Box1>
+                    <Lembrete></Lembrete>
+                    </Box1>
                                 {/* CAMPO PARA DESCRIÇÃO DA TAREFA */}
                     <Box2>
                         <Grid 
@@ -226,7 +231,7 @@ export default function Criar_Tarefa() {
                                     gutterBottom 
                                     sx={{ 
                                         fontWeight: 'bold', 
-                                        fontSize: '120%' 
+                                        fontSize: '100%' 
                                         }}
                                 >
                                         Descrição:

@@ -56,6 +56,8 @@ import Documentacao from './pages/LIDER_GRUPO/PROGESSO/Documentacao.jsx';
 import Apresentacao from './pages/LIDER_GRUPO/PROGESSO/Apresentacao.jsx';
 import Projeto from './pages/LIDER_GRUPO/PROGESSO/Projeto.jsx';
 
+import Testes from './pages/testes.jsx';
+
 // ***********************************************************   Interface_Membro *************************************************************************
 
 import Home2 from "./pages/MEMBRO_GRUPO/3Home_M/home.jsx";
@@ -139,6 +141,7 @@ function App() {
                     <Route path='/Documentacao' element={<Documentacao/>}/>
                     <Route path='/Apresentacao' element={<Apresentacao/>}/>
                     <Route path='/Projeto' element={<Projeto/>}/>
+                    <Route path='/testes' element={<Testes/>}/>
 
 
 

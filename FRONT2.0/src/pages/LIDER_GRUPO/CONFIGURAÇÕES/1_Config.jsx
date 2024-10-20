@@ -87,3 +87,48 @@ export default function Configuracoes() {
         </Container>
     );
 }
+
+// import React from 'react';
+// import { Switch, styled } from '@mui/material';
+
+// const CustomSwitch = styled(Switch)(({ theme }) => ({
+//   width: 48,
+//   height: 24,
+//   padding: 0,
+//   display: 'flex',
+//   '&:active': {
+//     '& .MuiSwitch-thumb': {
+//       width: 18,
+//     },
+//     '& .MuiSwitch-switchBase.Mui-checked': {
+//       transform: 'translateX(24px)',
+//     },
+//   },
+//   '& .MuiSwitch-switchBase': {
+//     padding: 2,
+//     '&.Mui-checked': {
+//       transform: 'translateX(24px)',
+//       color: '#fff',
+//       '& + .MuiSwitch-track': {
+//         opacity: 1,
+//         backgroundColor: '#004d40',
+//       },
+//     },
+//   },
+//   '& .MuiSwitch-thumb': {
+//     width: 20,
+//     height: 20,
+//     boxShadow: 'none',
+//   },
+//   '& .MuiSwitch-track': {
+//     borderRadius: 24 / 2,
+//     opacity: 1,
+//     backgroundColor: '#80cbc4',
+//   },
+// }));
+
+// export default function CustomInputSwitch() {
+//   return (
+//     <CustomSwitch defaultChecked />
+//   );
+// }

@@ -16,6 +16,7 @@ import GreenButton from '../../../Components/Btns/btn_green';
 import Box1 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form1';
 import Box2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
 import TaskList from '../../../Components/COMPONENTES_EVENTOS/TaskList';
+import Lembrete from '../../../Components/Lembrete';
 
 export default function CriarEvento() {
     const [value, setValue] = React.useState('');
@@ -237,6 +238,10 @@ export default function CriarEvento() {
                         />
                     </Box1>
 
+                                                    {/* CAMPO LEMBRETE */}
+                        <Box1>
+                        <Lembrete></Lembrete>
+                        </Box1>
                                                     {/* CAMPO DESCRIÇÃO */}
                     <Box2>
                         <Grid container alignItems="center" spacing={1}>
