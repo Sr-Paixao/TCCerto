@@ -29,7 +29,7 @@ export default function Tarefa_Concluida_M() {
     const navigate = useNavigate();
     const [openPopup, setOpenPopup] = useState(false); 
     const handleBack = () => {
-        navigate('/Central_Tarefas_M');
+        navigate('/Membro_Tarefas');
     };
 
     const handleMarkAsIncomplete = () => {
@@ -110,7 +110,6 @@ export default function Tarefa_Concluida_M() {
                                 sx={{ 
                                     textAlign: 'center', 
                                     marginTop: '20%', 
-                                    marginLeft: '10%'
                                     }}
                             >
                                 {dataFormatada}
@@ -149,7 +148,7 @@ export default function Tarefa_Concluida_M() {
                                     fontSize: '100%'
                                     }}
                             >
-                                Concluída por você em:
+                                Concluída em:
                             </Typography>
                         </Grid>
 
@@ -159,8 +158,7 @@ export default function Tarefa_Concluida_M() {
                                 paragraph 
                                 sx={{ 
                                     textAlign: 'center', 
-                                    marginTop: '20%', 
-                                    marginLeft: '10%'
+                                    marginTop: '20%'
                                     }}
                             >
                                 {dataFormatada}

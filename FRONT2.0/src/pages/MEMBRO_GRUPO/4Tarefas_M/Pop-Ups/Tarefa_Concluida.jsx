@@ -10,7 +10,7 @@ const Tarefa_Concluida = ({ open, handleClose }) => {
   useEffect(() => {
     if (open) {
       const redirectTimeout = setTimeout(() => {
-        navigate('/Central_Tarefas_M');
+        navigate('/Membro_Tarefas');
       }, 2000);
       return () => clearTimeout(redirectTimeout);
     }

@@ -42,7 +42,7 @@ export default function Dt_Tarefa_M() {
     };
 
     const handleBack = () => {
-        navigate('/Central_Tarefas_M');
+        navigate('/Membro_Tarefas');
     };
 
     const [value, setValue] = useState(0);
@@ -77,9 +77,9 @@ export default function Dt_Tarefa_M() {
                             `https://source.unsplash.com/32x32/?${assignedUsers[0]}`
                             } 
                         sx={{ 
-                            width: 24, 
-                            height: 24, 
-                            marginLeft: 20
+                            width: 20, 
+                            height: 20, 
+                            marginLeft: 80
                             }} 
                     />
                 );
@@ -94,8 +94,8 @@ export default function Dt_Tarefa_M() {
                                     `https://source.unsplash.com/32x32/?${user}`
                                     } 
                                 sx={{ 
-                                    width: 24, 
-                                    height: 24, 
+                                    width: 20, 
+                                    height: 20, 
                                     ml: -1
                                     }} 
                             />
@@ -145,7 +145,7 @@ export default function Dt_Tarefa_M() {
                                     variant: 'body2', 
                                     fontSize: '0.7rem' 
                                 }} 
-                                sx={{ marginLeft: 2 }} 
+                                sx={{ marginLeft: -2 }} 
                             />
                         </>
                     )}
