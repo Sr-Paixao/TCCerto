@@ -65,19 +65,22 @@ import Home2 from "./pages/MEMBRO_GRUPO/3Home_M/home.jsx";
 import Membro_Tarefas from './pages/MEMBRO_GRUPO/4Tarefas_M/Central_Tarefas_M.jsx';
 import Dt_Tarefa_M from './pages/MEMBRO_GRUPO/4Tarefas_M/Detalhes_Tarefa_M.jsx'; 
 import Dt_Concluida_M from './pages/MEMBRO_GRUPO/4Tarefas_M/Tarefa_Concluida_M.jsx';
+//EVENTOS_MEMBRO
+import Membro_Eventos from './pages/MEMBRO_GRUPO/Eventos_M/Eventos_M.jsx';
+import Dt_Evento_Membro from './pages/MEMBRO_GRUPO/Eventos_M/Dt_Eventos_M.jsx';
 // Modelo_Membro
 import Modelo_M from './pages/MEMBRO_GRUPO/5Modelo_M/Modelo_M.jsx';
 // Configuracao_Membro
 import Config_M from './pages/MEMBRO_GRUPO/6Configurações_M/Config_M.jsx';
 import Relatar_Problema_M from './pages/MEMBRO_GRUPO/6Configurações_M/Relatar_Problema_M.jsx';
-import Termo_2_M from './pages/MEMBRO_GRUPO/6Configurações_M/Termo_2_M.jsx';
 import Avaliacao_M from './pages/MEMBRO_GRUPO/6Configurações_M/Avaliacao_M.jsx';
 // Orcamento_Membro
 import Orcamento_M from './pages/MEMBRO_GRUPO/8Orçamento_M/Orçamento_M.jsx';
 // Equipe_Membro
 import Info_Equipe_M from './pages/MEMBRO_GRUPO/7Equipe_M/Info_Equipe_M.jsx';
 // Perfil_Membro
-import Perfil_M from "./pages/MEMBRO_GRUPO/Perfil_M.jsx";
+import Perfil_M from "./pages/MEMBRO_GRUPO/9Perfil_M/Perfil_M.jsx";
+import Edt_Perfil_M from "./pages/MEMBRO_GRUPO/9Perfil_M/Edt_Perfil_M.jsx";
 
 
 
@@ -155,16 +158,21 @@ function App() {
                     <Route path="/Dt_Tarefa_M" element={<Dt_Tarefa_M />} />
                     <Route path="/Dt_Concluida_M" element={<Dt_Concluida_M />} />
 
+                    <Route path="/Membro_Eventos" element={<Membro_Eventos />} />
+                    <Route path="/Dt_Evento_M" element={<Dt_Evento_Membro />} />
+
                     <Route path="/Membro_Modelo" element={<Modelo_M />} />
 
                     <Route path="/Membro_Config" element={<Config_M />} />
                     <Route path="/Relatar_Problema_M" element={<Relatar_Problema_M />} />
-                    <Route path="/Termo_2_M" element={<Termo_2_M />} />
                     <Route path="/Avaliacao_M" element={<Avaliacao_M />} />
 
                     <Route path="/Membro_Orcamento" element={<Orcamento_M />} />
 
                     <Route path="/Membro_Equipe" element={<Info_Equipe_M />} />
+
+                    <Route path="/Perfil_M" element={<Perfil_M />} />
+                    <Route path="/Edt_Perfil_M" element={<Edt_Perfil_M />} />
 
 
 

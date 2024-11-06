@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Box, Container, CssBaseline, Paper, Typography, IconButton, Grid } from '@mui/material';
-import { List, ListItem, ListItemAvatar, Avatar, TextField, Button} from '@mui/material';
+import { Box, Container, CssBaseline, Paper, Typography, IconButton} from '@mui/material';
+import { Avatar, Button} from '@mui/material';
 import Stack from '@mui/material/Stack';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import RedButton from '../../../Components/Btns/btn_red';
-import Box_2 from '../../../Components/COMPONENTES_TAREFAS/Box_Form/Box_form2';
 import Menu_Inferior from '../../../Components/MENUS/menu_inferior';
 
 const usuario = [
     { id: 1, name: 'Usuário 1', avatarSrc: '/avatar1.jpg' },
 ];
 
-export default function Perfil_Lider() {
+export default function Perfil_Membro() {
 
     const [value, setValue] = React.useState('');
 
@@ -22,7 +21,7 @@ export default function Perfil_Lider() {
 
     const navigate = useNavigate();
     const handleBack = () => {
-        navigate('/Index');
+        navigate('/home2');
     };
 
 
@@ -88,7 +87,7 @@ export default function Perfil_Lider() {
                 {/* BOTÃO PARA EDITAR INFORMAÇÕES */}
                 <Box sx={{ width: '100%', height: '100%', mt: 6 }}>
                     <RedButton 
-                        onClick={() => navigate('/Edt_Perfil')}
+                        onClick={() => navigate('/Edt_Perfil_M')}
                         fullWidth
                         variant="outlined"
                     >
@@ -97,7 +96,7 @@ export default function Perfil_Lider() {
                 </Box>
 
                 {/* MENU INFERIOR */}
-                <Menu_Inferior value={value} onChange={handleChange} interfaceType="Lider_Grupo" />
+                <Menu_Inferior value={value} onChange={handleChange} interfaceType="Membro_Grupo" />
 
             </Paper>
         </Container>
