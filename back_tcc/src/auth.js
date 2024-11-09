@@ -1,6 +1,6 @@
 const express = require('express');
 const { createUserWithEmailAndPassword, signInWithEmailAndPassword } = require('firebase/auth');
-const { auth } = require('./services/firebaseConfig'); // Certifique-se de que este arquivo está corretamente configurado
+const { auth } = require('./services/firebaseConfig');
 
 const router = express.Router();
 
