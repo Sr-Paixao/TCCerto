@@ -81,6 +81,8 @@ import Info_Equipe_M from './pages/MEMBRO_GRUPO/7Equipe_M/Info_Equipe_M.jsx';
 // Perfil_Membro
 import Perfil_M from "./pages/MEMBRO_GRUPO/9Perfil_M/Perfil_M.jsx";
 import Edt_Perfil_M from "./pages/MEMBRO_GRUPO/9Perfil_M/Edt_Perfil_M.jsx";
+//Chat_Membro
+import Chat_M from "./pages/MEMBRO_GRUPO/Chat_M/Chat_1.jsx";
 
 
 
@@ -144,6 +146,8 @@ function App() {
                     <Route path='/Documentacao' element={<Documentacao/>}/>
                     <Route path='/Apresentacao' element={<Apresentacao/>}/>
                     <Route path='/Projeto' element={<Projeto/>}/>
+
+
                     <Route path='/testes' element={<Testes/>}/>
 
 
@@ -173,6 +177,8 @@ function App() {
 
                     <Route path="/Perfil_M" element={<Perfil_M />} />
                     <Route path="/Edt_Perfil_M" element={<Edt_Perfil_M />} />
+
+                    <Route path="/Chat_M" element={<Chat_M/>}/>
 
 
 
