@@ -9,6 +9,8 @@ import api from './api.js';
 // *************************************************************  Telas_Gerais  **************************************************************************
 import Login from './pages/MEMBRO_GRUPO/1Login/Login.jsx';
 import Cadastro from './pages/MEMBRO_GRUPO/2Cadastro/Cadastro.jsx';
+import Credencial from './pages/GERAIS/EQUIPE/Credencial_equipe.jsx';
+import Bem_vindo from './pages/GERAIS/EQUIPE/BEM_VINDO.jsx';
 
 // ***********************************************************   Interface_Lider *************************************************************************
 
@@ -104,6 +106,8 @@ function App() {
 
             
                     <Route path="/Add_Membro" element={<Add_Membro />} />
+                    <Route path="/Credencial" element={<Credencial />} />
+                    <Route path="/Bem_vindo" element={<Bem_vindo />} />
 
                     <Route path="/Index" element={<Index />} />
 

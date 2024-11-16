@@ -86,13 +86,23 @@ export default function Perfil_Lider() {
                 </Box>
 
                 {/* BOTÃO PARA EDITAR INFORMAÇÕES */}
-                <Box sx={{ width: '100%', height: '100%', mt: 6 }}>
+                <Box sx={{ width: '100%', height: '100%', mt: 3 }}>
                     <RedButton 
                         onClick={() => navigate('/Edt_Perfil')}
                         fullWidth
                         variant="outlined"
                     >
                         EDITAR INFORMAÇÕES
+                    </RedButton>
+                </Box>
+
+                <Box sx={{ width: '100%', height: '100%', mt: -6 }}>
+                    <RedButton 
+                        onClick={() => navigate('/Login')}
+                        fullWidth
+                        variant="outlined"
+                    >
+                        Sair da Conta
                     </RedButton>
                 </Box>
 
