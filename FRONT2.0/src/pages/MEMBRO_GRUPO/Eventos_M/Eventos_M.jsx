@@ -28,10 +28,6 @@ export default function Central_Eventos() {
 
     const navigate = useNavigate();
 
-    const handleNovaEvento = () => {
-        navigate('/Criar_Evento');
-    };
-
     return (
         <Container component="main" maxWidth="xs">
             <CssBaseline />

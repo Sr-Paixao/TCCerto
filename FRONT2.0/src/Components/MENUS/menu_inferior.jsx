@@ -26,14 +26,9 @@ function Menu_Inferior({ value, onChange, interfaceType }) {
         },
         Membro_Grupo: {
             home: '/Home2',
-            progresso: '/Membro_progresso',
+            progresso: '/Progresso_M',
             equipe: '/Membro_Equipe'
-        },
-        // Orientador: {
-        //     home: '/Home4',
-        //     progresso: '/progresso4',
-        //     equipe: '/Equipe4'
-        // }
+        }
     };
 
     const selectedRoutes = routes[interfaceType] || {};

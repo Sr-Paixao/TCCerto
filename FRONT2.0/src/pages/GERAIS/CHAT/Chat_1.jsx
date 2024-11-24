@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AppBar, Toolbar, IconButton, Typography, Menu, MenuItem, Avatar, TextField, Paper, Popover, Box, Divider } from '@mui/material';
 import { ArrowBack, MoreVert, Search, Image, Delete, Close, AttachFile, Send, Mic, InsertDriveFile, MusicNote, CameraAlt, Poll, Photo, PlayCircleOutline } from '@mui/icons-material';
 
+// Cabeçalho do Chat
 function ChatHeader() {
     const [anchorEl, setAnchorEl] = useState(null);
 
@@ -13,15 +15,29 @@ function ChatHeader() {
         setAnchorEl(null);
     };
 
+      // POP-UP 
+        const [openPopup, setOpenPopup] = useState(false);
+        const navigate = useNavigate();
+    
+        const handleOpenPopup = () => {
+            setOpenPopup(true);
+        };
+        
+        const handleClosePopup = () => {
+            setOpenPopup(false);
+        };
+
     return (
         <AppBar position="static" style={{ backgroundColor: '#0f4032' }}>
             <Toolbar>
-                <IconButton edge="start" color="inherit">
+                <IconButton edge="start" color="inherit"
+                    onClick={() => navigate('/Home2')}>
                     <ArrowBack />
                 </IconButton>
-                <Avatar src="logo-url.jpg" alt="Bom Café" style={{ marginRight: 10 }} />
-                <Typography variant="h6" style={{ flexGrow: 1 }}>
-                    BOM CAFÉ
+                <Avatar src="logo-url.jpg" alt="Equipe" style={{ marginRight: 10 }} />
+                <Typography variant="h6" style={{ flexGrow: 1 }}
+                onClick={() => navigate('/Perfil_Chat')}>
+                    Nome Equipe
                 </Typography>
                 <IconButton edge="end" color="inherit" onClick={handleMenuOpen}>
                     <MoreVert />
@@ -42,10 +58,10 @@ function ChatHeader() {
                     <MenuItem onClick={handleMenuClose}>
                         <Search style={{ marginRight: 10 }} /> PESQUISA
                     </MenuItem>
-                    <MenuItem onClick={handleMenuClose}>
-                        <Image style={{ marginRight: 10 }} /> MÍDIA, LINKS E DOCS
+                    <MenuItem onClick={() => navigate('/Perfil_Chat')}>
+                        <Image style={{ marginRight: 10 }}/> MÍDIA, LINKS E DOCS
                     </MenuItem>
-                    <MenuItem onClick={handleMenuClose}>
+                    <MenuItem>
                         <Delete style={{ marginRight: 10 }} /> LIMPAR CONVERSA
                     </MenuItem>
                     <MenuItem onClick={handleMenuClose} style={{ justifyContent: 'center' }}>
@@ -57,54 +73,89 @@ function ChatHeader() {
     );
 }
 
-function MessageBubble({ type, text, timestamp, sender, senderAvatar, imageUrl }) {
+// Balões de Mensagem
+function MessageBubble({ type, text, timestamp, sender, senderAvatar, imageUrl, isSender }) {
     const messageStyles = {
-        text: {
-            backgroundColor: '#c5e1a5',
-            padding: '10px',
-            borderRadius: '12px',
-            maxWidth: '70%',
-            marginBottom: '8px',
-        },
-        audio: {
-            backgroundColor: '#a5d6a7',
-            padding: '10px',
-            borderRadius: '12px',
+        container: {
             display: 'flex',
-            alignItems: 'center',
-            maxWidth: '70%',
-            marginBottom: '8px',
+            flexDirection: isSender ? 'row-reverse' : 'row',
+            alignItems: 'flex-start',
+            marginBottom: '10px',
         },
-        image: {
-            backgroundColor: '#a5d6a7',
+        bubble: {
+            backgroundColor: isSender ? '#dcf8c6' : '#ffffff',
+            color: '#000',
             padding: '10px',
             borderRadius: '12px',
             maxWidth: '70%',
-            marginBottom: '8px',
+            boxShadow: '0 1px 3px rgba(0, 0, 0, 0.2)',
+            wordWrap: 'break-word',
+        },
+        timestamp: {
+            fontSize: '10px',
+            color: 'gray',
+            marginTop: '4px',
+            alignSelf: isSender ? 'flex-end' : 'flex-start',
+        },
+        avatar: {
+            width: 24,
+            height: 24,
+            margin: isSender ? '0 0 0 8px' : '0 8px 0 0',
         },
     };
 
     return (
-        <Box style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginBottom: '10px' }}>
-            <Box style={{ display: 'flex', alignItems: 'center', marginBottom: '4px' }}>
-                <Avatar src={senderAvatar} alt={sender} style={{ marginRight: '8px', width: 24, height: 24 }} />
-                <Typography variant="caption" style={{ fontWeight: 'bold' }}>{sender}</Typography>
+        <Box style={messageStyles.container}>
+            <Avatar src={senderAvatar} alt={sender} style={messageStyles.avatar} />
+            <Box>
+                <Box style={messageStyles.bubble}>
+                    {type === 'text' && <Typography>{text}</Typography>}
+                    {type === 'audio' && (
+                        <Box style={{ display: 'flex', alignItems: 'center' }}>
+                            <PlayCircleOutline style={{ marginRight: '8px' }} />
+                            <Typography>00:30</Typography>
+                        </Box>
+                    )}
+                    {type === 'image' && (
+                        <img
+                            src={imageUrl}
+                            alt="User upload"
+                            style={{ width: '100%', borderRadius: '8px' }}
+                        />
+                    )}
+                </Box>
+                <Typography style={messageStyles.timestamp}>{timestamp}</Typography>
             </Box>
-            <Box style={messageStyles[type]}>
-                {type === 'text' && <Typography>{text}</Typography>}
-                {type === 'audio' && (
-                    <Box style={{ display: 'flex', alignItems: 'center' }}>
-                        <PlayCircleOutline style={{ marginRight: '8px' }} />
-                        <Typography>00:30</Typography>
-                    </Box>
-                )}
-                {type === 'image' && <img src={imageUrl} alt="User upload" style={{ width: '100%', borderRadius: '8px' }} />}
-            </Box>
-            <Typography variant="caption" style={{ alignSelf: 'flex-end', color: 'gray' }}>{timestamp}</Typography>
         </Box>
     );
 }
 
+// Rótulos de Data (ONTEM/HOJE)
+function DateLabel({ text }) {
+    const styles = {
+        container: {
+            display: 'flex',
+            justifyContent: 'center',
+            margin: '15px 0',
+        },
+        label: {
+            backgroundColor: '#e0e0e0',
+            color: '#4a4a4a',
+            padding: '4px 12px',
+            borderRadius: '12px',
+            fontSize: '12px',
+            fontWeight: 'bold',
+        },
+    };
+
+    return (
+        <div style={styles.container}>
+            <span style={styles.label}>{text.toUpperCase()}</span>
+        </div>
+    );
+}
+
+// Entrada de Mensagem
 function ChatInput() {
     const [anchorEl, setAnchorEl] = useState(null);
 
@@ -205,20 +256,49 @@ function ChatInput() {
     );
 }
 
+// Tela Principal do Chat
 function ChatScreen() {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
             <ChatHeader />
             <Box style={{ flexGrow: 1, padding: '10px', backgroundColor: '#e0f2f1', overflowY: 'auto' }}>
-                <Typography variant="caption" style={{ display: 'block', textAlign: 'center', margin: '10px 0', color: 'gray' }}>ONTEM</Typography>
-                <MessageBubble type="text" sender="Bento" text="Olá! Tudo bem?" timestamp="07:00" senderAvatar="bento-avatar.jpg" />
-                <MessageBubble type="audio" sender="Claudia" timestamp="07:10" senderAvatar="claudia-avatar.jpg" />
-                <MessageBubble type="image" sender="Beatriz" imageUrl="image-url.jpg" timestamp="07:20" senderAvatar="beatriz-avatar.jpg" />
-                <Typography variant="caption" style={{ display: 'block', textAlign: 'center', margin: '10px 0', color: 'gray' }}>HOJE</Typography>
-                <MessageBubble type="text" sender="Samuel" text="Esta é uma mensagem de teste." timestamp="08:15" senderAvatar="samuel-avatar.jpg" />
+                <DateLabel text="ontem" />
+                <MessageBubble
+                    type="text"
+                    sender="Bento"
+                    text="Olá! Tudo bem?"
+                    timestamp="07:00"
+                    senderAvatar="bento-avatar.jpg"
+                    isSender={false}
+                />
+                <MessageBubble
+                    type="audio"
+                    sender="Claudia"
+                    timestamp="07:10"
+                    senderAvatar="claudia-avatar.jpg"
+                    isSender={false}
+                />
+                <MessageBubble
+                    type="image"
+                    sender="Beatriz"
+                    imageUrl="image-url.jpg"
+                    timestamp="07:20"
+                    senderAvatar="beatriz-avatar.jpg"
+                    isSender={false}
+                />
+                <DateLabel text="hoje" />
+                <MessageBubble
+                    type="text"
+                    sender="Samuel"
+                    text="Esta é uma mensagem enviada."
+                    timestamp="08:15"
+                    senderAvatar="samuel-avatar.jpg"
+                    isSender={true}
+                />
             </Box>
             <ChatInput />
         </div>
+            
     );
 }
 

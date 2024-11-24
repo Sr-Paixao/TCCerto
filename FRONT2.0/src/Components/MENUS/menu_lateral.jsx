@@ -10,6 +10,7 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import SettingsIcon from '@mui/icons-material/Settings';
 import EventAvailableRoundedIcon from '@mui/icons-material/EventAvailableRounded';
+import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import TCCERTOImage from '../../img/logo.svg';
 
 function MenuLateral({ open, onClose, interfaceType }) {
@@ -29,16 +30,20 @@ function MenuLateral({ open, onClose, interfaceType }) {
     Lider_Grupo: {
       tarefas: '/Central_Tarefas',
       eventos: '/Eventos',
+      chat: '/Chat',
       orcamento: '/orcamento',
       modelo: '/Modelo',
       configuracoes: '/config'
+      
     },
     Membro_Grupo: {
       tarefas: '/Membro_Tarefas',
       eventos: '/Membro_Eventos',
+      chat: '/Chat',
       orcamento: '/Membro_Orcamento',
       modelo: '/Membro_Modelo',
       configuracoes: '/Membro_Config'
+      
     }
   };
 
@@ -56,12 +61,17 @@ function MenuLateral({ open, onClose, interfaceType }) {
       path: selectedRoutes.eventos || '/Eventos'
     },
     {
-      icon: selectedIndex === 2 ? <MonetizationOnIcon sx={{ color: '#07382E' }} /> : <MonetizationOnOutlinedIcon />,
+      icon: selectedIndex === 2 ? <ChatBubbleOutlineOutlinedIcon sx={{ color: '#07382E' }} /> : <ChatBubbleOutlineOutlinedIcon />,
+      text: "Chat",
+      path: selectedRoutes.chat || '/Chat'
+    },
+    {
+      icon: selectedIndex === 3 ? <MonetizationOnIcon sx={{ color: '#07382E' }} /> : <MonetizationOnOutlinedIcon />,
       text: "Orçamento",
       path: selectedRoutes.orcamento || '/orcamento'
     },
     {
-      icon: selectedIndex === 3 ? <DescriptionIcon sx={{ color: '#07382E' }} /> : <DescriptionOutlinedIcon />,
+      icon: selectedIndex === 4 ? <DescriptionIcon sx={{ color: '#07382E' }} /> : <DescriptionOutlinedIcon />,
       text: "Modelo",
       path: selectedRoutes.modelo || '/Modelo'
     },
@@ -70,6 +80,7 @@ function MenuLateral({ open, onClose, interfaceType }) {
       text: "Configurações",
       path: selectedRoutes.configuracoes || '/config'
     }
+    
   ];
 
   return (

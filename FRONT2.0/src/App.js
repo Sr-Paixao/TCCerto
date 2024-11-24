@@ -12,6 +12,9 @@ import Cadastro from './pages/MEMBRO_GRUPO/2Cadastro/Cadastro.jsx';
 import Credencial from './pages/GERAIS/EQUIPE/Credencial_equipe.jsx';
 import Bem_vindo from './pages/GERAIS/EQUIPE/BEM_VINDO.jsx';
 
+import Chat from "./pages/GERAIS/CHAT/Chat_1.jsx";
+import Perfil_Chat from "./pages/GERAIS/CHAT/Perfil_Chat.jsx";
+
 // ***********************************************************   Interface_Lider *************************************************************************
 
 // Home_Lider
@@ -83,8 +86,11 @@ import Info_Equipe_M from './pages/MEMBRO_GRUPO/7Equipe_M/Info_Equipe_M.jsx';
 // Perfil_Membro
 import Perfil_M from "./pages/MEMBRO_GRUPO/9Perfil_M/Perfil_M.jsx";
 import Edt_Perfil_M from "./pages/MEMBRO_GRUPO/9Perfil_M/Edt_Perfil_M.jsx";
-//Chat_Membro
-import Chat_M from "./pages/MEMBRO_GRUPO/Chat_M/Chat_1.jsx";
+// Progresso_Membro
+import Progresso_M from "./pages/MEMBRO_GRUPO/11Progresso_M/Progresso_M.jsx";
+import Documentacao_M from "./pages/MEMBRO_GRUPO/11Progresso_M/Documentacao_M.jsx";
+import Apresentacao_M from "./pages/MEMBRO_GRUPO/11Progresso_M/Apresentacao_M.jsx";
+import Projeto_M from "./pages/MEMBRO_GRUPO/11Progresso_M/Projeto_M.jsx";
 
 
 
@@ -108,6 +114,9 @@ function App() {
                     <Route path="/Add_Membro" element={<Add_Membro />} />
                     <Route path="/Credencial" element={<Credencial />} />
                     <Route path="/Bem_vindo" element={<Bem_vindo />} />
+
+                    <Route path="/Chat" element={<Chat/>}/>
+                    <Route path="/Perfil_Chat" element={<Perfil_Chat/>}/>
 
                     <Route path="/Index" element={<Index />} />
 
@@ -182,7 +191,10 @@ function App() {
                     <Route path="/Perfil_M" element={<Perfil_M />} />
                     <Route path="/Edt_Perfil_M" element={<Edt_Perfil_M />} />
 
-                    <Route path="/Chat_M" element={<Chat_M/>}/>
+                    <Route path="/Progresso_M" element={<Progresso_M />} />
+                    <Route path="/Projeto_M" element={<Projeto_M />} />
+                    <Route path="/Apresentacao_M" element={<Apresentacao_M />} />
+                    <Route path="/Documentacao_M" element={<Documentacao_M />} />
 
 
 
