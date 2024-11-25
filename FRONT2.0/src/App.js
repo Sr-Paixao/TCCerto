@@ -15,6 +15,14 @@ import Bem_vindo from './pages/GERAIS/EQUIPE/BEM_VINDO.jsx';
 import Chat from "./pages/GERAIS/CHAT/Chat_1.jsx";
 import Perfil_Chat from "./pages/GERAIS/CHAT/Perfil_Chat.jsx";
 
+import ERRO_400 from "./pages/GERAIS/ERROS/E_400.jsx";
+import ERRO_403 from "./pages/GERAIS/ERROS/E_403.jsx";
+import ERRO_404 from "./pages/GERAIS/ERROS/E_404.jsx";
+import ERRO_408 from "./pages/GERAIS/ERROS/E_408.jsx";
+import ERRO_500 from "./pages/GERAIS/ERROS/E_500.jsx";
+import ERRO_502 from "./pages/GERAIS/ERROS/E_502.jsx";
+import ERRO_503 from "./pages/GERAIS/ERROS/E_503.jsx";
+
 // ***********************************************************   Interface_Lider *************************************************************************
 
 // Home_Lider
@@ -117,6 +125,14 @@ function App() {
 
                     <Route path="/Chat" element={<Chat/>}/>
                     <Route path="/Perfil_Chat" element={<Perfil_Chat/>}/>
+
+                    <Route path="/ERRO_400" element={<ERRO_400/>}/>
+                    <Route path="/ERRO_403" element={<ERRO_403/>}/>
+                    <Route path="/ERRO_404" element={<ERRO_404/>}/>
+                    <Route path="/ERRO_408" element={<ERRO_408/>}/>
+                    <Route path="/ERRO_500" element={<ERRO_500/>}/>
+                    <Route path="/ERRO_502" element={<ERRO_502/>}/>
+                    <Route path="/ERRO_503" element={<ERRO_503/>}/>
 
                     <Route path="/Index" element={<Index />} />
 
